@@ -1,0 +1,15 @@
+[theme]
+primaryColor = "#00D2BA"               # Vibrant Teal
+backgroundColor = "#0A1128"            # Deep Navy
+secondaryBackgroundColor = "#131F3F"  # Slate Navy Card
+textColor = "#F0F4F8"                 # Off-white
+font = "sans serif"
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false
