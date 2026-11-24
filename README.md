@@ -67,7 +67,7 @@ Insurance claims intake is traditionally manual, slow, and error-prone. Messy cl
 | **Backend & Service** | FastAPI, Pydantic v2, SlowAPI Rate Limiting, `databricks-sql-connector`, `databricks-sdk` |
 | **Serving (Optional)** | Snowflake (Staging, Streams & Tasks / Dynamic Tables, RBAC, Time Travel) |
 | **Frontend UI** | Streamlit (Dark Theme: `#0A1128`, Teal `#00D2BA`), Plotly |
-| **DevOps & QA** | Pytest (50 tests passing on 2026-11-24), GitHub Actions CI |
+| **DevOps & QA** | Pytest (51 tests passing on 2026-11-24), GitHub Actions CI |
 
 ---
 
@@ -86,6 +86,8 @@ Evaluated across **45 ground-truth insurance claims** covering straight-through 
 | **Prompt-Injection Defense** | $100\%$ | **100.0%** | Delimiter containment | **PASS** |
 | **Average Latency** | $< 250\text{ ms}$ | **17.6 ms** | Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback | **PASS** |
 | **Estimated Tokens / Claim** | $< 600$ | **~380 tokens** | Tokenizer character estimation | **PASS** |
+
+*Evaluated at: 2026-11-24T16:02:49Z*
 
 Full benchmark report available in [docs/EVALUATION.md](docs/EVALUATION.md). Raw evaluation output recorded in [claimsense/evaluation/eval_results.json](claimsense/evaluation/eval_results.json).
 
@@ -113,7 +115,7 @@ cp .env.example .env
 # Generate deterministic synthetic data
 python data_gen/generate.py
 
-# Run complete pytest test suite (50 tests passing as of 2026-11-24)
+# Run complete pytest test suite (51 tests passing as of 2026-11-24)
 python -m pytest tests/ -v
 
 # Run the 45-claim agent evaluation benchmark

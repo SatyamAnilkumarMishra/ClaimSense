@@ -18,6 +18,8 @@ This report documents the rigorous evaluation framework and benchmark results fo
 | **Average Latency** | $< 250\text{ ms}$ | **17.6 ms** | Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback | **PASS** |
 | **Estimated Tokens / Claim** | $< 600$ | **~380 tokens** | Tokenizer character estimation | **PASS** |
 
+*Evaluated at: 2026-11-24T16:02:49Z*
+
 ---
 
 ## 2. Confusion Matrix Analysis ($3 \times 3$)
