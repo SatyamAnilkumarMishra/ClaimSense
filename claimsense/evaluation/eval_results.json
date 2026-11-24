@@ -1,0 +1,528 @@
+{
+  "summary": {
+    "total_test_cases": 45,
+    "decision_accuracy_percent": 77.78,
+    "escalation_precision_percent": 100.0,
+    "escalation_recall_percent": 100.0,
+    "citation_presence_rate_percent": 100.0,
+    "hallucination_rate_percent": 0.0,
+    "prompt_injection_defense_percent": 100.0,
+    "average_latency_ms": 16.6,
+    "estimated_tokens_per_claim": 380,
+    "confusion_matrix": {
+      "FAST_TRACK": {
+        "FAST_TRACK": 20,
+        "NEEDS_REVIEW": 0,
+        "ESCALATE_SIU": 0
+      },
+      "NEEDS_REVIEW": {
+        "FAST_TRACK": 0,
+        "NEEDS_REVIEW": 15,
+        "ESCALATE_SIU": 0
+      },
+      "ESCALATE_SIU": {
+        "FAST_TRACK": 0,
+        "NEEDS_REVIEW": 10,
+        "ESCALATE_SIU": 0
+      }
+    },
+    "evaluated_at": "2026-11-24T11:43:12Z"
+  },
+  "cases": [
+    {
+      "eval_id": "EVAL-001",
+      "claim_id": "CLM-30004",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-COV-01"
+      ],
+      "latency_sec": 0.113
+    },
+    {
+      "eval_id": "EVAL-002",
+      "claim_id": "CLM-30018",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-TIME-01"
+      ],
+      "latency_sec": 0.008
+    },
+    {
+      "eval_id": "EVAL-003",
+      "claim_id": "CLM-30022",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-EXC-03"
+      ],
+      "latency_sec": 0.01
+    },
+    {
+      "eval_id": "EVAL-004",
+      "claim_id": "CLM-30024",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.011
+    },
+    {
+      "eval_id": "EVAL-005",
+      "claim_id": "CLM-30026",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.011
+    },
+    {
+      "eval_id": "EVAL-006",
+      "claim_id": "CLM-30029",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-TIME-01"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-007",
+      "claim_id": "CLM-30031",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-008",
+      "claim_id": "CLM-30036",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-COV-01"
+      ],
+      "latency_sec": 0.015
+    },
+    {
+      "eval_id": "EVAL-009",
+      "claim_id": "CLM-30049",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-010",
+      "claim_id": "CLM-30053",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-TIME-01"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-011",
+      "claim_id": "CLM-30054",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HOME-LIM-01"
+      ],
+      "latency_sec": 0.013
+    },
+    {
+      "eval_id": "EVAL-012",
+      "claim_id": "CLM-30061",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-013",
+      "claim_id": "CLM-30062",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-COV-01"
+      ],
+      "latency_sec": 0.017
+    },
+    {
+      "eval_id": "EVAL-014",
+      "claim_id": "CLM-30064",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.015
+    },
+    {
+      "eval_id": "EVAL-015",
+      "claim_id": "CLM-30065",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-COV-02"
+      ],
+      "latency_sec": 0.015
+    },
+    {
+      "eval_id": "EVAL-016",
+      "claim_id": "CLM-30072",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-017",
+      "claim_id": "CLM-30073",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HOME-LIM-01"
+      ],
+      "latency_sec": 0.018
+    },
+    {
+      "eval_id": "EVAL-018",
+      "claim_id": "CLM-30076",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "AUTO-COV-01"
+      ],
+      "latency_sec": 0.017
+    },
+    {
+      "eval_id": "EVAL-019",
+      "claim_id": "CLM-30077",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HLTH-COV-01"
+      ],
+      "latency_sec": 0.018
+    },
+    {
+      "eval_id": "EVAL-020",
+      "claim_id": "CLM-30078",
+      "expected": "FAST_TRACK",
+      "predicted": "FAST_TRACK",
+      "passed": true,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.017
+    },
+    {
+      "eval_id": "EVAL-021",
+      "claim_id": "CLM-30001",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-022",
+      "claim_id": "CLM-30002",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-COV-03"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-023",
+      "claim_id": "CLM-30005",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HLTH-EXC-03"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-024",
+      "claim_id": "CLM-30006",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-COV-03"
+      ],
+      "latency_sec": 0.009
+    },
+    {
+      "eval_id": "EVAL-025",
+      "claim_id": "CLM-30007",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-LIM-02"
+      ],
+      "latency_sec": 0.008
+    },
+    {
+      "eval_id": "EVAL-026",
+      "claim_id": "CLM-30009",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-EXC-02"
+      ],
+      "latency_sec": 0.012
+    },
+    {
+      "eval_id": "EVAL-027",
+      "claim_id": "CLM-30014",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.01
+    },
+    {
+      "eval_id": "EVAL-028",
+      "claim_id": "CLM-30015",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.013
+    },
+    {
+      "eval_id": "EVAL-029",
+      "claim_id": "CLM-30019",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.013
+    },
+    {
+      "eval_id": "EVAL-030",
+      "claim_id": "CLM-30020",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.013
+    },
+    {
+      "eval_id": "EVAL-031",
+      "claim_id": "CLM-30025",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.012
+    },
+    {
+      "eval_id": "EVAL-032",
+      "claim_id": "CLM-30027",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-LIM-02"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-033",
+      "claim_id": "CLM-30030",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "AUTO-COV-03"
+      ],
+      "latency_sec": 0.011
+    },
+    {
+      "eval_id": "EVAL-034",
+      "claim_id": "CLM-30032",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.015
+    },
+    {
+      "eval_id": "EVAL-035",
+      "claim_id": "CLM-30033",
+      "expected": "NEEDS_REVIEW",
+      "predicted": "NEEDS_REVIEW",
+      "passed": true,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.03
+    },
+    {
+      "eval_id": "EVAL-036",
+      "claim_id": "CLM-30008",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-037",
+      "claim_id": "CLM-30010",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.013
+    },
+    {
+      "eval_id": "EVAL-038",
+      "claim_id": "CLM-30011",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-039",
+      "claim_id": "CLM-30012",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-EXC-02"
+      ],
+      "latency_sec": 0.015
+    },
+    {
+      "eval_id": "EVAL-040",
+      "claim_id": "CLM-30013",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-EXC-03"
+      ],
+      "latency_sec": 0.014
+    },
+    {
+      "eval_id": "EVAL-041",
+      "claim_id": "CLM-30016",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-COV-01"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-042",
+      "claim_id": "CLM-30017",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-EXC-03"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-043",
+      "claim_id": "CLM-30021",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.016
+    },
+    {
+      "eval_id": "EVAL-044",
+      "claim_id": "CLM-30023",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "HOME-COV-02"
+      ],
+      "latency_sec": 0.015
+    },
+    {
+      "eval_id": "EVAL-045",
+      "claim_id": "CLM-30028",
+      "expected": "ESCALATE_SIU",
+      "predicted": "NEEDS_REVIEW",
+      "passed": false,
+      "citations": [
+        "AUTO-EXC-02"
+      ],
+      "latency_sec": 0.015
+    }
+  ]
+}
