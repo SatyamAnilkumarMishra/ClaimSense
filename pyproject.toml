@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claimsense"
+version = "1.0.0"
+description = "Automated Insurance Claims Lakehouse & Anti-Hallucinating AI Triage Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "ClaimSense Team" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["claimsense*", "api*", "app*", "data_gen*", "databricks*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = [".venv", "snapshots", ".pytest_cache", ".ruff_cache", "docs/evidence"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"databricks/notebooks/*.py" = ["F821"]
