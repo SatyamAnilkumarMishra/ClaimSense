@@ -58,3 +58,9 @@ FASTAPI_API_KEY = "claimsense_secret_key"
 * [ ] **Pipeline Page**: Click "Run Pipeline Now" and verify reconciliation displays `PASS`.
 * [ ] **AI Triage Page**: Select a claim, click "Run LangGraph Agent Triage", and verify decisions, confidence score, and policy clause citations display cleanly.
 * [ ] **Mobile Responsiveness**: Open the URL on a mobile device (iOS/Android). Verify KPI cards wrap gracefully, tables scroll horizontally, and buttons remain accessible.
+
+---
+
+## 4. Offline Snapshot Storage (`snapshots/claimsense_local.db`)
+
+When deployed without Databricks credentials or during warehouse cold-starts, ClaimSense automatically reads the bundled SQLite database at `snapshots/claimsense_local.db`. This database mirrors the Medallion Gold Star Schema (`dim_customer`, `dim_policy`, `fact_claims`, `pipeline_audit`) enabling instant, zero-cost, zero-latency local operation.

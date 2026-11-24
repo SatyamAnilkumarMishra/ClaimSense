@@ -1,6 +1,6 @@
 # Pipeline Reconciliation Audit Evidence (ISS-07)
 
-Captured from deterministic Lakehouse pipeline run executing `databricks/local_pipeline.py`.
+[SIMULATED LOCAL PIPELINE RUN] Captured from deterministic Lakehouse pipeline simulation executing `databricks/local_pipeline.py`.
 
 ## Execution Log
 
