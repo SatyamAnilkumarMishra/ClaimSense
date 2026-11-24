@@ -1,0 +1,7202 @@
+[
+  {
+    "claim_id": "CLM-30001",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Lewis",
+        "timestamp": "2026-02-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30002",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Lee",
+        "timestamp": "2025-11-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30003",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Clark",
+        "timestamp": "2025-09-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30004",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Rodriguez",
+        "timestamp": "2025-12-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30005",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Walker",
+        "timestamp": "2026-01-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30006",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Lee",
+        "timestamp": "2025-12-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30007",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Davis",
+        "timestamp": "2025-11-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30008",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Anderson",
+        "timestamp": "2026-01-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30009",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Moore",
+        "timestamp": "2025-12-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30010",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Brown",
+        "timestamp": "2026-05-13T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30011",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Clark",
+        "timestamp": "2026-05-11T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30012",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Anderson",
+        "timestamp": "2026-05-09T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30013",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Taylor",
+        "timestamp": "2026-05-07T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30014",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Lewis",
+        "timestamp": "2026-01-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30015",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Harris",
+        "timestamp": "2026-01-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30016",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Gonzalez",
+        "timestamp": "2025-11-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30017",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Sanchez",
+        "timestamp": "2026-01-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30018",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Jones",
+        "timestamp": "2025-11-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30019",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Gonzalez",
+        "timestamp": "2025-09-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30020",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Lopez",
+        "timestamp": "2025-12-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30021",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Jackson",
+        "timestamp": "2025-11-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30022",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Jackson",
+        "timestamp": "2025-09-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30023",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Taylor",
+        "timestamp": "2026-02-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30024",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Walker",
+        "timestamp": "2026-05-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30025",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Rodriguez",
+        "timestamp": "2025-12-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30026",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Robinson",
+        "timestamp": "2026-01-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30027",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Johnson",
+        "timestamp": "2026-01-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30028",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Robinson",
+        "timestamp": "2025-12-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30029",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Lee",
+        "timestamp": "2026-03-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30030",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Wilson",
+        "timestamp": "2025-11-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30031",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Lee",
+        "timestamp": "2025-10-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30032",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Robinson",
+        "timestamp": "2026-05-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30033",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Taylor",
+        "timestamp": "2026-05-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30034",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Thompson",
+        "timestamp": "2025-09-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30035",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Taylor",
+        "timestamp": "2026-01-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30036",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Gonzalez",
+        "timestamp": "2026-04-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30037",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Johnson",
+        "timestamp": "2025-12-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30038",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Martin",
+        "timestamp": "2025-12-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30039",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Harris",
+        "timestamp": "2025-09-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30040",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Williams",
+        "timestamp": "2026-02-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30041",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Hernandez",
+        "timestamp": "2026-05-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30042",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Anderson",
+        "timestamp": "2026-04-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30043",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Rodriguez",
+        "timestamp": "2025-10-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30044",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Johnson",
+        "timestamp": "2026-04-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30045",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Perez",
+        "timestamp": "2026-04-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30046",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Harris",
+        "timestamp": "2026-04-01T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30047",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Jones",
+        "timestamp": "2025-10-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30048",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Martin",
+        "timestamp": "2026-05-25T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30049",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Taylor",
+        "timestamp": "2026-01-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30050",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Davis",
+        "timestamp": "2025-08-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30051",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Lopez",
+        "timestamp": "2026-05-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30052",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Harris",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30053",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Walker",
+        "timestamp": "2026-02-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30054",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Ramirez",
+        "timestamp": "2026-04-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30055",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Miller",
+        "timestamp": "2026-02-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30056",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Thompson",
+        "timestamp": "2025-12-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30057",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Martinez",
+        "timestamp": "2025-11-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30058",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Wilson",
+        "timestamp": "2025-09-30T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30059",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Davis",
+        "timestamp": "2026-03-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30060",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Garcia",
+        "timestamp": "2025-10-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30061",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Johnson",
+        "timestamp": "2026-03-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30062",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Miller",
+        "timestamp": "2026-05-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30063",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Moore",
+        "timestamp": "2026-05-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30064",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Brown",
+        "timestamp": "2025-09-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30065",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Lopez",
+        "timestamp": "2026-03-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30066",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Williams",
+        "timestamp": "2025-08-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30067",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Lee",
+        "timestamp": "2025-09-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30068",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Rodriguez",
+        "timestamp": "2026-04-26T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30069",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Jackson",
+        "timestamp": "2026-01-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30070",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Gonzalez",
+        "timestamp": "2026-04-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30071",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Clark",
+        "timestamp": "2026-05-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30072",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Walker",
+        "timestamp": "2025-12-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30073",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Rodriguez",
+        "timestamp": "2025-11-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30074",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Harris",
+        "timestamp": "2025-11-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30075",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Moore",
+        "timestamp": "2026-04-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30076",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Jackson",
+        "timestamp": "2025-11-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30077",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Wilson",
+        "timestamp": "2026-03-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30078",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Anderson",
+        "timestamp": "2025-09-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30079",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Clark",
+        "timestamp": "2026-06-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30080",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Walker",
+        "timestamp": "2026-01-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30081",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Miller",
+        "timestamp": "2025-08-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30082",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Clark",
+        "timestamp": "2026-03-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30083",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Sanchez",
+        "timestamp": "2025-09-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30084",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Martin",
+        "timestamp": "2025-10-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30085",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Jackson",
+        "timestamp": "2026-04-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30086",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Moore",
+        "timestamp": "2025-12-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30087",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Lopez",
+        "timestamp": "2026-02-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30088",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Martinez",
+        "timestamp": "2026-04-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30089",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Williams",
+        "timestamp": "2025-09-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30090",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Garcia",
+        "timestamp": "2026-05-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30091",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Smith",
+        "timestamp": "2025-10-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30092",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Jackson",
+        "timestamp": "2025-10-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30093",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Walker",
+        "timestamp": "2026-03-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30094",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Robinson",
+        "timestamp": "2025-11-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30095",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Taylor",
+        "timestamp": "2026-03-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30096",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Garcia",
+        "timestamp": "2025-08-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30097",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Miller",
+        "timestamp": "2026-03-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30098",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Garcia",
+        "timestamp": "2025-09-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30099",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Jackson",
+        "timestamp": "2026-02-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30100",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Clark",
+        "timestamp": "2025-09-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30101",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Rodriguez",
+        "timestamp": "2025-08-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30102",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Ramirez",
+        "timestamp": "2025-10-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30103",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Moore",
+        "timestamp": "2026-03-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30104",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Lewis",
+        "timestamp": "2026-03-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30105",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Jones",
+        "timestamp": "2026-04-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30106",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Lee",
+        "timestamp": "2025-11-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30107",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Smith",
+        "timestamp": "2025-11-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30108",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Rodriguez",
+        "timestamp": "2025-10-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30109",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Brown",
+        "timestamp": "2025-12-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30110",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Miller",
+        "timestamp": "2026-05-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30111",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Williams",
+        "timestamp": "2025-12-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30112",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Smith",
+        "timestamp": "2026-05-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30113",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Ramirez",
+        "timestamp": "2026-04-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30114",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Lewis",
+        "timestamp": "2025-09-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30115",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Lopez",
+        "timestamp": "2026-03-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30116",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Jackson",
+        "timestamp": "2025-11-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30117",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Moore",
+        "timestamp": "2025-10-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30118",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Thomas",
+        "timestamp": "2026-05-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30119",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Matthew Ramirez",
+        "timestamp": "2025-10-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30120",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Smith",
+        "timestamp": "2025-12-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30121",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Lee",
+        "timestamp": "2026-05-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30122",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Jackson",
+        "timestamp": "2026-01-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30123",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Brown",
+        "timestamp": "2026-01-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30124",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Taylor",
+        "timestamp": "2025-12-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30125",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Rodriguez",
+        "timestamp": "2026-03-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30126",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Lopez",
+        "timestamp": "2025-08-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30127",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Thomas",
+        "timestamp": "2025-08-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30128",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Robinson",
+        "timestamp": "2026-02-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30129",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Walker",
+        "timestamp": "2026-05-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30130",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Jackson",
+        "timestamp": "2026-01-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30131",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Jones",
+        "timestamp": "2025-10-14T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30132",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Brown",
+        "timestamp": "2026-05-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30133",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Lewis",
+        "timestamp": "2025-11-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30134",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Lee",
+        "timestamp": "2025-12-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30135",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Robinson",
+        "timestamp": "2025-08-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30136",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Jones",
+        "timestamp": "2025-12-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30137",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Rodriguez",
+        "timestamp": "2025-10-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30138",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Thompson",
+        "timestamp": "2026-03-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30139",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Ramirez",
+        "timestamp": "2025-11-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30140",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Jones",
+        "timestamp": "2026-01-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30141",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Lewis",
+        "timestamp": "2025-11-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30142",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Clark",
+        "timestamp": "2026-04-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30143",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Rodriguez",
+        "timestamp": "2026-05-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30144",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Thomas",
+        "timestamp": "2026-05-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30145",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Thomas",
+        "timestamp": "2025-11-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30146",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Martin",
+        "timestamp": "2025-12-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30147",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Rodriguez",
+        "timestamp": "2026-05-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30148",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Jackson",
+        "timestamp": "2026-02-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30149",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Martinez",
+        "timestamp": "2026-05-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30150",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Hernandez",
+        "timestamp": "2026-04-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30151",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Thompson",
+        "timestamp": "2026-04-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30152",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Martinez",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30153",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Davis",
+        "timestamp": "2025-11-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30154",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Gonzalez",
+        "timestamp": "2025-11-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30155",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Hernandez",
+        "timestamp": "2026-05-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30156",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Miller",
+        "timestamp": "2025-12-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30157",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Garcia",
+        "timestamp": "2025-12-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30158",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Anderson",
+        "timestamp": "2025-11-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30159",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Matthew Garcia",
+        "timestamp": "2025-12-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30160",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Lewis",
+        "timestamp": "2026-04-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30161",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Rodriguez",
+        "timestamp": "2026-04-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30162",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Wilson",
+        "timestamp": "2026-01-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30163",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Martinez",
+        "timestamp": "2026-02-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30164",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Garcia",
+        "timestamp": "2025-09-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30165",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Williams",
+        "timestamp": "2025-10-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30166",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Perez",
+        "timestamp": "2025-11-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30167",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Jackson",
+        "timestamp": "2025-08-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30168",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Jones",
+        "timestamp": "2026-03-17T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30169",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Williams",
+        "timestamp": "2025-10-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30170",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Taylor",
+        "timestamp": "2025-08-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30171",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Ramirez",
+        "timestamp": "2025-11-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30172",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Garcia",
+        "timestamp": "2025-11-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30173",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Lewis",
+        "timestamp": "2025-11-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30174",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen White",
+        "timestamp": "2026-01-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30175",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony White",
+        "timestamp": "2026-01-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30176",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Jones",
+        "timestamp": "2025-11-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30177",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Johnson",
+        "timestamp": "2025-08-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30178",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Lopez",
+        "timestamp": "2026-01-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30179",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Martinez",
+        "timestamp": "2026-03-14T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30180",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Rodriguez",
+        "timestamp": "2026-03-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30181",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Rodriguez",
+        "timestamp": "2026-05-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30182",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Martinez",
+        "timestamp": "2026-01-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30183",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Martinez",
+        "timestamp": "2026-04-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30184",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Miller",
+        "timestamp": "2025-09-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30185",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Martinez",
+        "timestamp": "2026-05-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30186",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Lee",
+        "timestamp": "2025-11-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30187",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David White",
+        "timestamp": "2025-09-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30188",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Sanchez",
+        "timestamp": "2026-03-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30189",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Walker",
+        "timestamp": "2026-02-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30190",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Ramirez",
+        "timestamp": "2026-03-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30191",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Thomas",
+        "timestamp": "2026-02-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30192",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Thomas",
+        "timestamp": "2025-12-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30193",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Matthew Smith",
+        "timestamp": "2026-04-11T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30194",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Davis",
+        "timestamp": "2025-11-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30195",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Walker",
+        "timestamp": "2025-12-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30196",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Garcia",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30197",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Taylor",
+        "timestamp": "2026-05-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30198",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Johnson",
+        "timestamp": "2026-05-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30199",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Thompson",
+        "timestamp": "2026-05-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30200",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Clark",
+        "timestamp": "2026-01-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30201",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Harris",
+        "timestamp": "2026-04-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30202",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Robinson",
+        "timestamp": "2026-02-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30203",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Walker",
+        "timestamp": "2025-12-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30204",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Johnson",
+        "timestamp": "2026-04-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30205",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Ramirez",
+        "timestamp": "2026-05-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30206",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Rodriguez",
+        "timestamp": "2026-05-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30207",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Matthew Thompson",
+        "timestamp": "2025-11-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30208",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Thomas",
+        "timestamp": "2026-03-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30209",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Robinson",
+        "timestamp": "2026-03-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30210",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew White",
+        "timestamp": "2025-10-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30211",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Lopez",
+        "timestamp": "2025-09-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30212",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Ramirez",
+        "timestamp": "2026-03-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30213",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Taylor",
+        "timestamp": "2026-03-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30214",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Anderson",
+        "timestamp": "2025-11-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30215",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Sanchez",
+        "timestamp": "2026-05-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30216",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Ramirez",
+        "timestamp": "2025-09-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30217",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Hernandez",
+        "timestamp": "2025-10-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30218",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Clark",
+        "timestamp": "2025-09-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30219",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Clark",
+        "timestamp": "2026-04-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30220",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Jones",
+        "timestamp": "2026-04-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30221",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Thompson",
+        "timestamp": "2025-08-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30222",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Robinson",
+        "timestamp": "2026-04-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30223",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Martin",
+        "timestamp": "2026-01-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30224",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Perez",
+        "timestamp": "2026-01-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30225",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Jackson",
+        "timestamp": "2026-03-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30226",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Gonzalez",
+        "timestamp": "2025-09-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30227",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Clark",
+        "timestamp": "2026-02-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30228",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph White",
+        "timestamp": "2026-03-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30229",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Walker",
+        "timestamp": "2026-02-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30230",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Robinson",
+        "timestamp": "2025-08-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30231",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Garcia",
+        "timestamp": "2025-09-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30232",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Jackson",
+        "timestamp": "2026-04-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30233",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Johnson",
+        "timestamp": "2025-12-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30234",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Taylor",
+        "timestamp": "2025-10-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30235",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Perez",
+        "timestamp": "2026-03-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30236",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Perez",
+        "timestamp": "2026-01-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30237",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Moore",
+        "timestamp": "2026-01-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30238",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Hernandez",
+        "timestamp": "2025-09-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30239",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Clark",
+        "timestamp": "2026-03-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30240",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Williams",
+        "timestamp": "2025-10-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30241",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Lee",
+        "timestamp": "2026-02-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30242",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Thompson",
+        "timestamp": "2026-06-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30243",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Gonzalez",
+        "timestamp": "2025-09-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30244",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Martinez",
+        "timestamp": "2025-10-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30245",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Martin",
+        "timestamp": "2026-06-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30246",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Garcia",
+        "timestamp": "2026-04-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30247",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Martinez",
+        "timestamp": "2026-02-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30248",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Brown",
+        "timestamp": "2026-04-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30249",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Jones",
+        "timestamp": "2026-02-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30250",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Clark",
+        "timestamp": "2025-12-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30251",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Lee",
+        "timestamp": "2025-10-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30252",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Clark",
+        "timestamp": "2026-04-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30253",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Lewis",
+        "timestamp": "2026-02-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30254",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Perez",
+        "timestamp": "2026-04-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30255",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Walker",
+        "timestamp": "2025-09-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30256",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Robinson",
+        "timestamp": "2025-09-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30257",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Clark",
+        "timestamp": "2025-10-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30258",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Rodriguez",
+        "timestamp": "2025-09-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30259",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Taylor",
+        "timestamp": "2025-09-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30260",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Lopez",
+        "timestamp": "2026-03-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30261",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Miller",
+        "timestamp": "2026-02-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30262",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Lewis",
+        "timestamp": "2026-05-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30263",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Walker",
+        "timestamp": "2026-03-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30264",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Martin",
+        "timestamp": "2025-10-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30265",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Brown",
+        "timestamp": "2026-03-14T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30266",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Johnson",
+        "timestamp": "2025-09-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30267",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Taylor",
+        "timestamp": "2025-09-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30268",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Brown",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30269",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Rodriguez",
+        "timestamp": "2025-10-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30270",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Wilson",
+        "timestamp": "2025-08-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30271",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Perez",
+        "timestamp": "2025-11-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30272",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Thomas",
+        "timestamp": "2025-11-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30273",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Anderson",
+        "timestamp": "2025-08-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30274",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Gonzalez",
+        "timestamp": "2026-04-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30275",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Lopez",
+        "timestamp": "2026-04-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30276",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Anderson",
+        "timestamp": "2025-11-25T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30277",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Davis",
+        "timestamp": "2026-01-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30278",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Taylor",
+        "timestamp": "2026-04-22T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30279",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Walker",
+        "timestamp": "2026-04-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30280",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Taylor",
+        "timestamp": "2025-08-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30281",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Harris",
+        "timestamp": "2025-09-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30282",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Gonzalez",
+        "timestamp": "2025-10-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30283",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Davis",
+        "timestamp": "2026-02-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30284",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Lewis",
+        "timestamp": "2025-12-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30285",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Miller",
+        "timestamp": "2026-03-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30286",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Walker",
+        "timestamp": "2026-03-13T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30287",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Gonzalez",
+        "timestamp": "2025-12-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30288",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Lopez",
+        "timestamp": "2026-03-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30289",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Perez",
+        "timestamp": "2025-10-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30290",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Rodriguez",
+        "timestamp": "2026-04-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30291",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Ramirez",
+        "timestamp": "2025-11-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30292",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Moore",
+        "timestamp": "2026-03-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30293",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Thomas",
+        "timestamp": "2026-02-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30294",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Gonzalez",
+        "timestamp": "2025-09-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30295",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Lopez",
+        "timestamp": "2026-05-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30296",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Jackson",
+        "timestamp": "2026-01-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30297",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Martinez",
+        "timestamp": "2026-03-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30298",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Davis",
+        "timestamp": "2026-03-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30299",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Walker",
+        "timestamp": "2026-01-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30300",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Garcia",
+        "timestamp": "2026-02-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30301",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Rodriguez",
+        "timestamp": "2026-05-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30302",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Taylor",
+        "timestamp": "2025-11-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30303",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Moore",
+        "timestamp": "2026-05-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30304",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Robinson",
+        "timestamp": "2026-03-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30305",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Smith",
+        "timestamp": "2026-02-03T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30306",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Harris",
+        "timestamp": "2025-12-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30307",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Davis",
+        "timestamp": "2026-01-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30308",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Martinez",
+        "timestamp": "2025-11-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30309",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Lee",
+        "timestamp": "2026-01-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30310",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Smith",
+        "timestamp": "2026-01-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30311",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Smith",
+        "timestamp": "2026-01-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30312",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Williams",
+        "timestamp": "2025-11-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30313",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Lewis",
+        "timestamp": "2026-05-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30314",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Miller",
+        "timestamp": "2026-05-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30315",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Taylor",
+        "timestamp": "2025-09-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30316",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Hernandez",
+        "timestamp": "2026-01-02T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30317",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Jones",
+        "timestamp": "2026-04-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30318",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Thompson",
+        "timestamp": "2026-01-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30319",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Thompson",
+        "timestamp": "2026-04-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30320",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Miller",
+        "timestamp": "2026-01-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30321",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Taylor",
+        "timestamp": "2025-12-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30322",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Martin",
+        "timestamp": "2026-01-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30323",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Jones",
+        "timestamp": "2025-12-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30324",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Miller",
+        "timestamp": "2025-11-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30325",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Rodriguez",
+        "timestamp": "2026-04-09T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30326",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Lopez",
+        "timestamp": "2026-04-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30327",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Williams",
+        "timestamp": "2025-11-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30328",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Jackson",
+        "timestamp": "2026-04-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30329",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Lewis",
+        "timestamp": "2025-09-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30330",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Lewis",
+        "timestamp": "2025-09-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30331",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Moore",
+        "timestamp": "2025-12-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30332",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Martin",
+        "timestamp": "2026-01-29T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30333",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Robinson",
+        "timestamp": "2025-12-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30334",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Rodriguez",
+        "timestamp": "2025-08-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30335",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Robinson",
+        "timestamp": "2026-01-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30336",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert White",
+        "timestamp": "2025-12-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30337",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Ramirez",
+        "timestamp": "2026-04-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30338",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Hernandez",
+        "timestamp": "2025-11-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30339",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Williams",
+        "timestamp": "2026-03-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30340",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Gonzalez",
+        "timestamp": "2025-11-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30341",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Thomas",
+        "timestamp": "2025-09-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30342",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Hernandez",
+        "timestamp": "2026-03-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30343",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Lopez",
+        "timestamp": "2026-04-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30344",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Robinson",
+        "timestamp": "2025-12-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30345",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Walker",
+        "timestamp": "2025-11-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30346",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Hernandez",
+        "timestamp": "2026-01-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30347",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Thompson",
+        "timestamp": "2026-02-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30348",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Miller",
+        "timestamp": "2025-12-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30349",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Ramirez",
+        "timestamp": "2026-05-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30350",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Williams",
+        "timestamp": "2025-11-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30351",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Hernandez",
+        "timestamp": "2025-10-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30352",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Sanchez",
+        "timestamp": "2026-05-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30353",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Perez",
+        "timestamp": "2025-11-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30354",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Wilson",
+        "timestamp": "2025-09-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30355",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Martinez",
+        "timestamp": "2025-10-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30356",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Moore",
+        "timestamp": "2026-04-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30357",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Martinez",
+        "timestamp": "2026-03-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30358",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Martin",
+        "timestamp": "2026-03-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30359",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Taylor",
+        "timestamp": "2026-02-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30360",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Davis",
+        "timestamp": "2025-11-23T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30361",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Ramirez",
+        "timestamp": "2026-01-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30362",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Gonzalez",
+        "timestamp": "2025-10-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30363",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Clark",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30364",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Miller",
+        "timestamp": "2025-09-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30365",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Lewis",
+        "timestamp": "2026-01-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30366",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Smith",
+        "timestamp": "2026-04-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30367",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Lee",
+        "timestamp": "2025-10-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30368",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Harris",
+        "timestamp": "2025-11-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30369",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Martinez",
+        "timestamp": "2025-08-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30370",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Smith",
+        "timestamp": "2026-01-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30371",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Anderson",
+        "timestamp": "2025-08-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30372",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Johnson",
+        "timestamp": "2026-06-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30373",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Robinson",
+        "timestamp": "2025-12-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30374",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Sanchez",
+        "timestamp": "2025-11-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30375",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Harris",
+        "timestamp": "2025-11-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30376",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Taylor",
+        "timestamp": "2026-05-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30377",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Wilson",
+        "timestamp": "2026-05-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30378",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Taylor",
+        "timestamp": "2026-02-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30379",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Smith",
+        "timestamp": "2025-09-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30380",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Sanchez",
+        "timestamp": "2026-03-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30381",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Hernandez",
+        "timestamp": "2026-02-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30382",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Robinson",
+        "timestamp": "2025-12-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30383",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Robinson",
+        "timestamp": "2026-05-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30384",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Jackson",
+        "timestamp": "2026-01-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30385",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Jackson",
+        "timestamp": "2026-04-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30386",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Thomas",
+        "timestamp": "2026-04-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30387",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Harris",
+        "timestamp": "2025-10-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30388",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Robinson",
+        "timestamp": "2025-10-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30389",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan White",
+        "timestamp": "2025-12-31T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30390",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Lewis",
+        "timestamp": "2025-09-06T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30391",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Martinez",
+        "timestamp": "2025-12-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30392",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Moore",
+        "timestamp": "2025-10-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30393",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Davis",
+        "timestamp": "2025-09-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30394",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Gonzalez",
+        "timestamp": "2025-12-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30395",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Clark",
+        "timestamp": "2025-11-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30396",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Perez",
+        "timestamp": "2026-05-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30397",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Garcia",
+        "timestamp": "2025-10-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30398",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Anderson",
+        "timestamp": "2025-12-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30399",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Moore",
+        "timestamp": "2025-12-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30400",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Garcia",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30401",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Thompson",
+        "timestamp": "2026-05-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30402",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Garcia",
+        "timestamp": "2025-08-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30403",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Miller",
+        "timestamp": "2026-05-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30404",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Jackson",
+        "timestamp": "2026-06-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30405",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Jackson",
+        "timestamp": "2025-12-26T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30406",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Thompson",
+        "timestamp": "2025-11-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30407",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Lee",
+        "timestamp": "2026-04-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30408",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Moore",
+        "timestamp": "2025-11-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30409",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Jones",
+        "timestamp": "2025-10-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30410",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Martin",
+        "timestamp": "2025-10-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30411",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Martin",
+        "timestamp": "2025-11-09T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30412",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Thompson",
+        "timestamp": "2026-02-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30413",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Lewis",
+        "timestamp": "2025-09-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30414",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Harris",
+        "timestamp": "2025-10-01T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30415",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Garcia",
+        "timestamp": "2025-09-23T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30416",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Perez",
+        "timestamp": "2025-08-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30417",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Rodriguez",
+        "timestamp": "2026-01-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30418",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Sanchez",
+        "timestamp": "2026-05-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30419",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Clark",
+        "timestamp": "2026-03-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30420",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Lee",
+        "timestamp": "2025-11-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30421",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Gonzalez",
+        "timestamp": "2026-05-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30422",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Matthew Perez",
+        "timestamp": "2025-10-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30423",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Rodriguez",
+        "timestamp": "2026-05-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30424",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Perez",
+        "timestamp": "2026-02-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30425",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Taylor",
+        "timestamp": "2026-01-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30426",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Williams",
+        "timestamp": "2025-12-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30427",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Lewis",
+        "timestamp": "2026-03-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30428",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Rodriguez",
+        "timestamp": "2026-01-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30429",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Anderson",
+        "timestamp": "2026-01-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30430",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Martin",
+        "timestamp": "2025-11-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30431",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Smith",
+        "timestamp": "2026-01-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30432",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Jackson",
+        "timestamp": "2026-05-29T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30433",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Matthew Walker",
+        "timestamp": "2025-10-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30434",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Johnson",
+        "timestamp": "2026-04-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30435",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Garcia",
+        "timestamp": "2025-12-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30436",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark White",
+        "timestamp": "2026-03-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30437",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Lee",
+        "timestamp": "2026-02-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30438",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Brown",
+        "timestamp": "2025-10-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30439",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Lee",
+        "timestamp": "2025-10-23T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30440",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Garcia",
+        "timestamp": "2026-01-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30441",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Sanchez",
+        "timestamp": "2026-04-07T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30442",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Garcia",
+        "timestamp": "2025-12-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30443",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Davis",
+        "timestamp": "2026-01-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30444",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Smith",
+        "timestamp": "2026-03-24T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30445",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Taylor",
+        "timestamp": "2026-01-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30446",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Lopez",
+        "timestamp": "2026-03-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30447",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Davis",
+        "timestamp": "2026-02-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30448",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Perez",
+        "timestamp": "2026-01-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30449",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Brown",
+        "timestamp": "2025-12-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30450",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica White",
+        "timestamp": "2026-03-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30451",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Brown",
+        "timestamp": "2025-12-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30452",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Lewis",
+        "timestamp": "2026-02-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30453",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Rodriguez",
+        "timestamp": "2025-10-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30454",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Garcia",
+        "timestamp": "2026-05-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30455",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Wilson",
+        "timestamp": "2026-01-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30456",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Davis",
+        "timestamp": "2026-02-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30457",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald White",
+        "timestamp": "2026-02-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30458",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Moore",
+        "timestamp": "2025-11-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30459",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Garcia",
+        "timestamp": "2026-02-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30460",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Thompson",
+        "timestamp": "2026-05-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30461",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Jackson",
+        "timestamp": "2025-11-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30462",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Anderson",
+        "timestamp": "2025-12-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30463",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Hernandez",
+        "timestamp": "2025-11-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30464",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Taylor",
+        "timestamp": "2025-10-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30465",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Thomas",
+        "timestamp": "2026-05-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30466",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Gonzalez",
+        "timestamp": "2026-01-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30467",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Taylor",
+        "timestamp": "2026-04-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30468",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark White",
+        "timestamp": "2026-01-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30469",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Jackson",
+        "timestamp": "2026-02-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30470",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Lewis",
+        "timestamp": "2025-10-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30471",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Anderson",
+        "timestamp": "2026-01-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30472",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Johnson",
+        "timestamp": "2025-09-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30473",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Lopez",
+        "timestamp": "2026-04-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30474",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Walker",
+        "timestamp": "2025-08-30T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30475",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Perez",
+        "timestamp": "2026-03-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30476",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Martinez",
+        "timestamp": "2025-10-24T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30477",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Taylor",
+        "timestamp": "2025-10-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30478",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Thomas",
+        "timestamp": "2026-02-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30479",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Martinez",
+        "timestamp": "2026-05-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30480",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Sanchez",
+        "timestamp": "2025-10-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30481",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Ramirez",
+        "timestamp": "2025-11-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30482",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Garcia",
+        "timestamp": "2026-05-13T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30483",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Clark",
+        "timestamp": "2026-03-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30484",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Rodriguez",
+        "timestamp": "2026-01-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30485",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Thomas",
+        "timestamp": "2026-04-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30486",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Lopez",
+        "timestamp": "2025-12-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30487",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Lopez",
+        "timestamp": "2026-05-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30488",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Lee",
+        "timestamp": "2025-12-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30489",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Rodriguez",
+        "timestamp": "2026-02-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30490",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Lopez",
+        "timestamp": "2026-04-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30491",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Emily Martin",
+        "timestamp": "2025-12-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30492",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Clark",
+        "timestamp": "2025-09-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30493",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Harris",
+        "timestamp": "2025-10-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30494",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Martinez",
+        "timestamp": "2025-12-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30495",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Johnson",
+        "timestamp": "2026-05-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30496",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen Perez",
+        "timestamp": "2025-09-26T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30497",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Williams",
+        "timestamp": "2026-04-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30498",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Clark",
+        "timestamp": "2025-12-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30499",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Robinson",
+        "timestamp": "2025-09-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30500",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Clark",
+        "timestamp": "2025-10-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30501",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Brown",
+        "timestamp": "2025-10-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30502",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Gonzalez",
+        "timestamp": "2025-12-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30503",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Walker",
+        "timestamp": "2025-10-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30504",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Jones",
+        "timestamp": "2026-06-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30505",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Brown",
+        "timestamp": "2026-03-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30506",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Walker",
+        "timestamp": "2025-09-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30507",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Thomas",
+        "timestamp": "2025-09-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cleveland. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30508",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Gonzalez",
+        "timestamp": "2026-05-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30509",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Sanchez",
+        "timestamp": "2026-03-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30510",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Wilson",
+        "timestamp": "2025-10-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30511",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Garcia",
+        "timestamp": "2025-11-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30512",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Perez",
+        "timestamp": "2026-03-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30513",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Thomas",
+        "timestamp": "2025-09-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30514",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Lisa Lopez",
+        "timestamp": "2025-12-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30515",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Johnson",
+        "timestamp": "2026-05-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30516",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Smith",
+        "timestamp": "2026-02-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30517",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Smith",
+        "timestamp": "2025-10-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30518",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Thomas",
+        "timestamp": "2025-08-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30519",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Miller",
+        "timestamp": "2026-03-23T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30520",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donna Brown",
+        "timestamp": "2026-01-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30521",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Lee",
+        "timestamp": "2026-05-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30522",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Thomas Martin",
+        "timestamp": "2026-01-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30523",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Rodriguez",
+        "timestamp": "2026-02-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30524",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Jones",
+        "timestamp": "2025-11-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30525",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Lee",
+        "timestamp": "2025-10-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30526",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sandra Thomas",
+        "timestamp": "2025-11-09T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30527",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Sarah Perez",
+        "timestamp": "2025-10-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30528",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Lewis",
+        "timestamp": "2025-09-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30529",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Robinson",
+        "timestamp": "2026-04-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30530",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Hernandez",
+        "timestamp": "2025-09-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30531",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Wilson",
+        "timestamp": "2026-02-10T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30532",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Perez",
+        "timestamp": "2025-10-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30533",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Clark",
+        "timestamp": "2026-03-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30534",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Ramirez",
+        "timestamp": "2026-02-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30535",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Martinez",
+        "timestamp": "2025-11-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30536",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Thomas",
+        "timestamp": "2025-10-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Columbus. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30537",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Anthony Martin",
+        "timestamp": "2025-10-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30538",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Smith",
+        "timestamp": "2025-12-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30539",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Perez",
+        "timestamp": "2026-01-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30540",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Sanchez",
+        "timestamp": "2025-10-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30541",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Robinson",
+        "timestamp": "2025-11-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30542",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Martin",
+        "timestamp": "2026-04-27T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30543",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Harris",
+        "timestamp": "2025-11-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30544",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Gonzalez",
+        "timestamp": "2025-09-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30545",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Smith",
+        "timestamp": "2026-02-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30546",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jennifer Smith",
+        "timestamp": "2026-02-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30547",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michael Moore",
+        "timestamp": "2025-11-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30548",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Gonzalez",
+        "timestamp": "2026-02-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30549",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Taylor",
+        "timestamp": "2025-11-24T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30550",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Johnson",
+        "timestamp": "2025-10-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30551",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Hernandez",
+        "timestamp": "2026-01-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30552",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Patricia Miller",
+        "timestamp": "2026-01-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30553",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Johnson",
+        "timestamp": "2026-02-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30554",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Susan Ramirez",
+        "timestamp": "2025-10-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30555",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Garcia",
+        "timestamp": "2025-09-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Des Moines. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30556",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Lopez",
+        "timestamp": "2026-02-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30557",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua Perez",
+        "timestamp": "2025-12-18T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30558",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Christopher Sanchez",
+        "timestamp": "2025-10-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30559",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Betty Williams",
+        "timestamp": "2025-09-09T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30560",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Ashley Sanchez",
+        "timestamp": "2026-03-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Cincinnati. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30561",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Lewis",
+        "timestamp": "2026-04-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30562",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Lee",
+        "timestamp": "2025-09-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30563",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Williams",
+        "timestamp": "2025-09-18T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30564",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Margaret Martinez",
+        "timestamp": "2026-05-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Chicago. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30565",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Clark",
+        "timestamp": "2026-04-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30566",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Williams",
+        "timestamp": "2026-05-03T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30567",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Barbara Miller",
+        "timestamp": "2026-01-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30568",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William Lee",
+        "timestamp": "2026-04-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30569",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Jones",
+        "timestamp": "2025-09-30T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30570",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Jessica Wilson",
+        "timestamp": "2026-05-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30571",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mary Brown",
+        "timestamp": "2026-02-22T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30572",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Jackson",
+        "timestamp": "2025-10-28T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Des Moines. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30573",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joshua White",
+        "timestamp": "2026-05-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30574",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Smith",
+        "timestamp": "2026-05-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Indianapolis. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30575",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Walker",
+        "timestamp": "2025-08-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30576",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Taylor",
+        "timestamp": "2025-10-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30577",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Donald Sanchez",
+        "timestamp": "2025-10-05T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30578",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Richard Garcia",
+        "timestamp": "2026-02-20T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30579",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Daniel Lewis",
+        "timestamp": "2025-11-12T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30580",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Davis",
+        "timestamp": "2026-03-16T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Detroit. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30581",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Ramirez",
+        "timestamp": "2025-09-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30582",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Michelle Martin",
+        "timestamp": "2026-04-06T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Louisville. Documents attached: 4."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30583",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster William White",
+        "timestamp": "2025-08-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30584",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Clark",
+        "timestamp": "2025-09-26T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30585",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Charles Taylor",
+        "timestamp": "2025-10-29T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30586",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Joseph Jones",
+        "timestamp": "2025-12-02T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cincinnati. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30587",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster James Thompson",
+        "timestamp": "2025-11-14T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Columbus. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30588",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Robert Perez",
+        "timestamp": "2026-04-25T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30589",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Karen White",
+        "timestamp": "2025-08-08T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Pittsburgh. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30590",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Paul Martin",
+        "timestamp": "2026-06-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Pittsburgh. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30591",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Nancy Gonzalez",
+        "timestamp": "2025-12-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30592",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Kimberly Hernandez",
+        "timestamp": "2025-09-21T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Milwaukee. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30593",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Steven Brown",
+        "timestamp": "2026-05-17T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HEALTH incident in Indianapolis. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30594",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew White",
+        "timestamp": "2026-02-01T14:30:00Z",
+        "severity_tag": "SUSPICIOUS",
+        "text": "Intake record logged for HEALTH incident in Cleveland. Documents attached: 1."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30595",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Andrew Perez",
+        "timestamp": "2026-02-15T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30596",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Elizabeth Thompson",
+        "timestamp": "2025-09-11T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Detroit. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30597",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster John Lopez",
+        "timestamp": "2026-04-19T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for AUTO incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30598",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Mark Thompson",
+        "timestamp": "2025-08-31T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Des Moines. Documents attached: 3."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30599",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster David Walker",
+        "timestamp": "2025-11-01T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Louisville. Documents attached: 2."
+      }
+    ]
+  },
+  {
+    "claim_id": "CLM-30600",
+    "notes": [
+      {
+        "note_id": 1,
+        "author": "Adjuster Linda Martin",
+        "timestamp": "2026-04-04T14:30:00Z",
+        "severity_tag": "NORMAL",
+        "text": "Intake record logged for HOME incident in Cincinnati. Documents attached: 1."
+      }
+    ]
+  }
+]

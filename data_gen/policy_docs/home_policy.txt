@@ -1,0 +1,26 @@
+================================================================================
+CLAIMSENSE RESIDENTIAL HOMEOWNER INSURANCE POLICY (MASTER CONTRACT)
+================================================================================
+Policy Type: HOME
+Version: 2026.1
+
+[SECTION 1: COVERAGE & INCLUSIONS]
+[HOME-COV-01] Structural Property Protection: Covers direct physical structural loss or destruction to the residential premises resulting from fire, explosion, lightning, storm, tempest, or impact damage from aircraft.
+[HOME-COV-02] Contents Burglary & Theft: Covers personal household goods and appliances inside the private dwelling against forced, violent entry burglary and robbery.
+[HOME-COV-03] Alternative Accommodation Expense: Provides reasonable emergency living costs if the dwelling is rendered uninhabitable following an insured covered peril.
+
+[SECTION 2: EXCLUSIONS]
+[HOME-EXC-01] Wear, Tear & Gradual Settling: Damage caused by normal age depreciation, dampness, termites, fungus, rust, or gradual soil settling/subsidence is strictly excluded.
+[HOME-EXC-02] Extended Vacancy: If the insured premises remain unoccupied or vacant for more than 60 consecutive days without prior written insurer approval, theft and water escape coverages are voided.
+[HOME-EXC-03] Intentional Acts & Arson: Any loss caused directly or indirectly through arson or wilful neglect by the homeowner or resident family members is excluded.
+
+[SECTION 3: LIMITS & DEDUCTIBLES]
+[HOME-LIM-01] Total Indemnity Ceiling: Total recovery across structure and contents shall not surpass the declared policy Sum Insured.
+[HOME-LIM-02] Property Deductible: A mandatory deductible of $1,000 applies to each structural hazard claim.
+
+[SECTION 4: NOTIFICATION TIMELINES]
+[HOME-TIME-01] 7-Day Window: Property damages must be reported to the claims desk within 7 calendar days from the occurrence date.
+[HOME-TIME-02] Active Period Condition: Damage occurring outside the policy effective term cannot be indemnified.
+
+[SECTION 5: REQUIRED DOCUMENTATION]
+[HOME-DOC-01] Evidence Requirements: The claimant must supply at least two (2) verified documents: (1) Local Fire Brigade Report (for fire losses) or Police FIR (for burglary), and (2) Certified contractor structural estimate or proof of purchase valuation.

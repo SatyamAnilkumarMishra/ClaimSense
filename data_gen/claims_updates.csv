@@ -1,0 +1,41 @@
+claim_id,policy_id,claim_type,incident_date,reported_date,claimed_amount,status,description,documents_count,city
+CLM-30001,POL-20036,AUTO,2026-01-26,2026-02-11,1006.27,APPROVED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,3,Louisville
+CLM-30002,POL-20080,AUTO,2025-11-05,2025-11-21,25460.64,APPROVED,Rear-ended at traffic signal during morning rush hour.,4,Des Moines
+CLM-30003,POL-20120,HOME,,2025-09-17,46696.12,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,2,Cincinnati
+CLM-30004,POL-20040,HEALTH,2025-12-23,2025-12-29,3881.96,SETTLED,Treatment for fractured clavicle and overnight observation following bicycle fall.,2,Detroit
+CLM-30005,POL-20142,HEALTH,2025-06-21,2026-01-12,68439.68,APPROVED,Emergency medical admission for acute kidney stone removal.,1,Milwaukee
+CLM-30006,POL-20044,AUTO,2025-12-06,2025-12-25,3838.81,SETTLED,Rear-ended at traffic signal during morning rush hour.,1,Cleveland
+CLM-30007,POL-20147,AUTO,2025-10-26,2025-11-15,6980.16,SETTLED,Struck deer on state highway causing heavy front bumper and radiator damage.,4,Milwaukee
+CLM-30008,POL-20104,HOME,2025-12-26,2026-01-10,34101.36,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Cincinnati
+CLM-30009,POL-20037,HOME,2025-12-18,2025-12-29,263614.92,SETTLED,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,3,Pittsburgh
+CLM-30010,POL-20012,HOME,2025-02-24,2026-05-13,31069.44,APPROVED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Chicago
+CLM-30011,POL-20012,HOME,2026-05-10,2026-05-11,12434.02,APPROVED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,4,Des Moines
+CLM-30012,POL-20012,HOME,2026-05-08,2026-05-09,39424.99,SETTLED,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,3,Indianapolis
+CLM-30013,POL-20012,HOME,2026-05-06,2026-05-07,56129.07,APPROVED,Severe tree branch collapse through residential roof during thunder windstorm.,3,Louisville
+CLM-30014,POL-20118,HOME,2026-01-24,2026-01-31,214586.84,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,1,Columbus
+CLM-30015,POL-20121,AUTO,2026-01-01,2026-01-19,3595.5,SETTLED,Vehicle side-swiped while legally parked on curbside overnight.,1,Pittsburgh
+CLM-30016,POL-20012,HOME,2025-11-03,2025-11-05,63102.46,SETTLED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,2,Detroit
+CLM-30017,POL-20141,HOME,2026-01-04,2026-01-24,123064.78,SETTLED,Severe tree branch collapse through residential roof during thunder windstorm.,1,Cincinnati
+CLM-30018,POL-20143,HEALTH,2025-11-21,2025-11-26,17938.76,APPROVED,Emergency appendectomy performed following severe abdominal symptoms.,4,Milwaukee
+CLM-30019,POL-20122,HOME,2025-09-04,2025-09-19,36702.86,SETTLED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,2,Detroit
+CLM-30020,POL-20077,HOME,2025-12-06,2025-12-23,88258.22,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,4,Des Moines
+CLM-30021,POL-20029,HOME,2025-10-26,2025-11-14,62497.65,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Des Moines
+CLM-30022,POL-20014,HEALTH,2025-09-24,2025-09-30,39075.1,APPROVED,Emergency medical admission for acute kidney stone removal.,4,Cincinnati
+CLM-30023,POL-20029,HOME,2026-02-19,2026-02-20,84168.77,APPROVED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,4,Cincinnati
+CLM-30024,POL-20121,AUTO,2026-04-26,2026-05-01,25164.37,SETTLED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,3,Louisville
+CLM-30025,POL-20137,HOME,2025-12-03,2025-12-21,140143.27,APPROVED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,3,Des Moines
+CLM-30026,POL-20058,HOME,2025-12-26,2026-01-05,254092.8,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,4,Detroit
+CLM-30027,POL-20071,AUTO,2025-12-31,2026-01-04,6341.4,APPROVED,Struck deer on state highway causing heavy front bumper and radiator damage.,4,Pittsburgh
+CLM-30028,POL-20021,AUTO,2025-12-01,2025-12-16,23819.09,SETTLED,Vehicle side-swiped while legally parked on curbside overnight.,4,Indianapolis
+CLM-30029,POL-20070,HEALTH,2026-03-18,2026-03-22,22509.5,SETTLED,Emergency appendectomy performed following severe abdominal symptoms.,2,Indianapolis
+CLM-30030,POL-20026,AUTO,2025-10-28,2025-11-08,18069.9,SETTLED,Rear-ended at traffic signal during morning rush hour.,1,Cincinnati
+CLM-30031,POL-20122,HOME,2025-09-25,2025-10-02,135335.55,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,3,Detroit
+CLM-30032,POL-20137,HOME,2025-07-25,2026-05-14,160812.62,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,2,Columbus
+CLM-30033,POL-20075,HOME,2026-05-08,2026-05-09,85384.23,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,1,Detroit
+CLM-30034,POL-20035,AUTO,2025-09-11,2025-09-26,11367.21,SETTLED,Vehicle side-swiped while legally parked on curbside overnight.,1,Detroit
+CLM-30035,POL-20087,AUTO,2025-12-27,2026-01-15,12209.02,SETTLED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,2,Cincinnati
+CLM-30036,POL-20103,HEALTH,2026-04-09,2026-04-15,103214.31,APPROVED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,4,Detroit
+CLM-30037,POL-20069,HEALTH,2025-12-10,2025-12-20,32144.96,SETTLED,Emergency medical admission for acute kidney stone removal.,1,Chicago
+CLM-30038,POL-20120,HOME,2025-12-21,2025-12-27,109732.28,SETTLED,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Cleveland
+CLM-30039,POL-20035,AUTO,2025-09-25,2025-09-30,17286.81,SETTLED,Single-car collision with guardrail after unexpected black ice spin.,3,Pittsburgh
+CLM-30040,POL-20056,HEALTH,2026-01-21,2026-02-10,46315.33,SETTLED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,1,Milwaukee

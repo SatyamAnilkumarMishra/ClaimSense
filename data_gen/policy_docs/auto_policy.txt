@@ -1,0 +1,26 @@
+================================================================================
+CLAIMSENSE STANDARD AUTO INSURANCE POLICY (MASTER CONTRACT)
+================================================================================
+Policy Type: AUTO
+Version: 2026.1
+
+[SECTION 1: COVERAGE & INCLUSIONS]
+[AUTO-COV-01] Collision Coverage: The insurer covers direct physical loss or damage to the insured vehicle caused by accidental collision with another vehicle or stationary object, up to the declared Sum Insured less applicable deductible.
+[AUTO-COV-02] Comprehensive Coverage: The insurer indemnifies against vehicle loss arising from fire, vandalism, theft, falling objects, windstorm, earthquake, or flooding.
+[AUTO-COV-03] Third-Party Liability: Protection against legal liability for property damage or bodily injury caused to third parties during authorized vehicle operation.
+
+[SECTION 2: EXCLUSIONS]
+[AUTO-EXC-01] Driving Under Influence: No claim will be payable if the vehicle was operated by an individual under the influence of alcohol, narcotics, or non-prescribed controlled substances at the time of the incident.
+[AUTO-EXC-02] Commercial and Rideshare Exclusion: Excludes losses occurring while the personal vehicle is utilized for commercial passenger transport, ridesharing services, or parcel delivery without explicit commercial endorsement.
+[AUTO-EXC-03] Intentional or Staged Damage: Excludes any damage intentionally caused or staged by the insured or authorized drivers.
+
+[SECTION 3: LIMITS & DEDUCTIBLES]
+[AUTO-LIM-01] Maximum Indemnity: In no circumstance shall total settlement exceed the declared Sum Insured specified in the Policy Schedule.
+[AUTO-LIM-02] Deductible Application: The standard deductible ($500 to $1,000 depending on tier) applies to each distinct incident claim and is deducted from the approved settlement.
+
+[SECTION 4: REPORTING PERIOD & WAITING TIME]
+[AUTO-TIME-01] Timely Notification: All claims must be reported within 14 calendar days from the date of the incident. Late reporting without documented extenuating circumstances is subject to review or denial.
+[AUTO-TIME-02] Inactive Policy Period: Losses occurring prior to the Policy Start Date or after the Policy Expiry Date are strictly outside coverage.
+
+[SECTION 5: REQUIRED DOCUMENTATION]
+[AUTO-DOC-01] Minimum Documentation: A valid claim requires at least two (2) verified documents: (1) Official Police Report or First Information Report (FIR) for collisions or theft, and (2) Certified Repair Estimate or Final Itemized Bill.

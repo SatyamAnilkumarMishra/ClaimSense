@@ -1,0 +1,26 @@
+================================================================================
+CLAIMSENSE COMPREHENSIVE HEALTH INSURANCE POLICY (MASTER CONTRACT)
+================================================================================
+Policy Type: HEALTH
+Version: 2026.1
+
+[SECTION 1: COVERAGE & INCLUSIONS]
+[HLTH-COV-01] Inpatient Hospitalization: Covers medical expenses for room nursing, boarding, surgeon fees, and anesthesia for hospitalized treatment exceeding a minimum of 24 continuous hours.
+[HLTH-COV-02] Day Care Procedures: Covers specialized medical procedures and surgeries (such as dialysis, cataract, or chemotherapy) requiring less than 24 hours of hospitalization due to modern technological advancements.
+[HLTH-COV-03] Pre and Post Hospitalization: Reimburses relevant medical expenses incurred 30 days prior to admission and 60 days post discharge.
+
+[SECTION 2: EXCLUSIONS]
+[HLTH-EXC-01] Pre-Existing Conditions Waiting Period: Any medical illness or condition diagnosed within 36 months prior to policy issuance is subject to a 24-month continuous coverage waiting period.
+[HLTH-EXC-02] Cosmetic & Elective Procedures: Dental cosmetic work, plastic surgery, obesity treatments, and elective aesthetic enhancements are entirely excluded unless medically necessary following trauma.
+[HLTH-EXC-03] Substance Abuse Rehabilitation: Hospitalization or medical consultation for chronic alcohol detox or illicit substance abuse is excluded.
+
+[SECTION 3: LIMITS & DEDUCTIBLES]
+[HLTH-LIM-01] Maximum Sum Insured: Total cumulative reimbursements within a policy year cannot exceed the declared Sum Insured on the member policy schedule.
+[HLTH-LIM-02] Room Rent Cap: Daily hospital room charges are capped at 1% of the Sum Insured per day; ICU charges capped at 2% of the Sum Insured per day.
+
+[SECTION 4: TIMELINES & NOTIFICATIONS]
+[HLTH-TIME-01] Emergency Notification: In cases of unplanned emergency hospitalization, the insurer or TPA must be notified within 48 hours of admission.
+[HLTH-TIME-02] Policy Inactivity: Medical events occurring before policy inception or after policy termination are excluded.
+
+[SECTION 5: REQUIRED DOCUMENTATION]
+[HLTH-DOC-01] Mandatory Proofs: Every claim file must contain at least three (3) documents: (1) Hospital Final Discharge Summary signed by attending physician, (2) Detailed Itemized Hospital Bill, and (3) Pharmacy diagnostic and payment receipts.

@@ -1,0 +1,101 @@
+customer_id,first_name,last_name,email,phone,city,state,risk_score,created_at
+CUST-10001,Linda,Smith,linda.smith45@example.com,+1-450-428-3286,Cleveland,OH,0.36,2025-08-16
+CUST-10002,Donna,Wilson,donna.wilson14@example.com,+1-230-295-4582,Indianapolis,IN,0.06,2025-04-24
+CUST-10003,Paul,Wilson,paul.wilson38@example.com,+1-659-803-5557,Columbus,OH,0.11,2024-09-07
+CUST-10004,Nancy,Rodriguez,nancy.rodriguez29@example.com,+1-420-981-6514,Cleveland,OH,0.63,2024-11-26
+CUST-10005,Joshua,Rodriguez,joshua.rodriguez15@example.com,+1-947-670-9785,Cleveland,OH,0.18,2024-04-27
+CUST-10006,Charles,Clark,charles.clark90@example.com,+1-833-570-4150,Cleveland,OH,0.68,2025-01-21
+CUST-10007,Jennifer,Ramirez,jennifer.ramirez39@example.com,+1-303-589-5554,Louisville,KY,0.18,2024-10-30
+CUST-10008,Daniel,Miller,daniel.miller95@example.com,+1-473-918-2169,Des Moines,IA,0.24,2025-03-08
+CUST-10009,William,Anderson,william.anderson58@example.com,+1-476-855-4598,Detroit,MI,0.32,2025-03-24
+CUST-10010,Robert,Sanchez,robert.sanchez50@example.com,+1-610-474-2084,Indianapolis,IN,0.25,2024-12-26
+CUST-10011,Susan,Lee,susan.lee73@example.com,+1-605-858-8517,Cincinnati,OH,0.14,2024-04-18
+CUST-10012,Paul,Rodriguez,paul.rodriguez84@example.com,+1-638-797-7543,Detroit,MI,0.4,2024-06-10
+CUST-10013,Ashley,Williams,ashley.williams16@example.com,+1-312-356-3621,Pittsburgh,PA,0.18,2024-03-13
+CUST-10014,Sandra,Taylor,sandra.taylor42@example.com,+1-766-211-2876,Milwaukee,WI,0.32,2024-11-30
+CUST-10015,Linda,Martinez,linda.martinez65@example.com,+1-361-664-1053,Chicago,IL,0.32,2024-06-12
+CUST-10016,Michael,Ramirez,michael.ramirez90@example.com,+1-505-854-9317,Des Moines,IA,0.18,2025-06-01
+CUST-10017,Paul,Walker,paul.walker77@example.com,+1-200-813-6310,Louisville,KY,0.93,2025-01-03
+CUST-10018,Jessica,Johnson,jessica.johnson40@example.com,+1-780-280-2403,Louisville,KY,0.39,2024-05-17
+CUST-10019,David,Jones,david.jones94@example.com,+1-686-762-3705,Chicago,IL,0.26,2025-04-11
+CUST-10020,Paul,Harris,paul.harris98@example.com,+1-405-930-6107,Pittsburgh,PA,0.28,2024-08-22
+CUST-10021,Kimberly,Anderson,kimberly.anderson25@example.com,+1-453-430-2049,Detroit,MI,0.79,2024-03-21
+CUST-10022,Joseph,Smith,joseph.smith19@example.com,+1-924-846-1964,Indianapolis,IN,0.61,2024-12-10
+CUST-10023,John,Taylor,john.taylor40@example.com,+1-485-885-8953,Indianapolis,IN,0.3,2024-04-08
+CUST-10024,Andrew,Thomas,andrew.thomas41@example.com,+1-684-616-4119,Cleveland,OH,0.75,2024-09-06
+CUST-10025,Anthony,Anderson,anthony.anderson16@example.com,+1-889-869-2612,Columbus,OH,0.17,2025-07-25
+CUST-10026,Jessica,Miller,jessica.miller34@example.com,+1-749-659-3296,Pittsburgh,PA,0.21,2025-08-28
+CUST-10027,Mark,Sanchez,mark.sanchez80@example.com,+1-300-251-9856,Columbus,OH,0.37,2025-03-16
+CUST-10028,William,Wilson,william.wilson72@example.com,+1-692-418-7570,Columbus,OH,0.05,2024-10-10
+CUST-10029,Thomas,Robinson,thomas.robinson68@example.com,+1-492-633-8973,Cincinnati,OH,0.13,2025-09-15
+CUST-10030,Donna,White,donna.white79@example.com,+1-262-965-6138,Columbus,OH,0.77,2024-05-19
+CUST-10031,William,Johnson,william.johnson75@example.com,+1-282-390-2122,Des Moines,IA,0.9,2024-09-26
+CUST-10032,Linda,Walker,linda.walker82@example.com,+1-452-792-1651,Des Moines,IA,0.83,2024-04-14
+CUST-10033,Kimberly,Hernandez,kimberly.hernandez43@example.com,+1-409-885-6147,Indianapolis,IN,0.1,2024-01-23
+CUST-10034,Karen,Anderson,karen.anderson50@example.com,+1-969-274-1152,Louisville,KY,0.25,2025-08-03
+CUST-10035,John,Moore,john.moore37@example.com,+1-718-471-3170,Detroit,MI,0.36,2024-10-31
+CUST-10036,Charles,Garcia,charles.garcia66@example.com,+1-756-920-5956,Des Moines,IA,0.33,2024-05-21
+CUST-10037,James,Perez,james.perez80@example.com,+1-506-879-2697,Cincinnati,OH,0.36,2024-04-26
+CUST-10038,Elizabeth,Rodriguez,elizabeth.rodriguez46@example.com,+1-819-415-6617,Indianapolis,IN,0.35,2024-06-14
+CUST-10039,Ashley,Rodriguez,ashley.rodriguez16@example.com,+1-294-849-7939,Chicago,IL,0.72,2025-07-03
+CUST-10040,Thomas,Garcia,thomas.garcia66@example.com,+1-764-922-8007,Milwaukee,WI,0.63,2025-06-14
+CUST-10041,Paul,Johnson,paul.johnson57@example.com,+1-796-765-3426,Pittsburgh,PA,0.16,2025-10-04
+CUST-10042,Daniel,Miller,daniel.miller97@example.com,+1-455-882-2684,Detroit,MI,0.36,2024-09-23
+CUST-10043,Michelle,White,michelle.white29@example.com,+1-442-366-3900,Pittsburgh,PA,0.86,2024-12-08
+CUST-10044,Anthony,Sanchez,anthony.sanchez95@example.com,+1-952-454-5371,Cincinnati,OH,0.09,2025-10-05
+CUST-10045,Donald,Davis,donald.davis35@example.com,+1-671-558-6000,Indianapolis,IN,0.28,2024-10-01
+CUST-10046,Nancy,Rodriguez,nancy.rodriguez18@example.com,+1-991-485-6753,Milwaukee,WI,0.39,2024-05-13
+CUST-10047,Nancy,Walker,nancy.walker13@example.com,+1-318-467-3925,Des Moines,IA,0.14,2025-07-25
+CUST-10048,Joshua,Wilson,joshua.wilson54@example.com,+1-946-521-8149,Des Moines,IA,0.09,2024-04-02
+CUST-10049,Richard,Rodriguez,richard.rodriguez15@example.com,+1-925-646-1027,Milwaukee,WI,0.24,2023-12-28
+CUST-10050,Richard,Lopez,richard.lopez65@example.com,+1-271-880-6409,Des Moines,IA,0.35,2025-01-10
+CUST-10051,Steven,Martinez,steven.martinez95@example.com,+1-618-534-7592,Chicago,IL,0.12,2024-01-03
+CUST-10052,Matthew,Perez,matthew.perez32@example.com,+1-830-782-5930,Pittsburgh,PA,0.05,2025-01-24
+CUST-10053,Susan,Wilson,susan.wilson84@example.com,+1-821-870-6279,Louisville,KY,0.29,2024-06-08
+CUST-10054,Donald,Sanchez,donald.sanchez31@example.com,+1-874-286-5649,Milwaukee,WI,0.27,2025-08-10
+CUST-10055,Jessica,Perez,jessica.perez49@example.com,+1-430-403-3414,Columbus,OH,0.94,2024-02-27
+CUST-10056,John,Anderson,john.anderson63@example.com,+1-844-789-4185,Pittsburgh,PA,0.14,2024-01-12
+CUST-10057,James,Lewis,james.lewis23@example.com,+1-997-635-4585,Cincinnati,OH,0.29,2024-07-26
+CUST-10058,Patricia,Moore,patricia.moore41@example.com,+1-324-667-3184,Louisville,KY,0.4,2024-03-14
+CUST-10059,Christopher,Walker,christopher.walker66@example.com,+1-827-936-9270,Pittsburgh,PA,0.24,2025-06-04
+CUST-10060,Donald,Anderson,donald.anderson43@example.com,+1-969-453-5543,Milwaukee,WI,0.13,2024-08-20
+CUST-10061,John,Thompson,john.thompson46@example.com,+1-440-478-6502,Detroit,MI,0.08,2025-06-12
+CUST-10062,Joseph,Gonzalez,joseph.gonzalez98@example.com,+1-356-923-4505,Cleveland,OH,0.17,2024-07-24
+CUST-10063,Anthony,Johnson,anthony.johnson36@example.com,+1-630-598-1320,Des Moines,IA,0.05,2024-11-18
+CUST-10064,Karen,Harris,karen.harris59@example.com,+1-629-751-9947,Des Moines,IA,0.22,2025-02-07
+CUST-10065,Margaret,Thomas,margaret.thomas13@example.com,+1-598-544-7624,Cincinnati,OH,0.37,2024-02-15
+CUST-10066,Paul,Smith,paul.smith60@example.com,+1-806-777-1444,Cleveland,OH,0.1,2024-07-29
+CUST-10067,Barbara,Johnson,barbara.johnson43@example.com,+1-588-535-4467,Louisville,KY,0.32,2024-10-21
+CUST-10068,Sarah,Harris,sarah.harris63@example.com,+1-458-283-8705,Columbus,OH,0.07,2024-11-20
+CUST-10069,Joseph,Lee,joseph.lee18@example.com,+1-999-867-1659,Columbus,OH,0.12,2025-10-24
+CUST-10070,Michelle,Jones,michelle.jones40@example.com,+1-329-684-2874,Des Moines,IA,0.21,2025-02-24
+CUST-10071,Lisa,Garcia,lisa.garcia87@example.com,+1-821-965-2876,Cincinnati,OH,0.09,2025-10-18
+CUST-10072,Karen,Jackson,karen.jackson96@example.com,+1-584-606-4249,Cleveland,OH,0.34,2025-03-10
+CUST-10073,Michael,Thompson,michael.thompson48@example.com,+1-900-814-2983,Des Moines,IA,0.17,2024-09-01
+CUST-10074,Lisa,Williams,lisa.williams74@example.com,+1-863-549-1207,Pittsburgh,PA,0.09,2024-11-08
+CUST-10075,Sandra,Thompson,sandra.thompson29@example.com,+1-645-380-9548,Chicago,IL,0.37,2024-07-06
+CUST-10076,Sandra,Wilson,sandra.wilson85@example.com,+1-474-530-5022,Cleveland,OH,0.21,2024-07-26
+CUST-10077,Andrew,Martin,andrew.martin95@example.com,+1-588-544-1470,Louisville,KY,0.11,2025-04-10
+CUST-10078,Daniel,Sanchez,daniel.sanchez43@example.com,+1-548-486-5526,Milwaukee,WI,0.93,2025-08-18
+CUST-10079,Jessica,White,jessica.white62@example.com,+1-700-768-4937,Louisville,KY,0.22,2025-10-27
+CUST-10080,Jennifer,Martinez,jennifer.martinez38@example.com,+1-614-908-4986,Chicago,IL,0.18,2024-04-26
+CUST-10081,Kimberly,Lopez,kimberly.lopez64@example.com,+1-963-763-6419,Detroit,MI,0.14,2025-03-01
+CUST-10082,Joseph,Brown,joseph.brown34@example.com,+1-523-322-9779,Cincinnati,OH,0.31,2025-02-03
+CUST-10083,Donna,Harris,donna.harris77@example.com,+1-811-489-2647,Indianapolis,IN,0.18,2025-01-08
+CUST-10084,James,Thompson,james.thompson78@example.com,+1-329-480-1745,Columbus,OH,0.29,2025-07-07
+CUST-10085,Ashley,Brown,ashley.brown11@example.com,+1-787-491-8690,Louisville,KY,0.11,2025-09-22
+CUST-10086,Thomas,Walker,thomas.walker71@example.com,+1-316-266-7565,Louisville,KY,0.82,2025-09-20
+CUST-10087,Elizabeth,Jones,elizabeth.jones82@example.com,+1-511-287-5066,Cleveland,OH,0.2,2024-03-13
+CUST-10088,Michelle,Davis,michelle.davis76@example.com,+1-589-661-8253,Chicago,IL,0.4,2025-01-05
+CUST-10089,Andrew,Martin,andrew.martin17@example.com,+1-824-957-2625,Indianapolis,IN,0.14,2025-08-22
+CUST-10090,William,Davis,william.davis32@example.com,+1-765-276-3564,Columbus,OH,0.29,2024-07-20
+CUST-10091,Charles,Johnson,charles.johnson39@example.com,+1-495-923-5632,Louisville,KY,0.68,2025-02-16
+CUST-10092,Donna,Perez,donna.perez35@example.com,+1-635-317-9922,Indianapolis,IN,0.37,2025-06-21
+CUST-10093,John,Johnson,john.johnson31@example.com,+1-514-809-5728,Louisville,KY,0.29,2024-09-27
+CUST-10094,Sarah,Taylor,sarah.taylor79@example.com,+1-705-648-2317,Des Moines,IA,0.75,2024-12-18
+CUST-10095,Joshua,Rodriguez,joshua.rodriguez13@example.com,+1-293-434-1339,Chicago,IL,0.32,2025-05-18
+CUST-10096,Donald,Taylor,donald.taylor93@example.com,+1-652-484-3973,Des Moines,IA,0.33,2025-08-12
+CUST-10097,Donald,Lopez,donald.lopez62@example.com,+1-541-528-2713,Cincinnati,OH,0.29,2025-01-22
+CUST-10098,Betty,Clark,betty.clark80@example.com,+1-237-665-2442,Detroit,MI,0.09,2024-09-26
+CUST-10099,Steven,Clark,steven.clark10@example.com,+1-873-755-8569,Pittsburgh,PA,0.78,2024-02-15
+CUST-10100,Ashley,Lee,ashley.lee66@example.com,+1-978-252-4335,Chicago,IL,0.37,2024-08-22

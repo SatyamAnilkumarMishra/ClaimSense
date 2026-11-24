@@ -1,0 +1,207 @@
+claim_id,policy_id,claim_type,incident_date,reported_date,claimed_amount,status,description,documents_count,city
+CLM-30207,POL-20024,HEALTH,2025-11-18,2025-11-29,12664.88,PENDING_DOCS,Cardiac stent insertion and 3-day post-operative ICU monitoring.,4,Pittsburgh
+CLM-30208,POL-20108,HOME,2026-03-03,2026-03-07,68066.26,APPROVED,Severe tree branch collapse through residential roof during thunder windstorm.,1,Cincinnati
+CLM-30209,POL-20113,HOME,2026-02-24,2026-03-16,44525.7,IN_REVIEW,Severe tree branch collapse through residential roof during thunder windstorm.,3,Des Moines
+CLM-30210,POL-20106,AUTO,2025-10-14,2025-10-16,5925.95,SETTLED,Single-car collision with guardrail after unexpected black ice spin.,3,Columbus
+CLM-30211,POL-20087,AUTO,2025-09-04,2025-09-21,12433.93, in_review ,Single-car collision with guardrail after unexpected black ice spin.,1,Pittsburgh
+CLM-30212,POL-20099,HOME,2026-03-12,2026-03-30,94476.03,IN_REVIEW,Lightning strike causing electrical surge and scorched exterior chimney brick.,1,Columbus
+CLM-30213,POL-20127,HEALTH,2026-03-04,2026-03-07,13460.74,PENDING_DOCS,Day care surgical procedure for knee meniscus repair after sports injury.,3,Indianapolis
+CLM-30214,POL-20097,AUTO,2025-11-02,2025-11-10,6580.59,SUBMITTED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,4,Des Moines
+CLM-30215,POL-20128,AUTO,2026-05-18,2026-05-22,20295.33,SUBMITTED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,1,Milwaukee
+CLM-30216,POL-20078,AUTO,2026-07-02,2025-09-27,48989.35,SUBMITTED,Struck deer on state highway causing heavy front bumper and radiator damage.,4,Detroit
+CLM-30217,POL-20144,HEALTH,2025-09-27,2025-10-09,38650.78,IN_REVIEW,Emergency medical admission for acute kidney stone removal.,1,Cleveland
+CLM-30218,POL-20075,HOME,2025-08-20,2025-09-06,102560.06,APPROVED,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,1,Columbus
+CLM-30219,POL-20105,HEALTH,2026-04-03,2026-04-12,22352.68,IN_REVIEW,Cardiac stent insertion and 3-day post-operative ICU monitoring.,2,Cleveland
+CLM-30220,POL-20087,AUTO,2026-04-02,2026-04-16,2005.63,SETTLED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,1,Louisville
+CLM-30221,POL-20002,HOME,,2025-08-31,204798.56,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,4,Des Moines
+CLM-30222,POL-20033,AUTO,2026-04-04,2026-04-17,31030.3,APPROVED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,3,Milwaukee
+CLM-30223,POL-20064,HEALTH,2026-01-07,2026-01-20,67633.58,IN_REVIEW,Inpatient hospitalization for acute pneumonia treatment over 4 days.,3,Louisville
+CLM-30224,POL-20132,HEALTH,2025-12-25,2026-01-12,30473.0,SETTLED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,2,Indianapolis
+CLM-30225,POL-20034,HEALTH,2026-02-25,2026-03-14,30196.46,SETTLED,Day care surgical procedure for knee meniscus repair after sports injury.,3,Cleveland
+CLM-30226,POL-20107,HOME,2025-08-27,2025-09-06,310180.1,SUBMITTED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,4,Columbus
+CLM-30227,POL-20015,HOME,2026-02-14,2026-02-23,188167.09,PENDING_DOCS,Lightning strike causing electrical surge and scorched exterior chimney brick.,2,Chicago
+CLM-30228,POL-20076,HEALTH,2026-02-12,2026-03-02,5324.94,SETTLED,Treatment for fractured clavicle and overnight observation following bicycle fall.,4,Cleveland
+CLM-30229,POL-20100,HEALTH,2026-01-26,2026-02-12,83969.95,APPROVED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,3,Columbus
+CLM-30230,POL-20081,HOME,2025-08-18,2025-08-20,29213.7,APPROVED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,3,Indianapolis
+CLM-30231,POL-20095,HOME,2025-08-21,2025-09-10,88852.45,IN_REVIEW,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,2,Chicago
+CLM-30232,POL-20132,HEALTH,2026-03-27,2026-04-09,3820.61,IN_REVIEW,Day care surgical procedure for knee meniscus repair after sports injury.,3,Milwaukee
+CLM-30233,POL-20002,HOME,2025-12-09,2025-12-24,255649.02,PENDING_DOCS,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,2,Columbus
+CLM-30234,POL-20078,AUTO,2025-09-18,2025-10-07,14266.14,IN_REVIEW,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,1,Detroit
+CLM-30235,POL-20130,AUTO,2026-03-07,2026-03-21,14105.07,IN_REVIEW,Struck deer on state highway causing heavy front bumper and radiator damage.,4,Cleveland
+CLM-30236,POL-20093,HEALTH,2025-12-28,2026-01-04,16692.51,SUBMITTED,Emergency medical admission for acute kidney stone removal.,4,Milwaukee
+CLM-30237,POL-20062,HEALTH,2026-01-23,2026-01-25,12341.46,APPROVED,Emergency appendectomy performed following severe abdominal symptoms.,3,Pittsburgh
+CLM-30238,POL-20007,HEALTH,2025-09-05,2025-09-17,57645.13,PENDING_DOCS,Emergency appendectomy performed following severe abdominal symptoms.,4,Louisville
+CLM-30239,POL-99983,HEALTH,2026-03-03,2026-03-21,19829.19,IN_REVIEW,Emergency medical admission for acute kidney stone removal.,1,Indianapolis
+CLM-30240,POL-20138,HOME,2025-10-17,2025-10-20,267739.52,PENDING_DOCS,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,2,Columbus
+CLM-30241,POL-20046,AUTO,2026-01-19,2026-02-06,2394.68,APPROVED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,2,Chicago
+CLM-30242,POL-20081,HOME,2026-05-19,2026-06-01,243822.09,SETTLED,Severe tree branch collapse through residential roof during thunder windstorm.,1,Des Moines
+CLM-30243,POL-20092,HOME,2025-09-12,2025-09-16,119196.89,PENDING_DOCS,Severe tree branch collapse through residential roof during thunder windstorm.,3,Des Moines
+CLM-30244,POL-20008,HEALTH,2025-09-27,2025-10-03,29756.55,PENDING_DOCS,Treatment for fractured clavicle and overnight observation following bicycle fall.,2,Pittsburgh
+CLM-30245,POL-20096,HEALTH,2026-05-22,2026-06-09,15464.96,SUBMITTED,Emergency appendectomy performed following severe abdominal symptoms.,2,Cleveland
+CLM-30246,POL-20141,HOME,2026-04-14,2026-04-24,46633.59,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,3,Indianapolis
+CLM-30247,POL-20065,HEALTH,2026-02-17,2026-02-21,25182.4,SETTLED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,1,Milwaukee
+CLM-30248,POL-20065,HEALTH,2026-04-07,2026-04-14,78244.95,IN_REVIEW,Day care surgical procedure for knee meniscus repair after sports injury.,4,Detroit
+CLM-30249,POL-20018,HOME,2026-02-17,2026-02-28,91452.45,PENDING_DOCS,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Des Moines
+CLM-30250,POL-20094,HEALTH,2025-12-17,2025-12-31,3990.39,APPROVED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,3,Indianapolis
+CLM-30251,POL-20085,AUTO,2025-09-24,2025-10-09,16974.13,SUBMITTED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,3,Louisville
+CLM-30252,POL-20072,HEALTH,2026-03-17,2026-04-04,56269.94,settled,Emergency appendectomy performed following severe abdominal symptoms.,1,Cleveland
+CLM-30253,POL-20104,HOME,2026-02-08,2026-02-10,142987.63,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,4,Cincinnati
+CLM-30254,POL-20075,HOME,2026-03-20,2026-04-04,131505.52,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,1,Pittsburgh
+CLM-30255,POL-20043,AUTO,2025-09-06,2025-09-11,5100.65,IN_REVIEW,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,2,Des Moines
+CLM-30256,POL-20057,HEALTH,2025-09-20,2025-09-28,13628.96,IN_REVIEW,Emergency appendectomy performed following severe abdominal symptoms.,3,Indianapolis
+CLM-30257,POL-20100,HEALTH,2025-09-29,2025-10-14,93451.32,SETTLED,Emergency appendectomy performed following severe abdominal symptoms.,1,Detroit
+CLM-30258,POL-20149,HOME,2025-08-22,2025-09-10,57050.83,SUBMITTED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,4,Detroit
+CLM-30259,POL-20058,HOME,2025-09-05,2025-09-18,139691.85,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,3,Louisville
+CLM-30260,POL-20113,HOME,2026-03-04,2026-03-12,15016.1,IN_REVIEW,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,3,Indianapolis
+CLM-30261,POL-20031,HOME,2026-01-30,2026-02-13,288631.1,APPROVED,Lightning strike causing electrical surge and scorched exterior chimney brick.,1,Louisville
+CLM-30262,POL-20106,AUTO,2026-05-16,2026-05-24,5072.85,settled,Single-car collision with guardrail after unexpected black ice spin.,2,Cincinnati
+CLM-30263,POL-20015,HOME,2026-03-03,2026-03-12,227356.66,SUBMITTED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,4,Des Moines
+CLM-30264,POL-20115,HEALTH,2025-09-28,2025-10-14,16086.84,settled,Inpatient hospitalization for acute pneumonia treatment over 4 days.,4,Des Moines
+CLM-30265,POL-20068,HOME,2026-03-03,2026-03-14,97429.31,APPROVED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Indianapolis
+CLM-30266,POL-20134,HEALTH,2025-09-11,2025-09-25,44042.57,SETTLED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,1,Cincinnati
+CLM-30267,POL-20137,HOME,2025-09-12,2025-09-16,55286.74,SUBMITTED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,2,Des Moines
+CLM-30268,POL-20012,HOME,2025-08-29,2025-09-12,29874.91,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,4,Pittsburgh
+CLM-30269,POL-20066,HOME,2025-09-25,2025-10-03,320777.74,SETTLED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,1,Chicago
+CLM-30270,POL-20002,HOME,2025-08-05,2025-08-22,63294.3,IN_REVIEW,Lightning strike causing electrical surge and scorched exterior chimney brick.,1,Pittsburgh
+CLM-30271,POL-20040,HEALTH,2025-10-21,2025-11-09,5371.53,SETTLED,Day care surgical procedure for knee meniscus repair after sports injury.,4,Des Moines
+CLM-30272,POL-20053,HOME,2025-10-28,2025-11-15,279731.24,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,4,Cincinnati
+CLM-30273,POL-20079,HEALTH,2025-08-05,2025-08-17,13830.66,SUBMITTED,Emergency medical admission for acute kidney stone removal.,4,Cincinnati
+CLM-30274,POL-20042,HEALTH,2026-04-06,2026-04-13,57063.5,SUBMITTED,Treatment for fractured clavicle and overnight observation following bicycle fall.,3,Milwaukee
+CLM-30275,POL-20002,HOME,2026-04-11,2026-04-16,178292.31,PENDING_DOCS,Severe tree branch collapse through residential roof during thunder windstorm.,4,Cleveland
+CLM-30276,POL-20010,AUTO,2025-11-12,2025-11-25,15717.72,IN_REVIEW,Rear-ended at traffic signal during morning rush hour.,3,Des Moines
+CLM-30277,POL-20133,AUTO,2026-01-01,2026-01-08,2514.61,SUBMITTED,Vehicle side-swiped while legally parked on curbside overnight.,2,Des Moines
+CLM-30278,POL-20041,HEALTH,2026-04-13,2026-04-22,13919.68,SETTLED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,3,Pittsburgh
+CLM-30279,POL-20018,HOME,2026-04-11,2026-04-29,58730.24,IN_REVIEW,Basement furnace fire with heavy smoke damage throughout main living level.,3,Detroit
+CLM-30280,POL-20104,HOME,2025-08-06,2025-08-07,364466.9,SETTLED,Severe tree branch collapse through residential roof during thunder windstorm.,4,Milwaukee
+CLM-30281,POL-20030,HOME,2025-09-07,2025-09-16,154868.37,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,3,Louisville
+CLM-30282,POL-20087,AUTO,2025-10-05,2025-10-20,15818.51,pending_docs,Rear-ended at traffic signal during morning rush hour.,1,Louisville
+CLM-30283,POL-20057,HEALTH,2026-01-30,2026-02-10,47711.53,SUBMITTED,Treatment for fractured clavicle and overnight observation following bicycle fall.,3,Milwaukee
+CLM-30284,POL-20103,HEALTH,2025-12-03,2025-12-06,61568.77,PENDING_DOCS,Day care surgical procedure for knee meniscus repair after sports injury.,2,Louisville
+CLM-30285,POL-20047,AUTO,2026-02-19,2026-03-07,13228.07,IN_REVIEW,Struck deer on state highway causing heavy front bumper and radiator damage.,2,Indianapolis
+CLM-30286,POL-20092,HOME,2026-03-09,2026-03-13,63960.51,SUBMITTED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,1,Louisville
+CLM-30287,POL-20124,HOME,2026-07-07,2025-12-08,89257.35,SETTLED,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,3,Louisville
+CLM-30288,POL-20148,HEALTH,2026-03-23,2026-03-25,29379.6,SUBMITTED,Treatment for fractured clavicle and overnight observation following bicycle fall.,4,Louisville
+CLM-30289,POL-20045,AUTO,2025-10-05,2025-10-09,17635.06,SUBMITTED,Single-car collision with guardrail after unexpected black ice spin.,4,Detroit
+CLM-30290,POL-20149,HOME,2026-04-06,2026-04-17,99764.53,PENDING_DOCS,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,3,Cincinnati
+CLM-30291,POL-20088,AUTO,,2025-11-27,9355.01,PENDING_DOCS,Single-car collision with guardrail after unexpected black ice spin.,2,Pittsburgh
+CLM-30292,POL-20116,AUTO,2026-02-24,2026-03-15,4733.42,PENDING_DOCS,Single-car collision with guardrail after unexpected black ice spin.,2,Cleveland
+CLM-30293,POL-20098,HEALTH,2026-02-16,2026-02-21,57002.43,In_review,Emergency appendectomy performed following severe abdominal symptoms.,2,Louisville
+CLM-30294,POL-20133,AUTO,2025-08-27,2025-09-07,19616.32,SETTLED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,3,Chicago
+CLM-30295,POL-20042,HEALTH,2026-04-27,2026-05-04,86847.26,PENDING_DOCS,Cardiac stent insertion and 3-day post-operative ICU monitoring.,4,Cleveland
+CLM-30296,POL-20143,HEALTH,2026-01-16,2026-01-28,6289.3,SETTLED,Emergency medical admission for acute kidney stone removal.,1,Detroit
+CLM-30297,POL-20138,HOME,2026-02-27,2026-03-09,140410.44,APPROVED,Severe tree branch collapse through residential roof during thunder windstorm.,4,Louisville
+CLM-30298,POL-20038,HOME,2026-03-03,2026-03-14,48627.11,IN_REVIEW,Severe tree branch collapse through residential roof during thunder windstorm.,4,Cleveland
+CLM-30299,POL-20075,HOME,2026-01-11,2026-01-31,164156.58,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,3,Louisville
+CLM-30300,POL-20043,AUTO,2026-02-22,2026-02-23,1969.14,SUBMITTED,Single-car collision with guardrail after unexpected black ice spin.,2,Chicago
+CLM-30301,POL-20025,HEALTH,2026-04-25,2026-05-11,20324.1,SUBMITTED,Treatment for fractured clavicle and overnight observation following bicycle fall.,1,Pittsburgh
+CLM-30302,POL-20022,HOME,2025-11-09,2025-11-19,99540.69,IN_REVIEW,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Louisville
+CLM-30303,POL-20008,HEALTH,2026-05-10,2026-05-22,45692.98,SETTLED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,3,Louisville
+CLM-30304,POL-20139,HOME,2026-02-26,2026-03-17,65764.46,SETTLED,Lightning strike causing electrical surge and scorched exterior chimney brick.,4,Milwaukee
+CLM-30305,POL-20139,HOME,2026-01-31,2026-02-03,50581.38,IN_REVIEW,Basement furnace fire with heavy smoke damage throughout main living level.,3,Pittsburgh
+CLM-30306,POL-20035,AUTO,2025-12-02,2025-12-12,17748.93, pending_docs ,Vehicle windshield cracked by loose gravel thrown by commercial truck.,1,Louisville
+CLM-30307,POL-20075,HOME,2026-01-29,2026-01-30,142218.27,APPROVED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,2,Pittsburgh
+CLM-30308,POL-20100,HEALTH,2025-11-15,2025-11-23,33140.58,SETTLED,Treatment for fractured clavicle and overnight observation following bicycle fall.,4,Indianapolis
+CLM-30309,POL-20137,HOME,2026-01-10,2026-01-24,86100.2,PENDING_DOCS,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,1,Cincinnati
+CLM-30310,POL-20116,AUTO,2026-01-08,2026-01-28,12942.91,SUBMITTED,Vehicle side-swiped while legally parked on curbside overnight.,3,Columbus
+CLM-30311,POL-20027,HEALTH,2026-01-03,2026-01-12,13127.55,SUBMITTED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,4,Columbus
+CLM-30312,POL-20088,AUTO,2025-10-24,2025-11-03,14018.04,SUBMITTED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,4,Detroit
+CLM-30313,POL-20038,HOME,,2026-05-08,83126.16,IN_REVIEW,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Milwaukee
+CLM-30314,POL-20098,HEALTH,2026-05-21,2026-05-25,68348.9,IN_REVIEW,Cardiac stent insertion and 3-day post-operative ICU monitoring.,2,Pittsburgh
+CLM-30315,POL-20025,HEALTH,2025-09-03,2025-09-10,17866.83,submitted,Inpatient hospitalization for acute pneumonia treatment over 4 days.,3,Detroit
+CLM-30316,POL-20124,HOME,2025-12-26,2026-01-02,99497.06,IN_REVIEW,Severe tree branch collapse through residential roof during thunder windstorm.,1,Indianapolis
+CLM-30317,POL-20071,AUTO,2026-03-27,2026-04-09,8444.15,approved,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,1,Columbus
+CLM-30318,POL-20023,HOME,2026-01-20,2026-01-26,-1250.75,PENDING_DOCS,Severe tree branch collapse through residential roof during thunder windstorm.,3,Columbus
+CLM-30319,POL-20028,HOME,2026-03-24,2026-04-09,100619.26,IN_REVIEW,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Louisville
+CLM-30320,POL-20035,AUTO,2026-01-19,2026-01-21,18272.32,SETTLED,Struck deer on state highway causing heavy front bumper and radiator damage.,4,Milwaukee
+CLM-30321,POL-20140,HEALTH,2025-11-30,2025-12-11,26303.08,IN_REVIEW,Treatment for fractured clavicle and overnight observation following bicycle fall.,3,Des Moines
+CLM-30322,POL-20076,HEALTH,2026-01-13,2026-01-31,21646.74,IN_REVIEW,Cardiac stent insertion and 3-day post-operative ICU monitoring.,1,Milwaukee
+CLM-30323,POL-20062,HEALTH,2025-12-14,2025-12-17,11947.2,APPROVED,Treatment for fractured clavicle and overnight observation following bicycle fall.,4,Indianapolis
+CLM-30324,POL-20083,HOME,2025-10-30,2025-11-10,18270.25,IN_REVIEW,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,1,Columbus
+CLM-30325,POL-20050,AUTO,2026-04-07,2026-04-09,10528.95,Settled,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,4,Louisville
+CLM-30326,POL-20057,HEALTH,2026-07-14,2026-04-22,98195.58,APPROVED,Emergency appendectomy performed following severe abdominal symptoms.,2,Louisville
+CLM-30327,POL-20107,HOME,2025-11-20,2025-11-22,292683.96,SUBMITTED,Severe tree branch collapse through residential roof during thunder windstorm.,3,Milwaukee
+CLM-30328,POL-20133,AUTO,2026-04-08,2026-04-12,18247.66, settled ,Vehicle side-swiped while legally parked on curbside overnight.,4,Indianapolis
+CLM-30329,POL-20046,AUTO,2025-08-15,2025-09-02,7996.75,Approved,Struck deer on state highway causing heavy front bumper and radiator damage.,1,Des Moines
+CLM-30330,POL-20047,AUTO,2025-08-19,2025-09-01,38882.24,APPROVED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,2,Milwaukee
+CLM-30331,POL-20084,AUTO,2025-11-18,2025-12-02,19135.19,IN_REVIEW,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,4,Detroit
+CLM-30332,POL-20141,HOME,2026-01-17,2026-01-29,168768.41,SUBMITTED,Severe tree branch collapse through residential roof during thunder windstorm.,4,Pittsburgh
+CLM-30333,POL-20035,AUTO,2025-12-24,2025-12-25,12260.85,SUBMITTED,Struck deer on state highway causing heavy front bumper and radiator damage.,2,Indianapolis
+CLM-30334,POL-99992,HEALTH,2025-08-08,2025-08-27,15056.46, in_review ,Day care surgical procedure for knee meniscus repair after sports injury.,1,Louisville
+CLM-30335,POL-20150,HOME,2026-01-20,2026-01-28,54139.62,APPROVED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,3,Cleveland
+CLM-30336,POL-20020,AUTO,2025-12-12,2025-12-28,10555.13,PENDING_DOCS,Single-car collision with guardrail after unexpected black ice spin.,1,Des Moines
+CLM-30337,POL-20098,HEALTH,2026-04-17,2026-04-19,64921.65,APPROVED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,3,Detroit
+CLM-30338,POL-20003,HEALTH,2025-11-13,2025-11-15,12405.46,SETTLED,Treatment for fractured clavicle and overnight observation following bicycle fall.,1,Detroit
+CLM-30339,POL-20057,HEALTH,2026-03-10,2026-03-12,73179.44,SETTLED,Treatment for fractured clavicle and overnight observation following bicycle fall.,4,Louisville
+CLM-30340,POL-20075,HOME,2025-11-07,2025-11-12,47573.01,SUBMITTED,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,1,Louisville
+CLM-30341,POL-20103,HEALTH,2025-09-13,2025-09-27,82947.95,SETTLED,Cardiac stent insertion and 3-day post-operative ICU monitoring.,2,Cincinnati
+CLM-30342,POL-20147,AUTO,2026-02-16,2026-03-06,6755.97,PENDING_DOCS,Rear-ended at traffic signal during morning rush hour.,2,Indianapolis
+CLM-30343,POL-20148,HEALTH,2026-04-12,2026-04-16,36497.69,IN_REVIEW,Day care surgical procedure for knee meniscus repair after sports injury.,4,Detroit
+CLM-30344,POL-20007,HEALTH,2025-12-22,2025-12-28,103796.06,APPROVED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,4,Des Moines
+CLM-30345,POL-20052,HEALTH,2025-11-17,2025-11-22,13563.17,SUBMITTED,Emergency medical admission for acute kidney stone removal.,1,Cleveland
+CLM-30346,POL-20038,HOME,2025-12-31,2026-01-01,40968.96,APPROVED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Chicago
+CLM-30347,POL-20138,HOME,2026-02-08,2026-02-15,202587.87,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,3,Milwaukee
+CLM-30348,POL-20005,AUTO,2025-11-16,2025-12-05,41530.2,SUBMITTED,Vehicle side-swiped while legally parked on curbside overnight.,1,Chicago
+CLM-30349,POL-20070,HEALTH,2026-04-30,2026-05-15,23779.63, pending_docs ,Cardiac stent insertion and 3-day post-operative ICU monitoring.,1,Cleveland
+CLM-30350,POL-20075,HOME,2025-11-11,2025-11-19,353738.43,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Detroit
+CLM-30351,POL-20129,HOME,2025-10-05,2025-10-23,326063.74,SETTLED,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,1,Columbus
+CLM-30352,POL-20041,HEALTH,2026-05-18,2026-05-30,12370.06,SETTLED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,3,Chicago
+CLM-30353,POL-20066,HOME,2025-11-10,2025-11-11,331844.43,PENDING_DOCS,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,3,Indianapolis
+CLM-30354,POL-20098,HEALTH,2025-09-03,2025-09-23,61725.6,SETTLED,Inpatient hospitalization for acute pneumonia treatment over 4 days.,2,Pittsburgh
+CLM-30355,POL-20085,AUTO,2025-10-10,2025-10-28,6782.59,IN_REVIEW,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,2,Des Moines
+CLM-30356,POL-20135,HEALTH,2026-03-19,2026-04-02,17429.89,PENDING_DOCS,Inpatient hospitalization for acute pneumonia treatment over 4 days.,2,Des Moines
+CLM-30357,POL-20031,HOME,2026-02-22,2026-03-05,297844.82,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,2,Columbus
+CLM-30358,POL-20071,AUTO,,2026-03-18,1791.02,SETTLED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,2,Columbus
+CLM-30359,POL-20060,HEALTH,2026-01-29,2026-02-06,49679.56,APPROVED,Emergency medical admission for acute kidney stone removal.,3,Cleveland
+CLM-30360,POL-20121,AUTO,2025-11-17,2025-11-23,39252.47,IN_REVIEW,Vehicle side-swiped while legally parked on curbside overnight.,4,Louisville
+CLM-30361,POL-20004,HOME,2026-01-09,2026-01-23,97330.12,IN_REVIEW,Severe tree branch collapse through residential roof during thunder windstorm.,2,Indianapolis
+CLM-30362,POL-20084,AUTO,2025-10-05,2025-10-13,11476.89,APPROVED,Single-car collision with guardrail after unexpected black ice spin.,1,Des Moines
+CLM-30363,POL-20147,AUTO,2025-08-26,2025-09-12,7003.59,APPROVED,Rear-ended at traffic signal during morning rush hour.,1,Milwaukee
+CLM-30364,POL-20063,HOME,2025-09-04,2025-09-22,46072.09,SETTLED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,1,Milwaukee
+CLM-30365,POL-20102,AUTO,2025-12-23,2026-01-02,5248.13,SUBMITTED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,4,Chicago
+CLM-30366,POL-20116,AUTO,2026-04-11,2026-04-28,4324.65,PENDING_DOCS,Vehicle windshield cracked by loose gravel thrown by commercial truck.,2,Pittsburgh
+CLM-30367,POL-20052,HEALTH,2025-10-07,2025-10-10,5313.84,SUBMITTED,Emergency appendectomy performed following severe abdominal symptoms.,2,Cleveland
+CLM-30368,POL-20135,HEALTH,2025-11-12,2025-11-29,11196.18,APPROVED,Treatment for fractured clavicle and overnight observation following bicycle fall.,2,Pittsburgh
+CLM-30369,POL-20086,HOME,2025-08-11,2025-08-16,54383.23,SUBMITTED,Lightning strike causing electrical surge and scorched exterior chimney brick.,2,Cincinnati
+CLM-30370,POL-20115,HEALTH,2025-12-31,2026-01-06,12641.01,SETTLED,Emergency appendectomy performed following severe abdominal symptoms.,2,Indianapolis
+CLM-30371,POL-20128,AUTO,2025-08-22,2025-08-23,28937.32,SETTLED,Vehicle side-swiped while legally parked on curbside overnight.,4,Indianapolis
+CLM-30372,POL-20021,AUTO,2026-05-24,2026-06-01,31170.46,SETTLED,Single-car collision with guardrail after unexpected black ice spin.,3,Des Moines
+CLM-30373,POL-20015,HOME,2025-11-30,2025-12-02,50572.68,PENDING_DOCS,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,1,Des Moines
+CLM-30374,POL-20028,HOME,2025-10-26,2025-11-01,77433.95,SETTLED,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Des Moines
+CLM-30375,POL-20117,HOME,2025-11-24,2025-11-26,27633.02,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,3,Detroit
+CLM-30376,POL-20141,HOME,2026-04-24,2026-05-04,89007.74,SETTLED,Basement furnace fire with heavy smoke damage throughout main living level.,1,Chicago
+CLM-30377,POL-20054,AUTO,2026-04-28,2026-05-02,14748.6,SETTLED,Single-car collision with guardrail after unexpected black ice spin.,1,Louisville
+CLM-30378,POL-20082,HEALTH,2026-01-15,2026-02-01,63576.41,SETTLED,Treatment for fractured clavicle and overnight observation following bicycle fall.,3,Cincinnati
+CLM-30379,POL-20128,AUTO,2025-09-17,2025-09-23,40584.79,SUBMITTED,Vehicle side-swiped while legally parked on curbside overnight.,2,Chicago
+CLM-30380,POL-20031,HOME,2026-02-10,2026-03-02,349670.78,PENDING_DOCS,Basement furnace fire with heavy smoke damage throughout main living level.,4,Columbus
+CLM-30381,POL-20003,HEALTH,2026-02-13,2026-02-23,10768.57,SETTLED,Day care surgical procedure for knee meniscus repair after sports injury.,1,Chicago
+CLM-30382,POL-20030,HOME,2025-12-08,2025-12-19,76858.02,PENDING_DOCS,Burst kitchen plumbing pipe during freeze causing drywall and floor water damage.,1,Cincinnati
+CLM-30383,POL-20122,HOME,2026-05-09,2026-05-14,90743.02,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,4,Milwaukee
+CLM-30384,POL-20134,HEALTH,2025-12-25,2026-01-13,39092.0,SUBMITTED,Treatment for fractured clavicle and overnight observation following bicycle fall.,3,Milwaukee
+CLM-30385,POL-20091,AUTO,2026-04-24,2026-04-29,8130.47,SETTLED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,1,Detroit
+CLM-30386,POL-20048,HOME,2026-03-29,2026-04-08,127105.75,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,3,Columbus
+CLM-30387,POL-20096,HEALTH,2025-10-08,2025-10-18,4762.27,PENDING_DOCS,Emergency appendectomy performed following severe abdominal symptoms.,3,Cincinnati
+CLM-30388,POL-20024,HEALTH,2025-10-12,2025-10-29,4965.57,IN_REVIEW,Inpatient hospitalization for acute pneumonia treatment over 4 days.,4,Milwaukee
+CLM-30389,POL-20135,HEALTH,2025-12-20,2025-12-31,3578.54,IN_REVIEW,Emergency medical admission for acute kidney stone removal.,1,Milwaukee
+CLM-30390,POL-20100,HEALTH,2025-09-02,2025-09-06,7900.71,PENDING_DOCS,Emergency appendectomy performed following severe abdominal symptoms.,1,Des Moines
+CLM-30391,POL-20134,HEALTH,2025-12-19,2025-12-20,31906.04,IN_REVIEW,Day care surgical procedure for knee meniscus repair after sports injury.,3,Indianapolis
+CLM-30392,POL-20082,HEALTH,2025-10-14,2025-10-18,34083.79,submitted,Emergency appendectomy performed following severe abdominal symptoms.,2,Chicago
+CLM-30393,POL-20053,HOME,2025-08-23,2025-09-04,203543.84,PENDING_DOCS,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Cincinnati
+CLM-30394,POL-20080,AUTO,2025-12-05,2025-12-23,21994.11,SUBMITTED,Vehicle windshield cracked by loose gravel thrown by commercial truck.,2,Columbus
+CLM-30395,POL-20110,HOME,2025-11-08,2025-11-14,254020.22,PENDING_DOCS,Basement furnace fire with heavy smoke damage throughout main living level.,4,Des Moines
+CLM-30396,POL-20137,HOME,2026-04-17,2026-05-02,209531.52,APPROVED,Severe tree branch collapse through residential roof during thunder windstorm.,1,Louisville
+CLM-30397,POL-99913,HOME,2025-09-29,2025-10-07,233044.48,PENDING_DOCS,Basement furnace fire with heavy smoke damage throughout main living level.,2,Des Moines
+CLM-30398,POL-20085,AUTO,2025-12-12,2025-12-27,18343.97,PENDING_DOCS,Rear-ended at traffic signal during morning rush hour.,1,Louisville
+CLM-30399,POL-20073,HOME,2025-11-30,2025-12-20,63531.13,SUBMITTED,Lightning strike causing electrical surge and scorched exterior chimney brick.,1,Pittsburgh
+CLM-30400,POL-20078,AUTO,2025-08-28,2025-09-12,10868.57,in_review,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,4,Indianapolis
+CLM-30401,POL-20099,HOME,2026-04-24,2026-05-05,27803.22,PENDING_DOCS,Hail storm impact damage to roof asphalt shingles and window vinyl siding.,4,Pittsburgh
+CLM-30402,POL-20020,AUTO,2025-08-07,2025-08-23,8080.14,SUBMITTED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,4,Detroit
+CLM-30403,POL-20104,HOME,2025-06-21,2026-05-12,42239.4,SUBMITTED,Residential forced entry burglary; jewelry and electronics removed from master bedroom.,4,Detroit
+CLM-30404,POL-20149,HOME,2026-05-27,2026-06-01,167850.52,APPROVED,Basement furnace fire with heavy smoke damage throughout main living level.,4,Milwaukee
+CLM-30405,POL-20053,HOME,2025-12-16,2025-12-26,210339.83,PENDING_DOCS,Lightning strike causing electrical surge and scorched exterior chimney brick.,3,Pittsburgh
+CLM-30406,POL-20131,AUTO,2025-11-02,2025-11-07,39268.34,SUBMITTED,Vehicle broken into overnight; dashboard audio electronics stolen and window broken.,1,Detroit
+CLM-30407,POL-20092,HOME,2026-04-01,2026-04-11,306345.88,SETTLED,Lightning strike causing electrical surge and scorched exterior chimney brick.,2,Pittsburgh
+CLM-30408,POL-20098,HEALTH,2025-11-01,2025-11-14,33287.35,IN_REVIEW,Cardiac stent insertion and 3-day post-operative ICU monitoring.,2,Cincinnati
+CLM-30409,POL-20093,HEALTH,2025-10-26,2025-10-31,5937.65,SUBMITTED,Emergency appendectomy performed following severe abdominal symptoms.,2,Cincinnati
+CLM-30410,POL-20125,HOME,2025-10-16,2025-10-21,15754.69,SETTLED,Lightning strike causing electrical surge and scorched exterior chimney brick.,4,Louisville
+CLM-30411,POL-20131,AUTO,2025-10-22,2025-11-09,37898.02,IN_REVIEW,Vehicle side-swiped while legally parked on curbside overnight.,4,Detroit
+CLM-30412,POL-20128,AUTO,2026-01-26,2026-02-12,14625.83,Settled,Rear-ended at traffic signal during morning rush hour.,3,Columbus
