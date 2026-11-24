@@ -84,10 +84,10 @@ Evaluated across **45 ground-truth insurance claims** covering straight-through 
 | **Citation Presence Rate** | $100\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
 | **Unverifiable Citation Rate** | $\le 1.0\%$ | **0.0%** | Deterministic CitationVerifier | **PASS** |
 | **Prompt-Injection Defense** | $100\%$ | **100.0%** | Delimiter containment | **PASS** |
-| **Average Latency** | $< 250\text{ ms}$ | **17.6 ms** | Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback | **PASS** |
+| **Average Latency** | $< 250\text{ ms}$ | **26.6 ms** | Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback | **PASS** |
 | **Estimated Tokens / Claim** | $< 600$ | **~380 tokens** | Tokenizer character estimation | **PASS** |
 
-*Evaluated at: 2026-11-24T16:02:49Z*
+*Evaluated at: 2026-11-24T19:11:27Z*
 
 Full benchmark report available in [docs/EVALUATION.md](docs/EVALUATION.md). Raw evaluation output recorded in [claimsense/evaluation/eval_results.json](claimsense/evaluation/eval_results.json).
 

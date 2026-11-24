@@ -9,7 +9,7 @@
     "unverifiable_citation_rate_percent": 0.0,
     "hallucination_rate_percent": 0.0,
     "prompt_injection_defense_percent": 100.0,
-    "average_latency_ms": 17.6,
+    "average_latency_ms": 26.6,
     "estimated_tokens_per_claim": 380,
     "confusion_matrix": {
       "FAST_TRACK": {
@@ -30,7 +30,7 @@
     },
     "llm_mode": "deterministic_fallback",
     "measurement_method": "Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback",
-    "evaluated_at": "2026-11-24T16:02:49Z"
+    "evaluated_at": "2026-11-24T19:11:27Z"
   },
   "cases": [
     {
@@ -42,7 +42,7 @@
       "citations": [
         "HLTH-COV-01"
       ],
-      "latency_sec": 0.032,
+      "latency_sec": 0.037,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -55,7 +55,7 @@
       "citations": [
         "HLTH-TIME-01"
       ],
-      "latency_sec": 0.024,
+      "latency_sec": 0.03,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -68,7 +68,7 @@
       "citations": [
         "HLTH-EXC-03"
       ],
-      "latency_sec": 0.02,
+      "latency_sec": 0.034,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -81,7 +81,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.013,
+      "latency_sec": 0.035,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -94,7 +94,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.016,
+      "latency_sec": 0.038,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -107,7 +107,7 @@
       "citations": [
         "HLTH-TIME-01"
       ],
-      "latency_sec": 0.016,
+      "latency_sec": 0.043,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -120,7 +120,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.016,
+      "latency_sec": 0.033,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -133,7 +133,7 @@
       "citations": [
         "HLTH-COV-01"
       ],
-      "latency_sec": 0.017,
+      "latency_sec": 0.027,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -146,7 +146,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.016,
+      "latency_sec": 0.027,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -159,7 +159,7 @@
       "citations": [
         "HLTH-TIME-01"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.022,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -172,7 +172,7 @@
       "citations": [
         "HOME-LIM-01"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.025,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -185,7 +185,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.016,
+      "latency_sec": 0.037,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -198,7 +198,7 @@
       "citations": [
         "AUTO-COV-01"
       ],
-      "latency_sec": 0.017,
+      "latency_sec": 0.034,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -211,7 +211,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.035,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -224,7 +224,7 @@
       "citations": [
         "HLTH-COV-02"
       ],
-      "latency_sec": 0.014,
+      "latency_sec": 0.036,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -237,7 +237,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.013,
+      "latency_sec": 0.03,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -250,7 +250,7 @@
       "citations": [
         "HOME-LIM-01"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.024,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -263,7 +263,7 @@
       "citations": [
         "AUTO-COV-01"
       ],
-      "latency_sec": 0.014,
+      "latency_sec": 0.025,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -276,7 +276,7 @@
       "citations": [
         "HLTH-COV-01"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.02,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -289,7 +289,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.017,
+      "latency_sec": 0.016,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -315,7 +315,7 @@
       "citations": [
         "AUTO-COV-03"
       ],
-      "latency_sec": 0.018,
+      "latency_sec": 0.022,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -328,7 +328,7 @@
       "citations": [
         "HLTH-EXC-03"
       ],
-      "latency_sec": 0.021,
+      "latency_sec": 0.032,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -341,7 +341,7 @@
       "citations": [
         "AUTO-COV-03"
       ],
-      "latency_sec": 0.019,
+      "latency_sec": 0.037,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -354,7 +354,7 @@
       "citations": [
         "AUTO-LIM-02"
       ],
-      "latency_sec": 0.017,
+      "latency_sec": 0.031,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -367,7 +367,7 @@
       "citations": [
         "HOME-EXC-02"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.034,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -380,7 +380,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.017,
+      "latency_sec": 0.033,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -393,7 +393,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.017,
+      "latency_sec": 0.024,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -406,7 +406,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.019,
+      "latency_sec": 0.022,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -419,7 +419,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.021,
+      "latency_sec": 0.024,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -432,7 +432,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.019,
+      "latency_sec": 0.02,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -445,7 +445,7 @@
       "citations": [
         "AUTO-LIM-02"
       ],
-      "latency_sec": 0.03,
+      "latency_sec": 0.016,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -458,7 +458,7 @@
       "citations": [
         "AUTO-COV-03"
       ],
-      "latency_sec": 0.023,
+      "latency_sec": 0.015,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -471,7 +471,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.021,
+      "latency_sec": 0.015,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -484,7 +484,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.025,
+      "latency_sec": 0.014,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -497,7 +497,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.022,
+      "latency_sec": 0.016,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -510,7 +510,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.026,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -523,7 +523,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.018,
+      "latency_sec": 0.02,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -536,7 +536,7 @@
       "citations": [
         "HOME-EXC-02"
       ],
-      "latency_sec": 0.014,
+      "latency_sec": 0.016,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -549,7 +549,7 @@
       "citations": [
         "HOME-EXC-03"
       ],
-      "latency_sec": 0.014,
+      "latency_sec": 0.015,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -562,7 +562,7 @@
       "citations": [
         "HOME-COV-01"
       ],
-      "latency_sec": 0.018,
+      "latency_sec": 0.012,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -575,7 +575,7 @@
       "citations": [
         "HOME-EXC-03"
       ],
-      "latency_sec": 0.015,
+      "latency_sec": 0.026,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -588,7 +588,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.014,
+      "latency_sec": 0.036,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -601,7 +601,7 @@
       "citations": [
         "HOME-COV-02"
       ],
-      "latency_sec": 0.009,
+      "latency_sec": 0.038,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     },
@@ -614,7 +614,7 @@
       "citations": [
         "AUTO-EXC-02"
       ],
-      "latency_sec": 0.014,
+      "latency_sec": 0.032,
       "llm_mode": "deterministic_fallback",
       "model_name": "offline_heuristic"
     }
