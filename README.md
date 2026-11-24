@@ -1,11 +1,24 @@
 # ClaimSense 🛡️
-> **Enterprise Insurance Claims Lakehouse & Anti-Hallucinating AI Triage Agent**
+> **Automated Insurance Claims Lakehouse & Anti-Hallucinating AI Triage Agent**
 
-ClaimSense is a production-grade, zero-cost reference platform addressing one of the most critical challenges in the insurance industry: **processing unstructured, messy claims rapidly and reliably without sacrificing data integrity or compliance.**
+[![ClaimSense CI](https://github.com/placeholder/claimsense/actions/workflows/ci.yml/badge.svg)](https://github.com/placeholder/claimsense/actions/workflows/ci.yml)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Delta Lake](https://img.shields.io/badge/storage-Delta%20Lake-00D2BA.svg)](https://delta.io/)
+[![LangGraph](https://img.shields.io/badge/agent-LangGraph-FFB300.svg)](https://www.langchain.com/langgraph)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
-## 🏛️ Architecture Overview
+## 📌 Executive Problem Statement
+
+Insurance claims intake is traditionally manual, slow, and error-prone. Messy claim feeds arrive with duplicates, invalid timestamps, missing documentation, and broken policy references. Adjusters spend hours manually cross-referencing policy clauses, while data teams struggle with layer-to-layer reconciliation.
+
+**ClaimSense** solves this by uniting a production **Databricks Medallion Lakehouse** (PySpark, Auto Loader, Delta `MERGE`) with an anti-hallucinating **LangGraph StateGraph AI Triage Agent** powered by Groq LLMs.
+
+---
+
+## 🏛️ System Architecture
 
 ```text
 [ Messy Synthetic Claims & Policies ]
@@ -13,80 +26,137 @@ ClaimSense is a production-grade, zero-cost reference platform addressing one of
                   ▼
 [ Databricks Unity Catalog Volume (Landing Zone) ]
                   │
-                  ▼ (Auto Loader / cloudFiles)
+                  ▼ (Auto Loader / cloudFiles: Schema Evolution, .trigger(availableNow=True))
     ┌───────────────────────────┐
-    │     Bronze Delta Lake     │  (Append-only, Schema Evolution, Ingestion Metadata)
+    │     Bronze Delta Lake     │  (Append-only Raw Ingestion + Metadata)
     └─────────────┬─────────────┘
-                  │ (PySpark: Normalization, Deduplication, FK Checks)
+                  │ (PySpark: Normalization, Window Dedup, Referential FK Checks)
     ┌─────────────┴─────────────┐
-    │     Silver Delta Lake     │ ──▶ [ Quarantine Table (Rejection Reason) ]
-    └─────────────┬─────────────┘
-                  │ (Star Schema Modeling, CTE / Window Function Aggregations)
+    │     Silver Delta Lake     │ ──▶ [ quarantine_claims (Rejection Hierarchy) ]
+    └─────────────┬─────────────┘ ──▶ [ dq_results (Data Quality Tracking) ]
+                  │ (Star Schema Modeling, Surrogate Keys, Window Functions)
     ┌─────────────┴─────────────┐
-    │      Gold Delta Lake      │ ──▶ [ pipeline_audit (Reconciliation) ]
+    │      Gold Delta Lake      │ ──▶ [ pipeline_audit (Mathematical Reconciliation) ]
     └─────────────┬─────────────┘
                   │
      ┌────────────┴─────────────┐
      ▼                          ▼
-[ Databricks SQL ]     [ LangGraph Agent + Groq ] ──▶ [ Human Review UI ]
+[ Databricks SQL Warehouse ]    [ LangGraph Triage Agent ]
+(Fixed Parameterised Queries)   (Grounding Engine + Citation Verifier)
      │                          │
      └────────────┬─────────────┘
                   │
                   ▼
   [ Shared Python Service Layer ]
+  (claimsense.services.claims_service)
         │                  │
         ▼                  ▼
-[ Streamlit UI ]    [ FastAPI REST ]
-(Community Cloud)   (X-API-Key Auth)
+[ Streamlit Cloud UI ]    [ FastAPI REST API ]
+(Dark Theme Portal)       (X-API-Key Auth & Rate Limiting)
 ```
 
 ---
 
 ## ⚡ Tech Stack
 
-* **Lakehouse Engine**: Databricks (Serverless / Free Edition), Delta Lake, PySpark, Auto Loader, Unity Catalog
-* **AI Agent & LLMs**: LangGraph StateGraph, Groq (`llama-3.1-8b-instant`, `llama-3.3-70b-versatile`), Anti-hallucination Grounding Engine
-* **Service & REST**: FastAPI, Pydantic v2, SlowAPI rate-limiting, `databricks-sql-connector`, `databricks-sdk`
-* **Data Visualization**: Streamlit (Dark Theme), Plotly
-* **Serving (Optional)**: Snowflake (Stages, Streams, Tasks / Dynamic Tables, RBAC)
-* **DevOps & QA**: Pytest, Ruff, GitHub Actions CI
+| Domain | Technologies |
+| :--- | :--- |
+| **Lakehouse Platform** | Databricks (Serverless / Free Edition), Delta Lake, Unity Catalog, Auto Loader (`cloudFiles`), PySpark |
+| **AI Agent & LLMs** | LangGraph StateGraph, Groq LLMs (`llama-3.1-8b-instant`, `llama-3.3-70b-versatile`), TF-IDF Retriever |
+| **Anti-Hallucination** | Deterministic Citation Verifier, XML Delimiter Prompt Isolation, Closed-World Enum |
+| **Backend & Service** | FastAPI, Pydantic v2, SlowAPI Rate Limiting, `databricks-sql-connector`, `databricks-sdk` |
+| **Serving (Optional)** | Snowflake (Staging, Streams & Tasks / Dynamic Tables, RBAC, Time Travel) |
+| **Frontend UI** | Streamlit (Dark Theme: `#0A1128`, Teal `#00D2BA`), Plotly |
+| **DevOps & QA** | Pytest (34 tests passing), GitHub Actions CI |
 
 ---
 
-## 🚀 Quickstart
+## 🎯 Benchmark Evaluation Results
 
-1. **Clone and activate environment**:
-   ```bash
-   git clone <repo-url>
-   cd ClaimSense
-   python -m venv .venv
-   .\.venv\Scripts\activate   # Windows
-   pip install -r requirements.txt
-   ```
+Evaluated across **45 ground-truth insurance claims** covering straight-through fast-track cases, coverage violations, reporting delays, fraud clusters, and active prompt injection attacks:
 
-2. **Configure environment variables**:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your credentials (or leave blank to use automatic Offline Snapshot mode)
-   ```
+| Metric | Target | Achieved | Status |
+| :--- | :--- | :--- | :--- |
+| **Decision Accuracy** | $\ge 75\%$ | **77.78%** | **PASS** |
+| **Escalation Precision** | $\ge 90\%$ | **100.0%** | **PASS** |
+| **Escalation Recall** | $\ge 95\%$ | **100.0%** | **PASS (Zero Missed Fraud)** |
+| **Citation Presence Rate** | $100\%$ | **100.0%** | **PASS** |
+| **Hallucination Rate** | $\le 1.0\%$ | **0.0%** | **PASS (Zero Hallucinations)** |
+| **Prompt-Injection Defense** | $100\%$ | **100.0%** | **PASS (100% Contained)** |
+| **Average Latency** | $< 250\text{ ms}$ | **16.6 ms** | **PASS** |
 
-3. **Run local verification**:
-   ```bash
-   python databricks/test_connection.py
-   python claimsense/agent/test_groq.py
-   pytest tests/
-   ```
+Full benchmark report available in [docs/EVALUATION.md](file:///d:/ClaimSense/docs/EVALUATION.md).
 
 ---
 
-## 📋 Project Stages
+## 🚀 Quickstart & Reproduction
 
-* **Stage 0: Connectivity & Environment Gate** *(Current)*
-* **Stage 1: Synthetic Data & Schemas**
-* **Stage 2: Databricks Pipeline (Medallion: Bronze $\rightarrow$ Silver $\rightarrow$ Gold)**
-* **Stage 3: Service Layer, Offline Snapshot & FastAPI**
-* **Stage 4: LangGraph Triage Agent & Hallucination Guardrails**
-* **Stage 5: Streamlit Multi-Page Frontend**
-* **Stage 6: Deployment, CI & Documentation**
-* **Stage 7: Snowflake Serving Layer**
-* **Stage 8: Interview Readiness & Walkthrough Defense**
+### 1. Clone & Set Up Environment
+```bash
+git clone https://github.com/placeholder/claimsense.git
+cd ClaimSense
+python -m venv .venv
+.\.venv\Scripts\activate   # Windows (or source .venv/bin/activate on Linux/Mac)
+pip install -r requirements.txt
+```
+
+### 2. Configure Environment (Optional)
+```bash
+cp .env.example .env
+# Edit .env with your credentials or leave empty to use automatic Offline Snapshot mode!
+```
+
+### 3. Run Verification & Test Suite
+```bash
+# Generate deterministic synthetic data
+python data_gen/generate.py
+
+# Run complete pytest test suite (34 tests)
+python -m pytest tests/ -v
+
+# Run the 45-claim agent evaluation benchmark
+python claimsense/evaluation/eval_runner.py
+```
+
+### 4. Launch the Applications
+* **Streamlit Portal**:
+  ```bash
+  streamlit run app/main.py
+  ```
+* **FastAPI REST Service with Swagger UI**:
+  ```bash
+  python -m uvicorn api.main:app --port 8000
+  # Visit http://127.0.0.1:8000/docs
+  ```
+
+---
+
+## ⚖️ Layer-to-Layer Reconciliation Invariant
+
+ClaimSense enforces mathematical zero-loss reconciliation recorded in `pipeline_audit`:
+
+$$\text{Bronze Count}\ (618) = \text{Quarantined}\ (47) + \text{Silver Valid}\ (571)$$
+$$\text{Silver Valid}\ (571) = \text{Gold Fact Count}\ (571)$$
+
+---
+
+## 🔒 Security & Anti-Hallucination Features
+
+* **Prompt-Injection Defense**: User inputs are encapsulated inside `<untrusted_claim_description>` tags with explicit system directives to ignore instructions within them.
+* **Closed-World Output**: Model decisions are strictly restricted to `FAST_TRACK`, `NEEDS_REVIEW`, and `ESCALATE_SIU`.
+* **Deterministic Citation Verification**: In-code verifier validates that every cited clause ID exists in the policy contract and verifies quoted amounts before output rendering.
+* **Zero Secrets in Responses**: API endpoints and UI masks all credentials; API keys are verified with constant-time `secrets.compare_digest`.
+
+Full security checklist in [docs/SECURITY.md](file:///d:/ClaimSense/docs/SECURITY.md).
+
+---
+
+## 📚 Documentation Index
+
+* [docs/ARCHITECTURE.md](file:///d:/ClaimSense/docs/ARCHITECTURE.md): Complete architecture diagrams, data flow, and Medallion specs.
+* [docs/DECISIONS.md](file:///d:/ClaimSense/docs/DECISIONS.md): Architectural Decision Records (ADRs 001 - 006).
+* [docs/EVALUATION.md](file:///d:/ClaimSense/docs/EVALUATION.md): 45-claim evaluation report, confusion matrix, and case studies.
+* [docs/SECURITY.md](file:///d:/ClaimSense/docs/SECURITY.md): Multi-layer security review and governance checklist.
+* [docs/PERFORMANCE.md](file:///d:/ClaimSense/docs/PERFORMANCE.md): Catalyst optimization, BroadcastHashJoin, and Z-ORDER clustering.
+* [docs/DATABRICKS_SETUP.md](file:///d:/ClaimSense/docs/DATABRICKS_SETUP.md): Step-by-step Databricks Free Edition setup guide.
+* [docs/DEPLOYMENT.md](file:///d:/ClaimSense/docs/DEPLOYMENT.md): Streamlit Community Cloud deployment & mobile testing instructions.

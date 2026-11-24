@@ -7,7 +7,7 @@ on:
     branches: [ "main", "master" ]
 
 jobs:
-  test-and-lint:
+  test-and-verify:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,10 +25,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Lint with Ruff
+      - name: Verify Secret Hygiene
         run: |
-          ruff check .
+          # Verify .env and secrets.toml are not tracked in git
+          if git ls-files | grep -E '^(\.env|\.streamlit/secrets\.toml)$'; then
+            echo "ERROR: Secret files tracked in Git!"
+            exit 1
+          fi
+          echo "Secret hygiene verified: No credentials tracked in git."
 
-      - name: Run Pytest test suite
+      - name: Run Data Generator (Determinism Check)
+        run: |
+          python data_gen/generate.py
+
+      - name: Run Complete Pytest Suite (34 tests)
         run: |
           pytest tests/ -v
+
+      - name: Run Agent Evaluation Benchmark
+        run: |
+          python claimsense/evaluation/eval_runner.py

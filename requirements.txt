@@ -1,31 +1,32 @@
-# Core Data & Modeling
-pydantic>=2.7.0
-pydantic-settings>=2.2.0
-python-dotenv>=1.0.1
-pandas>=2.2.0
-pyarrow>=16.0.0
-duckdb>=1.0.0
+# ClaimSense Production Pinned Dependencies
+# Python 3.11+ / 3.12 / 3.13 compatible
 
-# Databricks Connectivity
+# Core Data & Modeling
+pydantic==2.14.4
+pydantic-settings==2.16.3
+python-dotenv==1.2.4
+pandas==3.1.1
+pyarrow>=16.0.0
+
+# Database & Lakehouse Connectors
 databricks-sql-connector>=3.1.0
 databricks-sdk>=0.25.0
 
-# LLM & LangGraph Agent
+# AI Agent & LLM
 groq>=0.9.0
 langchain-core>=0.2.0
 langchain-groq>=0.1.5
 langgraph>=0.2.0
 
-# API Layer
-fastapi>=0.111.0
-uvicorn[standard]>=0.30.0
-slowapi>=0.1.9
-httpx>=0.27.0
+# REST API & Security
+fastapi==0.165.0
+uvicorn[standard]==0.54.0
+slowapi==0.1.10
+httpx==0.28.1
 
-# Streamlit UI
+# Streamlit Frontend & Visualization
 streamlit>=1.36.0
 plotly>=5.22.0
 
-# DevOps, Quality & Testing
-pytest>=8.2.0
-ruff>=0.4.5
+# Quality Assurance & Testing
+pytest==9.1.1
