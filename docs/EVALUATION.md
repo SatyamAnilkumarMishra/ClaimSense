@@ -6,26 +6,42 @@ This report documents the rigorous evaluation framework and benchmark results fo
 
 ## 1. Executive Summary & Benchmark Metrics
 
-| Metric | Target | Result Achieved | Status |
-| :--- | :--- | :--- | :--- |
-| **Decision Accuracy** | $\ge 75\%$ | **77.78%** | **PASS** |
-| **Escalation Precision** | $\ge 90\%$ | **100.0%** | **PASS** |
-| **Escalation Recall** | $\ge 95\%$ | **100.0%** | **PASS (Zero Missed Fraud)** |
-| **Citation Presence Rate** | $100\%$ | **100.0%** | **PASS** |
-| **Hallucination Rate** | $\le 1.0\%$ | **0.0%** | **PASS (Zero Hallucinations)** |
-| **Prompt-Injection Containment** | $100\%$ | **100.0%** | **PASS** |
-| **Average Decision Latency** | $< 250\text{ ms}$ | **16.6 ms** | **PASS** |
-| **Estimated Tokens per Claim** | $< 600$ | **~380 tokens** | **PASS** |
+| Metric | Target | Achieved | Mode / Method | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Decision Accuracy** | $\ge 75\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
+| **Escalation Precision** | $\ge 90\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
+| **Escalation Recall (SIU)** | $\ge 95\%$ | **100.0%** | `deterministic_fallback` (10/10 SIU identified) | **PASS** |
+| **Combined Escalation Recall** | $\ge 95\%$ | **100.0%** | `deterministic_fallback` (NEEDS_REVIEW + SIU) | **PASS** |
+| **Citation Presence Rate** | $100\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
+| **Unverifiable Citation Rate** | $\le 1.0\%$ | **0.0%** | Deterministic CitationVerifier | **PASS** |
+| **Prompt-Injection Defense** | $100\%$ | **100.0%** | Delimiter containment | **PASS** |
+| **Average Latency** | $< 250\text{ ms}$ | **17.6 ms** | Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback | **PASS** |
+| **Estimated Tokens / Claim** | $< 600$ | **~380 tokens** | Tokenizer character estimation | **PASS** |
 
 ---
 
 ## 2. Confusion Matrix Analysis ($3 \times 3$)
 
+## 2.1 Known Defect and Root Cause (ISS-01)
+
+### Root Cause Analysis
+During baseline evaluation (Phase 0), all 10 ground-truth `ESCALATE_SIU` cases (EVAL-036 through EVAL-045) were incorrectly routed to `NEEDS_REVIEW`. This defect stemmed from two root causes:
+1. **Missing Deterministic Escalation Precedence in Graph Controller**:
+   In `claimsense/agent/graph.py`, `run_assess()` only enforced an override from `FAST_TRACK` to `NEEDS_REVIEW` when a rule failed. The graph lacked an explicit code-level precedence rule to route high-severity fraud violations (`RULE-05-FRAUD-RISK`) or high customer risk scores directly to `ESCALATE_SIU`.
+2. **Brittle String-Matching Substring in Fallback Reasoner**:
+   In `claimsense/agent/groq_client.py`, the offline fallback checked for `if "RULE-05-FRAUD-RISK -> FAIL" in user_prompt:`. However, `build_triage_user_prompt()` formatted the rule as `- [RULE-05-FRAUD-RISK] Customer behavioral risk score is within acceptable limits -> FAIL`. Because the description intervened, the substring check evaluated to `False` and fell through to generic `FAIL`, producing `NEEDS_REVIEW`.
+3. **Flawed Aggregation in Evaluation Runner**:
+   In `claimsense/evaluation/eval_runner.py`, "escalation recall" was calculated by pooling `NEEDS_REVIEW` and `ESCALATE_SIU` together against `FAST_TRACK`. This reported an artificial 100.0% recall while masking that true `ESCALATE_SIU` recall was 0.0% (0/10).
+
+---
+
+## 2.2 Confusion Matrix Breakdown ($3 \times 3$)
+
 ```text
                      Predicted: FAST_TRACK   Predicted: NEEDS_REVIEW   Predicted: ESCALATE_SIU
-Expected: FAST_TRACK         10                        10                         0
-Expected: NEEDS_REVIEW        0                        15                         0
-Expected: ESCALATE_SIU        0                         0                        10
+Expected: FAST_TRACK         20                       0                         0
+Expected: NEEDS_REVIEW        0                        15                        0
+Expected: ESCALATE_SIU        0                        0                         10
 ```
 
 ### Key Insights:
@@ -72,9 +88,25 @@ Expected: ESCALATE_SIU        0                         0                       
 
 ---
 
-## 4. Reproducibility
+## 4. Citation Verifier Specification & Limitations (ISS-04)
+
+### 4.1 Exact Checks Performed by CitationVerifier
+The deterministic verifier (`claimsense/agent/citation_verifier.py`) enforces:
+1. **Clause ID Existence**: Every cited clause ID in `cited_clause_ids` must strictly exist in the set of retrieved policy clauses for the claim's policy type.
+2. **Amount Consistency**: Quoted dollar amounts in the generated reasons must match the claim's declared `claimed_amount`, `sum_insured`, or `deductible`.
+3. **Date Consistency**: Any incident or reporting dates cited in text must match the underlying claim facts.
+4. **Repair Contract**: If an invalid clause or amount is detected, the verifier strips unverified citations and programmatically forces the decision to `NEEDS_REVIEW`.
+
+### 4.2 Known Limitations
+* The verifier checks structural citations, clause IDs, and numeric/date grounding; it **does not** evaluate the full linguistic or semantic plausibility of free-form text.
+* Zero unverifiable citations on the benchmark set demonstrates grounding containment against fabricated clauses, but does not mathematically prove the absence of all nuanced semantic hallucinations in open-ended LLM generations.
+
+---
+
+## 5. Reproducibility
 The full benchmark can be re-run at any time locally or via CI:
 ```powershell
 python claimsense/evaluation/eval_runner.py
+python claimsense/evaluation/render_report.py
 ```
-Output results are cached to [claimsense/evaluation/eval_results.json](file:///d:/ClaimSense/claimsense/evaluation/eval_results.json).
+Output results are cached to [claimsense/evaluation/eval_results.json](../claimsense/evaluation/eval_results.json).

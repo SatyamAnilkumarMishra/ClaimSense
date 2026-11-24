@@ -78,6 +78,25 @@ flowchart TD
 
 ## 3. LangGraph AI Triage Agent Architecture
 
+### 3.1 Compiled Graph Topology (Single Source of Control Flow)
+
+```mermaid
+flowchart TD
+    START([START]) --> intake[intake: Validate Claim ID]
+    intake --> fetch_data[fetch_data: Load Lakehouse Facts]
+    fetch_data --> validate_rules[validate_rules: Deterministic Rules]
+    validate_rules --> retrieve_clauses[retrieve_clauses: TF-IDF Policy Clauses]
+    retrieve_clauses --> assess_llm[assess_llm: Groq LLM / Offline Fallback]
+    assess_llm --> apply_precedence[apply_precedence: 4-Tier Precedence Order]
+    
+    apply_precedence -->|fast_track| finalize[finalize: Audit Store & Metric Record]
+    apply_precedence -->|human_review| human_review[human_review: Adjuster Queue Checkpoint]
+    human_review --> finalize
+    finalize --> END([END])
+```
+
+### 3.2 Triage Sequence Diagram
+
 ```mermaid
 sequenceDiagram
     participant UI as Streamlit / FastAPI

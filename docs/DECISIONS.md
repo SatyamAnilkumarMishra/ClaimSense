@@ -36,7 +36,7 @@ This document formalizes the key engineering design decisions made during the ar
 * **Context**: LLMs often hallucinate policy exclusions or fabricate amounts, posing catastrophic compliance and legal risks for insurance companies.
 * **Decision**: Implement `CitationVerifier` in deterministic Python code rather than relying exclusively on prompt instructions.
 * **Rationale**: Programmatically validates that every cited clause ID exists in the retrieved set and matches claim numbers. Automatically triggers repair retries or conservative escalation to `NEEDS_REVIEW`.
-* **Trade-off**: Slight compute overhead (<5 ms) to verify strings; achieves a **0.0% hallucination rate** on benchmarks.
+* **Trade-off**: Slight compute overhead (<5 ms) to verify strings; achieves a **0.0% unverifiable citation rate** on benchmarks.
 
 ---
 

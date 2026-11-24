@@ -1,0 +1,43 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.13.5, pytest-9.1.1, pluggy-1.6.0 -- C:\Python313\python.exe
+cachedir: .pytest_cache
+rootdir: D:\ClaimSense
+plugins: anyio-4.10.0, langsmith-0.4.27
+collecting ... collected 34 items
+
+tests/test_agent.py::test_agent_tools PASSED                             [  2%]
+tests/test_agent.py::test_policy_retriever PASSED                        [  5%]
+tests/test_agent.py::test_citation_verifier_detects_hallucinations PASSED [  8%]
+tests/test_agent.py::test_langgraph_agent_full_execution PASSED          [ 11%]
+tests/test_agent.py::test_prompt_injection_defense PASSED                [ 14%]
+tests/test_agent.py::test_human_review_checkpoint_resume PASSED          [ 17%]
+tests/test_agent.py::test_triage_audit_store PASSED                      [ 20%]
+tests/test_api.py::test_api_health_endpoint PASSED                       [ 23%]
+tests/test_api.py::test_api_kpis_endpoint PASSED                         [ 26%]
+tests/test_api.py::test_api_claims_endpoints PASSED                      [ 29%]
+tests/test_api.py::test_api_triage_unauthorized PASSED                   [ 32%]
+tests/test_api.py::test_api_triage_authorized PASSED                     [ 35%]
+tests/test_api.py::test_api_human_review_resume PASSED                   [ 38%]
+tests/test_api.py::test_no_secrets_in_responses PASSED                   [ 41%]
+tests/test_config.py::test_default_settings PASSED                       [ 44%]
+tests/test_config.py::test_databricks_not_configured_by_default PASSED   [ 47%]
+tests/test_config.py::test_databricks_configured_when_all_params_present PASSED [ 50%]
+tests/test_config.py::test_offline_mode_forces_unconfigured PASSED       [ 52%]
+tests/test_data_gen.py::test_generator_determinism PASSED                [ 55%]
+tests/test_data_gen.py::test_generated_files_exist PASSED                [ 58%]
+tests/test_data_gen.py::test_customer_count_and_schema PASSED            [ 61%]
+tests/test_data_gen.py::test_policy_count_and_types PASSED               [ 64%]
+tests/test_data_gen.py::test_dirty_data_proportions PASSED               [ 67%]
+tests/test_data_gen.py::test_adjuster_notes_json PASSED                  [ 70%]
+tests/test_pipeline.py::test_bronze_ingestion PASSED                     [ 73%]
+tests/test_pipeline.py::test_silver_and_quarantine_routing PASSED        [ 76%]
+tests/test_pipeline.py::test_gold_star_schema PASSED                     [ 79%]
+tests/test_pipeline.py::test_reconciliation_audit_zero_discrepancy PASSED [ 82%]
+tests/test_pipeline.py::test_delta_merge_cdc_updates PASSED              [ 85%]
+tests/test_services.py::test_service_health PASSED                       [ 88%]
+tests/test_services.py::test_service_kpi_summary PASSED                  [ 91%]
+tests/test_services.py::test_service_claims_list_and_detail PASSED       [ 94%]
+tests/test_services.py::test_service_triage_flow PASSED                  [ 97%]
+tests/test_services.py::test_databricks_failure_fallback_to_snapshot PASSED [100%]
+
+============================= 34 passed in 2.12s ==============================

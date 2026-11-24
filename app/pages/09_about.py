@@ -34,7 +34,7 @@ def render():
     st.markdown("""
     * **Project Name**: ClaimSense
     * **Repository**: Public GitHub Repository
-    * **Evaluation Set**: 45 ground-truth claims with 0% hallucination rate
+    * **Evaluation Set**: 45 ground-truth claims with 0.0% unverifiable citation rate
     * **API Documentation**: Interactive OpenAPI / Swagger UI
     """)
 

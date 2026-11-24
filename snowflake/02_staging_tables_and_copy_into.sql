@@ -62,7 +62,7 @@ CREATE OR REPLACE TABLE STAGING.STG_DIM_CLAIM_TYPE (
 
 -- 2. COPY INTO Commands (Executed after SnowSQL PUT @CLAIMSENSE_STAGE)
 -- Example upload command via SnowSQL CLI:
--- PUT file:///d:/ClaimSense/snowflake/staged_data/*.parquet @CLAIMSENSE_STAGE;
+-- PUT file://<local_path>/snowflake/staged_data/*.parquet @CLAIMSENSE_STAGE;
 
 COPY INTO STAGING.STG_FACT_CLAIMS
 FROM (

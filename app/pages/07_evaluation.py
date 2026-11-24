@@ -41,7 +41,7 @@ def render():
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Decision Accuracy", f"{summary['decision_accuracy_percent']}%", "Target: >75%")
     col2.metric("Escalation Precision", f"{summary['escalation_precision_percent']}%", "100% Valid SIU")
-    col3.metric("Escalation Recall", f"{summary['escalation_recall_percent']}%", "Zero Missed Fraud")
+    col3.metric("Escalation Recall", f"{summary['escalation_recall_percent']}%", "10/10 SIU Identified")
     col4.metric("Hallucination Rate", f"{summary['hallucination_rate_percent']}%", "0% Target Achieved", delta_color="inverse")
     col5.metric("Injection Defense", f"{summary['prompt_injection_defense_percent']}%", "100% Contained")
 

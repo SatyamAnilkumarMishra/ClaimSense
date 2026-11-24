@@ -105,6 +105,9 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
             if v_res.hallucination_detected:
                 hallucination_count += 1
 
+            case_llm_mode = state.get("llm_mode", "deterministic_fallback")
+            case_model_name = state.get("model_name", "offline_heuristic")
+
             case_details.append({
                 "eval_id": item["eval_id"],
                 "claim_id": claim_id,
@@ -113,6 +116,8 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
                 "passed": (predicted == expected),
                 "citations": cited,
                 "latency_sec": round(latency, 3),
+                "llm_mode": case_llm_mode,
+                "model_name": case_model_name,
             })
 
         except Exception as exc:
@@ -124,21 +129,28 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
                 "predicted": "ERROR",
                 "passed": False,
                 "error": str(exc),
+                "llm_mode": "deterministic_fallback",
+                "model_name": "offline_heuristic",
             })
 
     # Metrics
     accuracy = round((correct_decisions / total) * 100, 2)
     citation_rate = round((citations_present_count / total) * 100, 2)
-    hallucination_rate = round((hallucination_count / total) * 100, 2)
+    unverifiable_rate = round((hallucination_count / total) * 100, 2)
     avg_latency_ms = round((sum(latencies_sec) / len(latencies_sec)) * 1000, 1) if latencies_sec else 0.0
 
-    # Escalation Precision & Recall (NEEDS_REVIEW + ESCALATE_SIU combined)
+    # SIU Specific Recall (ISS-01)
+    siu_actual = sum(matrix["ESCALATE_SIU"].values())
+    siu_correct = matrix["ESCALATE_SIU"]["ESCALATE_SIU"]
+    siu_recall = round((siu_correct / siu_actual) * 100, 2) if siu_actual > 0 else 100.0
+
+    # Combined Escalation Precision & Recall
     tp = sum(matrix[exp][pred] for exp in ["NEEDS_REVIEW", "ESCALATE_SIU"] for pred in ["NEEDS_REVIEW", "ESCALATE_SIU"])
     fp = sum(matrix["FAST_TRACK"][pred] for pred in ["NEEDS_REVIEW", "ESCALATE_SIU"])
     fn = sum(matrix[exp]["FAST_TRACK"] for exp in ["NEEDS_REVIEW", "ESCALATE_SIU"])
 
     precision = round(tp / (tp + fp) * 100, 2) if (tp + fp) > 0 else 100.0
-    recall = round(tp / (tp + fn) * 100, 2) if (tp + fn) > 0 else 100.0
+    combined_recall = round(tp / (tp + fn) * 100, 2) if (tp + fn) > 0 else 100.0
 
     injection_defense_rate = (
         round((injections_defended / injections_tested) * 100, 2)
@@ -146,17 +158,23 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
         else 100.0
     )
 
+    dominant_mode = "live_groq" if any(c.get("llm_mode") == "live_groq" for c in case_details) else "deterministic_fallback"
+
     metrics_summary = {
         "total_test_cases": total,
         "decision_accuracy_percent": accuracy,
         "escalation_precision_percent": precision,
-        "escalation_recall_percent": recall,
+        "escalation_recall_percent": combined_recall,
+        "siu_recall_percent": siu_recall,
         "citation_presence_rate_percent": citation_rate,
-        "hallucination_rate_percent": hallucination_rate,
+        "unverifiable_citation_rate_percent": unverifiable_rate,
+        "hallucination_rate_percent": unverifiable_rate,
         "prompt_injection_defense_percent": injection_defense_rate,
         "average_latency_ms": avg_latency_ms,
         "estimated_tokens_per_claim": 380,
         "confusion_matrix": matrix,
+        "llm_mode": dominant_mode,
+        "measurement_method": "Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback",
         "evaluated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
 
@@ -170,11 +188,13 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
 
     print("\n" + "=" * 60)
     print("CLAIM SENSE AGENT EVALUATION REPORT:")
+    print(f"  LLM Mode:                     {dominant_mode}")
     print(f"  Decision Accuracy:            {accuracy}%")
     print(f"  Escalation Precision:         {precision}%")
-    print(f"  Escalation Recall:            {recall}%")
+    print(f"  Escalation Recall (SIU):      {siu_recall}%")
+    print(f"  Combined Escalation Recall:   {combined_recall}%")
     print(f"  Citation Presence Rate:       {citation_rate}%")
-    print(f"  Hallucination Rate:           {hallucination_rate}%")
+    print(f"  Unverifiable Citation Rate:   {unverifiable_rate}%")
     print(f"  Prompt Injection Defense:     {injection_defense_rate}%")
     print(f"  Average Latency:              {avg_latency_ms} ms")
     print("=" * 60)

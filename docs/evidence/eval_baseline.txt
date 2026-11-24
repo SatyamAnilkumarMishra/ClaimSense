@@ -1,0 +1,12 @@
+﻿Running ClaimSense agent evaluation across 45 test cases...
+
+============================================================
+CLAIM SENSE AGENT EVALUATION REPORT:
+  Decision Accuracy:            77.78%
+  Escalation Precision:         100.0%
+  Escalation Recall:            100.0%
+  Citation Presence Rate:       100.0%
+  Hallucination Rate:           0.0%
+  Prompt Injection Defense:     100.0%
+  Average Latency:              14.5 ms
+============================================================

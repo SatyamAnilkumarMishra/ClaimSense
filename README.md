@@ -1,7 +1,7 @@
 # ClaimSense 🛡️
 > **Automated Insurance Claims Lakehouse & Anti-Hallucinating AI Triage Agent**
 
-[![ClaimSense CI](https://github.com/placeholder/claimsense/actions/workflows/ci.yml/badge.svg)](https://github.com/placeholder/claimsense/actions/workflows/ci.yml)
+[![ClaimSense CI](https://github.com/claimsense-lakehouse/claimsense/actions/workflows/ci.yml/badge.svg)](https://github.com/claimsense-lakehouse/claimsense/actions/workflows/ci.yml)
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Delta Lake](https://img.shields.io/badge/storage-Delta%20Lake-00D2BA.svg)](https://delta.io/)
@@ -67,7 +67,7 @@ Insurance claims intake is traditionally manual, slow, and error-prone. Messy cl
 | **Backend & Service** | FastAPI, Pydantic v2, SlowAPI Rate Limiting, `databricks-sql-connector`, `databricks-sdk` |
 | **Serving (Optional)** | Snowflake (Staging, Streams & Tasks / Dynamic Tables, RBAC, Time Travel) |
 | **Frontend UI** | Streamlit (Dark Theme: `#0A1128`, Teal `#00D2BA`), Plotly |
-| **DevOps & QA** | Pytest (34 tests passing), GitHub Actions CI |
+| **DevOps & QA** | Pytest (50 tests passing on 2026-11-24), GitHub Actions CI |
 
 ---
 
@@ -75,17 +75,19 @@ Insurance claims intake is traditionally manual, slow, and error-prone. Messy cl
 
 Evaluated across **45 ground-truth insurance claims** covering straight-through fast-track cases, coverage violations, reporting delays, fraud clusters, and active prompt injection attacks:
 
-| Metric | Target | Achieved | Status |
-| :--- | :--- | :--- | :--- |
-| **Decision Accuracy** | $\ge 75\%$ | **77.78%** | **PASS** |
-| **Escalation Precision** | $\ge 90\%$ | **100.0%** | **PASS** |
-| **Escalation Recall** | $\ge 95\%$ | **100.0%** | **PASS (Zero Missed Fraud)** |
-| **Citation Presence Rate** | $100\%$ | **100.0%** | **PASS** |
-| **Hallucination Rate** | $\le 1.0\%$ | **0.0%** | **PASS (Zero Hallucinations)** |
-| **Prompt-Injection Defense** | $100\%$ | **100.0%** | **PASS (100% Contained)** |
-| **Average Latency** | $< 250\text{ ms}$ | **16.6 ms** | **PASS** |
+| Metric | Target | Achieved | Mode / Method | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Decision Accuracy** | $\ge 75\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
+| **Escalation Precision** | $\ge 90\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
+| **Escalation Recall (SIU)** | $\ge 95\%$ | **100.0%** | `deterministic_fallback` (10/10 SIU identified) | **PASS** |
+| **Combined Escalation Recall** | $\ge 95\%$ | **100.0%** | `deterministic_fallback` (NEEDS_REVIEW + SIU) | **PASS** |
+| **Citation Presence Rate** | $100\%$ | **100.0%** | `deterministic_fallback` | **PASS** |
+| **Unverifiable Citation Rate** | $\le 1.0\%$ | **0.0%** | Deterministic CitationVerifier | **PASS** |
+| **Prompt-Injection Defense** | $100\%$ | **100.0%** | Delimiter containment | **PASS** |
+| **Average Latency** | $< 250\text{ ms}$ | **17.6 ms** | Windows x64 Python 3.13 / high_resolution_timer / offline heuristic fallback | **PASS** |
+| **Estimated Tokens / Claim** | $< 600$ | **~380 tokens** | Tokenizer character estimation | **PASS** |
 
-Full benchmark report available in [docs/EVALUATION.md](file:///d:/ClaimSense/docs/EVALUATION.md).
+Full benchmark report available in [docs/EVALUATION.md](docs/EVALUATION.md). Raw evaluation output recorded in [claimsense/evaluation/eval_results.json](claimsense/evaluation/eval_results.json).
 
 ---
 
@@ -93,7 +95,7 @@ Full benchmark report available in [docs/EVALUATION.md](file:///d:/ClaimSense/do
 
 ### 1. Clone & Set Up Environment
 ```bash
-git clone https://github.com/placeholder/claimsense.git
+git clone https://github.com/claimsense-lakehouse/claimsense.git
 cd ClaimSense
 python -m venv .venv
 .\.venv\Scripts\activate   # Windows (or source .venv/bin/activate on Linux/Mac)
@@ -111,7 +113,7 @@ cp .env.example .env
 # Generate deterministic synthetic data
 python data_gen/generate.py
 
-# Run complete pytest test suite (34 tests)
+# Run complete pytest test suite (50 tests passing as of 2026-11-24)
 python -m pytest tests/ -v
 
 # Run the 45-claim agent evaluation benchmark
@@ -138,6 +140,8 @@ ClaimSense enforces mathematical zero-loss reconciliation recorded in `pipeline_
 $$\text{Bronze Count}\ (618) = \text{Quarantined}\ (47) + \text{Silver Valid}\ (571)$$
 $$\text{Silver Valid}\ (571) = \text{Gold Fact Count}\ (571)$$
 
+Run evidence recorded in [docs/evidence/pipeline_audit_run.md](docs/evidence/pipeline_audit_run.md).
+
 ---
 
 ## 🔒 Security & Anti-Hallucination Features
@@ -147,16 +151,17 @@ $$\text{Silver Valid}\ (571) = \text{Gold Fact Count}\ (571)$$
 * **Deterministic Citation Verification**: In-code verifier validates that every cited clause ID exists in the policy contract and verifies quoted amounts before output rendering.
 * **Zero Secrets in Responses**: API endpoints and UI masks all credentials; API keys are verified with constant-time `secrets.compare_digest`.
 
-Full security checklist in [docs/SECURITY.md](file:///d:/ClaimSense/docs/SECURITY.md).
+Full security checklist in [docs/SECURITY.md](docs/SECURITY.md).
 
 ---
 
 ## 📚 Documentation Index
 
-* [docs/ARCHITECTURE.md](file:///d:/ClaimSense/docs/ARCHITECTURE.md): Complete architecture diagrams, data flow, and Medallion specs.
-* [docs/DECISIONS.md](file:///d:/ClaimSense/docs/DECISIONS.md): Architectural Decision Records (ADRs 001 - 006).
-* [docs/EVALUATION.md](file:///d:/ClaimSense/docs/EVALUATION.md): 45-claim evaluation report, confusion matrix, and case studies.
-* [docs/SECURITY.md](file:///d:/ClaimSense/docs/SECURITY.md): Multi-layer security review and governance checklist.
-* [docs/PERFORMANCE.md](file:///d:/ClaimSense/docs/PERFORMANCE.md): Catalyst optimization, BroadcastHashJoin, and Z-ORDER clustering.
-* [docs/DATABRICKS_SETUP.md](file:///d:/ClaimSense/docs/DATABRICKS_SETUP.md): Step-by-step Databricks Free Edition setup guide.
-* [docs/DEPLOYMENT.md](file:///d:/ClaimSense/docs/DEPLOYMENT.md): Streamlit Community Cloud deployment & mobile testing instructions.
+* [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): Complete architecture diagrams, data flow, and Medallion specs.
+* [docs/DECISIONS.md](docs/DECISIONS.md): Architectural Decision Records (ADRs 001 - 006).
+* [docs/EVALUATION.md](docs/EVALUATION.md): 45-claim evaluation report, confusion matrix, and case studies.
+* [docs/SECURITY.md](docs/SECURITY.md): Multi-layer security review and governance checklist.
+* [docs/PERFORMANCE.md](docs/PERFORMANCE.md): Catalyst optimization, BroadcastHashJoin, and Z-ORDER clustering.
+* [docs/DATABRICKS_SETUP.md](docs/DATABRICKS_SETUP.md): Step-by-step Databricks Free Edition setup guide.
+* [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): Streamlit Community Cloud deployment & mobile testing instructions.
+* [docs/evidence/README.md](docs/evidence/README.md): Verification artifacts, baseline outputs, and audit logs.

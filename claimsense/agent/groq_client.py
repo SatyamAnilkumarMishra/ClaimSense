@@ -18,6 +18,8 @@ class GroqClientWrapper:
         self.settings = settings or get_settings()
         self._cache: Dict[str, str] = {}
         self._tokens_used_today = 0
+        self.last_llm_mode: str = "deterministic_fallback"
+        self.last_model_name: str = "offline_heuristic"
 
     def _hash_messages(self, model: str, messages: List[Dict[str, str]]) -> str:
         serialized = json.dumps({"model": model, "messages": messages}, sort_keys=True)
@@ -44,11 +46,18 @@ class GroqClientWrapper:
 
         # Check Cache
         if cache_key in self._cache:
-            return json.loads(self._cache[cache_key])
+            cached_data = json.loads(self._cache[cache_key])
+            self.last_llm_mode = cached_data.get("_llm_mode", "deterministic_fallback")
+            self.last_model_name = cached_data.get("_model_name", model)
+            return cached_data
 
         # If Groq is not configured or quota exceeded, use deterministic mock fallback
         if not self.settings.is_groq_configured or self._tokens_used_today >= self.settings.GROQ_DAILY_TOKEN_LIMIT:
+            self.last_llm_mode = "deterministic_fallback"
+            self.last_model_name = "offline_heuristic"
             mock_result = self._mock_triage_decision(user_prompt)
+            mock_result["_llm_mode"] = "deterministic_fallback"
+            mock_result["_model_name"] = "offline_heuristic"
             self._cache[cache_key] = json.dumps(mock_result)
             return mock_result
 
@@ -72,7 +81,11 @@ class GroqClientWrapper:
                         self._tokens_used_today += response.usage.total_tokens
 
                     data = json.loads(content)
-                    self._cache[cache_key] = content
+                    data["_llm_mode"] = "live_groq"
+                    data["_model_name"] = model
+                    self.last_llm_mode = "live_groq"
+                    self.last_model_name = model
+                    self._cache[cache_key] = json.dumps(data)
                     return data
                 except Exception as exc:
                     last_exc = exc
@@ -82,11 +95,21 @@ class GroqClientWrapper:
                         break
 
             logger.warning(f"Live Groq call failed ({last_exc}). Falling back to deterministic agent reasoning.")
-            return self._mock_triage_decision(user_prompt)
+            self.last_llm_mode = "deterministic_fallback"
+            self.last_model_name = "offline_heuristic"
+            mock_res = self._mock_triage_decision(user_prompt)
+            mock_res["_llm_mode"] = "deterministic_fallback"
+            mock_res["_model_name"] = "offline_heuristic"
+            return mock_res
 
         except Exception as exc:
             logger.warning(f"Groq invocation failed ({exc}). Using offline reasoning fallback.")
-            return self._mock_triage_decision(user_prompt)
+            self.last_llm_mode = "deterministic_fallback"
+            self.last_model_name = "offline_heuristic"
+            mock_res = self._mock_triage_decision(user_prompt)
+            mock_res["_llm_mode"] = "deterministic_fallback"
+            mock_res["_model_name"] = "offline_heuristic"
+            return mock_res
 
     def _mock_triage_decision(self, user_prompt: str) -> Dict[str, Any]:
         """Deterministic offline fallback reasoning based on rule check facts in prompt."""
@@ -105,7 +128,9 @@ class GroqClientWrapper:
                 "cited_clause_ids": [primary_clause],
             }
 
-        if "RULE-05-FRAUD-RISK -> FAIL" in user_prompt:
+        # Check for fraud risk rule failure using regex to handle descriptions between ID and outcome
+        has_fraud_fail = bool(re.search(r"RULE-05-FRAUD-RISK.*?->\s*FAIL", user_prompt))
+        if has_fraud_fail or "flag_high_risk_customer" in user_prompt.lower():
             return {
                 "decision": "ESCALATE_SIU",
                 "confidence": 0.95,
