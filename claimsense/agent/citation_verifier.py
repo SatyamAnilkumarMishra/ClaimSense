@@ -18,9 +18,9 @@ class VerificationResult:
     def __init__(
         self,
         is_valid: bool,
-        repaired_decision: Optional[str] = None,
-        errors: Optional[List[str]] = None,
-        verified_citations: Optional[List[str]] = None,
+        repaired_decision: str | None = None,
+        errors: list[str] | None = None,
+        verified_citations: list[str] | None = None,
         hallucination_detected: bool = False,
     ):
         self.is_valid = is_valid

@@ -135,8 +135,8 @@ def get_claim(claim_id: str):
     service = get_claims_service()
     try:
         return service.get_claim_detail(claim_id)
-    except ClaimNotFoundError:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found.")
+    except ClaimNotFoundError as err:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found.") from err
 
 
 @app.post(
@@ -190,9 +190,9 @@ def triage_claim(request: Request, claim_id: str):
     try:
         return service.triage_claim(claim_id)
     except ValueError as e:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
-    except ClaimNotFoundError:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found.")
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e)) from e
+    except ClaimNotFoundError as err:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found.") from err
 
 
 @app.post(
@@ -212,7 +212,7 @@ def human_review_claim(
     try:
         return service.review_claim(claim_id, review_req)
     except ValueError as e:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e)) from e
 
 
 if __name__ == "__main__":

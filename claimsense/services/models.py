@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from typing import Any, Dict, List, Optional
 from pydantic import BaseModel, Field
 
 
-class TriageDecisionEnum(str, Enum):
+class TriageDecisionEnum(StrEnum):
     FAST_TRACK = "FAST_TRACK"
     NEEDS_REVIEW = "NEEDS_REVIEW"
     ESCALATE_SIU = "ESCALATE_SIU"

@@ -17,7 +17,7 @@ Implements strict LangGraph principles (LG-01 to LG-11):
 from __future__ import annotations
 
 from datetime import datetime, timezone
-from enum import Enum
+from enum import StrEnum
 import json
 import logging
 import re
@@ -43,14 +43,14 @@ logger = logging.getLogger(__name__)
 # LG-01 & LG-05: Typed, Validated State & Schemas
 # ==============================================================================
 
-class PrecedenceLevel(str, Enum):
+class PrecedenceLevel(StrEnum):
     SIU_FRAUD_BREACH = "SIU_FRAUD_BREACH"
     EVIDENCE_OR_CITATION_FAILURE = "EVIDENCE_OR_CITATION_FAILURE"
     LOW_CONFIDENCE = "LOW_CONFIDENCE"
     LLM_DECISION_ACCEPTED = "LLM_DECISION_ACCEPTED"
 
 
-class AllowedReviewAction(str, Enum):
+class AllowedReviewAction(StrEnum):
     APPROVE = "APPROVE"
     OVERRIDE = "OVERRIDE"
     REJECT = "REJECT"

@@ -65,7 +65,7 @@ class DatabricksClient:
                         if cursor.description:
                             columns = [col[0] for col in cursor.description]
                             rows = cursor.fetchall()
-                            return [dict(zip(columns, row)) for row in rows]
+                            return [dict(zip(columns, row, strict=True)) for row in rows]
                         return []
 
             except Exception as exc:
@@ -75,7 +75,7 @@ class DatabricksClient:
                 )
                 if isinstance(last_error, (DatabricksAuthError, DatabricksQuotaExceededError)):
                     # Non-retryable
-                    raise last_error
+                    raise last_error from exc
                 if attempt < max_retries:
                     time.sleep(backoff_sec * (2 ** (attempt - 1)))
 

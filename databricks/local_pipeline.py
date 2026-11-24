@@ -239,8 +239,10 @@ class LocalMedallionPipeline:
         """)
         self.conn.commit()
 
-    def run_bronze(self, batches: List[str] = ["claims_batch_1.csv", "claims_batch_2.csv", "claims_batch_3.csv"]) -> Dict[str, int]:
+    def run_bronze(self, batches: Optional[List[str]] = None) -> Dict[str, int]:
         """Ingests raw CSV batches into Bronze tables with metadata."""
+        if batches is None:
+            batches = ["claims_batch_1.csv", "claims_batch_2.csv", "claims_batch_3.csv"]
         cur = self.conn.cursor()
         now_ts = datetime.now(timezone.utc).isoformat()
 
