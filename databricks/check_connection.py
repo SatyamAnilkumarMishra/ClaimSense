@@ -1,4 +1,4 @@
-"""Test script for Databricks SQL Warehouse connectivity.
+"""Manual check: verifies the Databricks SQL connection.
 
 Runs a simple `SELECT 1` query using databricks-sql-connector.
 Provides human-friendly diagnostic messages for auth, warehouse state, or missing variables.

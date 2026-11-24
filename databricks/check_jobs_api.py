@@ -1,4 +1,4 @@
-"""Test script for Databricks Jobs (Workflows) API.
+"""Manual check: verifies the Databricks Jobs (Workflows) API connectivity.
 
 Uses databricks-sdk WorkspaceClient to verify API connectivity and list available jobs.
 """
@@ -8,7 +8,7 @@ import sys
 from claimsense.config import get_settings
 
 
-def test_jobs_api() -> bool:
+def check_jobs_api() -> bool:
     settings = get_settings()
 
     print("=" * 60)
@@ -56,5 +56,5 @@ def test_jobs_api() -> bool:
 
 
 if __name__ == "__main__":
-    success = test_jobs_api()
+    success = check_jobs_api()
     sys.exit(0 if success else 1)

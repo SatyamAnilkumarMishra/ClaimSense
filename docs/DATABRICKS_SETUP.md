@@ -61,9 +61,9 @@ DATABRICKS_VOLUME=landing_zone
 ---
 
 ## 4. Verify Connectivity
-Run the test scripts:
+Run the check scripts:
 ```powershell
-.\.venv\Scripts\python.exe databricks/test_connection.py
-.\.venv\Scripts\python.exe databricks/test_jobs_api.py
+.\.venv\Scripts\python.exe databricks/check_connection.py
+.\.venv\Scripts\python.exe databricks/check_jobs_api.py
 ```
 If successful, you will see `[SUCCESS] Databricks SQL Warehouse is connected and healthy!`.
