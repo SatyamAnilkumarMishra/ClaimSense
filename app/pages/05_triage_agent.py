@@ -1,8 +1,8 @@
 """ClaimSense: LangGraph AI Triage Agent Page."""
 
-import time
 import pandas as pd
 import streamlit as st
+
 from claimsense.agent.audit_store import get_triage_audit_store
 from claimsense.db.client_factory import get_db_client
 from claimsense.services.claims_service import get_claims_service
@@ -11,7 +11,9 @@ from claimsense.services.models import HumanReviewRequest, TriageDecisionEnum
 
 def render():
     st.title("🤖 LangGraph AI Claims Triage Agent")
-    st.markdown("Ground-truth AI triage engine running deterministic policy rules, vector clause retrieval, and anti-hallucination verification.")
+    st.markdown(
+        "Ground-truth AI triage engine running deterministic policy rules, vector clause retrieval, and anti-hallucination verification."
+    )
 
     service = get_claims_service()
     db = get_db_client()
@@ -37,11 +39,19 @@ def render():
             st.session_state["selected_claim_id"] = "CLM-30372"
 
     # Claim Selector Dropdown
-    claims_rows = db.execute_query("SELECT claim_id, claim_type, claimed_amount, city FROM fact_claims ORDER BY claim_id LIMIT 60")
+    claims_rows = db.execute_query(
+        "SELECT claim_id, claim_type, claimed_amount, city FROM fact_claims ORDER BY claim_id LIMIT 60"
+    )
     claim_options = [r["claim_id"] for r in claims_rows] if claims_rows else ["CLM-30079"]
 
-    default_idx = claim_options.index(st.session_state["selected_claim_id"]) if st.session_state["selected_claim_id"] in claim_options else 0
-    chosen_claim_id = st.selectbox("Or select claim from Lakehouse:", claim_options, index=default_idx)
+    default_idx = (
+        claim_options.index(st.session_state["selected_claim_id"])
+        if st.session_state["selected_claim_id"] in claim_options
+        else 0
+    )
+    chosen_claim_id = st.selectbox(
+        "Or select claim from Lakehouse:", claim_options, index=default_idx
+    )
     st.session_state["selected_claim_id"] = chosen_claim_id
 
     # Execute Triage Button
@@ -62,45 +72,62 @@ def render():
         with res_col1:
             dec = assess.decision
             if dec == TriageDecisionEnum.FAST_TRACK:
-                st.markdown("""
+                st.markdown(
+                    """
                 <div style="background: rgba(0, 210, 186, 0.15); border: 2px solid #00D2BA; border-radius: 10px; padding: 1.25rem;">
                     <span class="badge-fast-track">FAST_TRACK RECOMMENDATION</span>
                     <h2 style="color: #00D2BA; margin: 0.5rem 0 0.25rem 0;">Straight-Through Processing Approved</h2>
                     <p style="color: #F0F4F8; margin: 0;">All deterministic rules passed. Eligible for automated rapid settlement.</p>
                 </div>
-                """, unsafe_allow_html=True)
+                """,
+                    unsafe_allow_html=True,
+                )
             elif dec == TriageDecisionEnum.NEEDS_REVIEW:
-                st.markdown("""
+                st.markdown(
+                    """
                 <div style="background: rgba(255, 179, 0, 0.15); border: 2px solid #FFB300; border-radius: 10px; padding: 1.25rem;">
                     <span class="badge-needs-review">NEEDS_REVIEW RECOMMENDATION</span>
                     <h2 style="color: #FFB300; margin: 0.5rem 0 0.25rem 0;">Manual Adjuster Review Required</h2>
                     <p style="color: #F0F4F8; margin: 0;">Exceptions flagged (e.g. reporting delay, documentation shortage, or policy limits).</p>
                 </div>
-                """, unsafe_allow_html=True)
+                """,
+                    unsafe_allow_html=True,
+                )
             else:
-                st.markdown("""
+                st.markdown(
+                    """
                 <div style="background: rgba(255, 75, 75, 0.15); border: 2px solid #FF4B4B; border-radius: 10px; padding: 1.25rem;">
                     <span class="badge-escalate-siu">ESCALATE_SIU RECOMMENDATION</span>
                     <h2 style="color: #FF4B4B; margin: 0.5rem 0 0.25rem 0;">Fraud Investigation Referral</h2>
                     <p style="color: #F0F4F8; margin: 0;">Elevated behavioral risk score or rapid filing cluster pattern detected.</p>
                 </div>
-                """, unsafe_allow_html=True)
+                """,
+                    unsafe_allow_html=True,
+                )
 
         with res_col2:
-            st.markdown(f"""
+            st.markdown(
+                f"""
             <div class="kpi-card" style="height: 100%;">
                 <div class="kpi-title">Agent Confidence</div>
                 <div class="kpi-value">{assess.confidence * 100:.0f}%</div>
                 <div class="kpi-subtext">Verified Policy Grounding</div>
             </div>
-            """, unsafe_allow_html=True)
+            """,
+                unsafe_allow_html=True,
+            )
 
         st.markdown("<br>", unsafe_allow_html=True)
 
         # Tabs for Decision Details
-        tab_reasons, tab_rules, tab_clauses, tab_trace = st.tabs([
-            "📋 Reasons & Citations", "⚖️ Deterministic Rules", "📜 Cited Policy Clauses", "🔍 Execution Trace"
-        ])
+        tab_reasons, tab_rules, tab_clauses, tab_trace = st.tabs(
+            [
+                "📋 Reasons & Citations",
+                "⚖️ Deterministic Rules",
+                "📜 Cited Policy Clauses",
+                "🔍 Execution Trace",
+            ]
+        )
 
         with tab_reasons:
             st.markdown("#### Primary Assessment Reasons")
@@ -132,12 +159,16 @@ def render():
         with tab_trace:
             st.markdown("#### LangGraph StateGraph Execution Trace")
             for step in assess.trace:
-                st.markdown(f"- **Step `{step.get('step')}`** at `{step.get('timestamp')}`: `{step}`")
+                st.markdown(
+                    f"- **Step `{step.get('step')}`** at `{step.get('timestamp')}`: `{step}`"
+                )
 
         # Human-in-the-Loop Review Panel
         st.divider()
         st.markdown("### 👤 Human Adjuster Review Panel")
-        st.caption("Human makes the final claim decision. Adjuster feedback resumes and finalizes the LangGraph StateGraph.")
+        st.caption(
+            "Human makes the final claim decision. Adjuster feedback resumes and finalizes the LangGraph StateGraph."
+        )
 
         rev_col1, rev_col2 = st.columns([1, 2])
 
@@ -145,10 +176,15 @@ def render():
             action_choice = st.selectbox("Action:", ["APPROVE", "OVERRIDE", "REJECT"])
             override_val = None
             if action_choice == "OVERRIDE":
-                override_val = st.selectbox("Override To:", ["FAST_TRACK", "NEEDS_REVIEW", "ESCALATE_SIU"])
+                override_val = st.selectbox(
+                    "Override To:", ["FAST_TRACK", "NEEDS_REVIEW", "ESCALATE_SIU"]
+                )
 
         with rev_col2:
-            notes_input = st.text_area("Adjuster Compliance Notes:", "Claim details and repair receipts cross-checked. Approved for payment.")
+            notes_input = st.text_area(
+                "Adjuster Compliance Notes:",
+                "Claim details and repair receipts cross-checked. Approved for payment.",
+            )
 
         if st.button("Submit Final Decision ➔", type="primary"):
             req = HumanReviewRequest(
@@ -157,7 +193,9 @@ def render():
                 reviewer_notes=notes_input,
             )
             res = service.review_claim(assess.claim_id, req)
-            st.success(f"Final Decision Recorded: {res.final_decision}. Graph execution finalized at {res.timestamp}.")
+            st.success(
+                f"Final Decision Recorded: {res.final_decision}. Graph execution finalized at {res.timestamp}."
+            )
 
     st.divider()
 
@@ -165,9 +203,13 @@ def render():
     st.markdown("### 📜 Past Triage Audit Trail (`triage_audit`)")
     audit_recs = audit_store.list_audit_records(limit=10)
     if audit_recs:
-        st.dataframe(pd.DataFrame(audit_recs)[[
-            "audit_id", "claim_id", "decision", "confidence", "created_at"
-        ]], use_container_width=True, hide_index=True)
+        st.dataframe(
+            pd.DataFrame(audit_recs)[
+                ["audit_id", "claim_id", "decision", "confidence", "created_at"]
+            ],
+            use_container_width=True,
+            hide_index=True,
+        )
 
 
 if __name__ == "__main__":

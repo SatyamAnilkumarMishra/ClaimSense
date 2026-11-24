@@ -2,22 +2,29 @@
 
 import pandas as pd
 import streamlit as st
+
 from claimsense.config import get_settings
 from claimsense.db.client_factory import get_db_client
 
 
 def render():
     st.title("❄️ Snowflake Serving Layer (Mart)")
-    st.markdown("Examine the downstream serving layer designed for enterprise BI tools, role-based access control (RBAC), and Dynamic Tables / Tasks.")
+    st.markdown(
+        "Examine the downstream serving layer designed for enterprise BI tools, role-based access control (RBAC), and Dynamic Tables / Tasks."
+    )
 
     settings = get_settings()
     db = get_db_client()
 
     # Snowflake Connectivity Card
     if settings.is_snowflake_configured:
-        st.success(f"Connected to Snowflake Warehouse: {settings.SNOWFLAKE_WAREHOUSE} | DB: {settings.SNOWFLAKE_DATABASE}.{settings.SNOWFLAKE_SCHEMA}")
+        st.success(
+            f"Connected to Snowflake Warehouse: {settings.SNOWFLAKE_WAREHOUSE} | DB: {settings.SNOWFLAKE_DATABASE}.{settings.SNOWFLAKE_SCHEMA}"
+        )
     else:
-        st.info("Snowflake Serving Layer: Currently operating in Stage 7 Cached Mode. Full SQL DDL/DML, stages, tasks, and RBAC scripts are preserved in the `snowflake/` repository folder.")
+        st.info(
+            "Snowflake Serving Layer: Currently operating in Stage 7 Cached Mode. Full SQL DDL/DML, stages, tasks, and RBAC scripts are preserved in the `snowflake/` repository folder."
+        )
 
     # Snowflake Mart Summary Metrics
     st.markdown("### 📊 Curated Mart View: `CLAIMS_SUMMARY_MART`")
@@ -51,7 +58,8 @@ def render():
     """)
 
     with st.expander("⏱️ Snowflake Time Travel & Zero-Copy Clone DDL"):
-        st.code("""
+        st.code(
+            """
         -- Snowflake Time Travel Demonstration
         SELECT * FROM CLAIMSENSE_DB.MART.FACT_CLAIMS
         AT(OFFSET => -60*5); -- Query state exactly 5 minutes ago
@@ -59,7 +67,9 @@ def render():
         -- Zero-Copy Clone for Dev/Testing
         CREATE TABLE CLAIMSENSE_DB.MART.FACT_CLAIMS_DEV
         CLONE CLAIMSENSE_DB.MART.FACT_CLAIMS;
-        """, language="sql")
+        """,
+            language="sql",
+        )
 
 
 if __name__ == "__main__":

@@ -2,7 +2,6 @@
 
 import json
 from pathlib import Path
-import re
 
 
 def test_readme_and_evaluation_docs_match_eval_results():
@@ -10,7 +9,7 @@ def test_readme_and_evaluation_docs_match_eval_results():
     results_file = Path("claimsense/evaluation/eval_results.json")
     assert results_file.exists(), "eval_results.json must exist"
 
-    with open(results_file, "r", encoding="utf-8") as f:
+    with open(results_file, encoding="utf-8") as f:
         data = json.load(f)
 
     summary = data["summary"]
@@ -33,5 +32,7 @@ def test_readme_and_evaluation_docs_match_eval_results():
     eval_text = eval_doc_file.read_text(encoding="utf-8")
 
     assert f"**{accuracy}%**" in eval_text, f"EVALUATION.md does not contain accuracy {accuracy}%"
-    assert f"**{precision}%**" in eval_text, f"EVALUATION.md does not contain precision {precision}%"
+    assert f"**{precision}%**" in eval_text, (
+        f"EVALUATION.md does not contain precision {precision}%"
+    )
     assert f"**{latency} ms**" in eval_text, f"EVALUATION.md does not contain latency {latency} ms"

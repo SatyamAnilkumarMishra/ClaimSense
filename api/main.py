@@ -14,22 +14,14 @@ from __future__ import annotations
 
 import logging
 import secrets
-import sys
 import uuid
-from pathlib import Path
-from typing import Any, Dict, List, Optional
 
-from fastapi import Depends, FastAPI, HTTPException, Header, Query, Request, status
+from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
-
-# Ensure project root is importable
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
 
 from claimsense.config import get_settings
 from claimsense.db.errors import ClaimNotFoundError
@@ -74,7 +66,7 @@ app.add_middleware(
 
 
 # Security: API Key Dependency (Constant-Time Verification)
-def verify_api_key(x_api_key: Optional[str] = Header(None, alias="X-API-Key")) -> str:
+def verify_api_key(x_api_key: str | None = Header(None, alias="X-API-Key")) -> str:
     """Enforces constant-time API key verification for protected endpoints."""
     if not x_api_key or not secrets.compare_digest(x_api_key, settings.FASTAPI_API_KEY):
         raise HTTPException(
@@ -104,6 +96,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 # REST Endpoints
 # -----------------------------------------------------------------------------
 
+
 @app.get("/health", response_model=SystemHealthResponse, tags=["System"])
 def health_check():
     """Returns connectivity and operational status across Databricks, Groq, and fallback modes."""
@@ -118,11 +111,11 @@ def get_kpis():
     return service.get_kpi_summary()
 
 
-@app.get("/claims", response_model=List[ClaimSummary], tags=["Claims"])
+@app.get("/claims", response_model=list[ClaimSummary], tags=["Claims"])
 def list_claims(
     limit: int = Query(default=50, ge=1, le=500),
-    status: Optional[str] = Query(default=None),
-    claim_type: Optional[str] = Query(default=None),
+    status: str | None = Query(default=None),
+    claim_type: str | None = Query(default=None),
 ):
     """Retrieves claim records with optional filters."""
     service = get_claims_service()
@@ -136,7 +129,9 @@ def get_claim(claim_id: str):
     try:
         return service.get_claim_detail(claim_id)
     except ClaimNotFoundError as err:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found.") from err
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found."
+        ) from err
 
 
 @app.post(
@@ -163,7 +158,7 @@ def get_pipeline_status(run_id: str):
     return matching
 
 
-@app.get("/audit/runs", response_model=List[AuditRunRecord], tags=["Audit"])
+@app.get("/audit/runs", response_model=list[AuditRunRecord], tags=["Audit"])
 def get_audit_history(limit: int = Query(default=10, ge=1, le=50)):
     """Returns reconciliation history records from pipeline_audit."""
     service = get_claims_service()
@@ -192,7 +187,9 @@ def triage_claim(request: Request, claim_id: str):
     except ValueError as e:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e)) from e
     except ClaimNotFoundError as err:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found.") from err
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND, detail=f"Claim '{claim_id}' not found."
+        ) from err
 
 
 @app.post(
@@ -217,4 +214,5 @@ def human_review_claim(
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run("api.main:app", host="127.0.0.1", port=8000, reload=True)

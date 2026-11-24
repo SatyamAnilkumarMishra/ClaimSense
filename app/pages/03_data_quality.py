@@ -5,7 +5,9 @@ import streamlit as st
 
 try:
     import plotly.express as px
+
     from app.styles.plotly_theme import apply_plotly_theme
+
     HAS_PLOTLY = True
 except ImportError:
     HAS_PLOTLY = False
@@ -16,7 +18,9 @@ from claimsense.services.claims_service import get_claims_service
 
 def render():
     st.title("🛡️ Data Quality & Quarantine View")
-    st.markdown("Inspect defective claim rows quarantined during Silver transformation, analyze violation patterns, and examine before/after remediation lineages.")
+    st.markdown(
+        "Inspect defective claim rows quarantined during Silver transformation, analyze violation patterns, and examine before/after remediation lineages."
+    )
 
     service = get_claims_service()
     db = get_db_client()
@@ -47,13 +51,16 @@ def render():
                 st.bar_chart(df_rules.set_index("reject_reason")["failed_count"])
 
     with col_stats:
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="kpi-card">
             <div class="kpi-title">Total Quarantined</div>
             <div class="kpi-value" style="color: #FFB300;">{total_q}</div>
             <div class="kpi-subtext">Isolated from Gold Analytics</div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
         st.markdown("""
         #### 🛑 Rule Hierarchy
@@ -100,7 +107,8 @@ def render():
     col_dirty, col_clean = st.columns(2)
 
     with col_dirty:
-        st.markdown("""
+        st.markdown(
+            """
         <div style="background: rgba(255, 75, 75, 0.08); border: 1px solid rgba(255, 75, 75, 0.3); border-radius: 8px; padding: 1rem;">
             <h4 style="color: #FF4B4B; margin-top: 0;">❌ Raw Bronze Record (Messy)</h4>
             <code>
@@ -114,10 +122,13 @@ def render():
             duplicate_row_present: YES
             </code>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     with col_clean:
-        st.markdown("""
+        st.markdown(
+            """
         <div style="background: rgba(0, 210, 186, 0.08); border: 1px solid rgba(0, 210, 186, 0.3); border-radius: 8px; padding: 1rem;">
             <h4 style="color: #00D2BA; margin-top: 0;">✅ Silver Remediated Record</h4>
             <code>
@@ -131,7 +142,9 @@ def render():
             deduplicated: YES (Window row_number = 1)
             </code>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 """Database client factory with automatic, transparent fallback to offline snapshots."""
 
 import logging
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 from claimsense.config import Settings, get_settings
 from claimsense.db.databricks_client import DatabricksClient
@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 class ResilientDBClient:
     """Unified client that routes to Databricks when healthy, with instant snapshot fallback."""
 
-    def __init__(self, settings: Optional[Settings] = None):
+    def __init__(self, settings: Settings | None = None):
         self.settings = settings or get_settings()
         self.databricks_client = DatabricksClient(self.settings)
         self.snapshot_client = SnapshotClient(self.settings)
@@ -23,8 +23,8 @@ class ResilientDBClient:
     def execute_query(
         self,
         query: str,
-        parameters: Optional[Dict[str, Any] | Tuple[Any, ...] | List[Any]] = None,
-    ) -> List[Dict[str, Any]]:
+        parameters: dict[str, Any] | tuple[Any, ...] | list[Any] | None = None,
+    ) -> list[dict[str, Any]]:
         """Executes query on Databricks if configured, degrading gracefully to Snapshot on error."""
         if self.settings.is_databricks_configured:
             try:
@@ -41,10 +41,10 @@ class ResilientDBClient:
         return self.snapshot_client.execute_query(query, parameters)
 
 
-_resilient_client_instance: Optional[ResilientDBClient] = None
+_resilient_client_instance: ResilientDBClient | None = None
 
 
-def get_db_client(settings: Optional[Settings] = None) -> ResilientDBClient:
+def get_db_client(settings: Settings | None = None) -> ResilientDBClient:
     """Singleton getter for the resilient database client."""
     global _resilient_client_instance
     if _resilient_client_instance is None:

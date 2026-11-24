@@ -5,7 +5,9 @@ import streamlit as st
 
 try:
     import plotly.express as px
+
     from app.styles.plotly_theme import apply_plotly_theme
+
     HAS_PLOTLY = True
 except ImportError:
     HAS_PLOTLY = False
@@ -16,7 +18,9 @@ from claimsense.services.claims_service import get_claims_service
 
 def render():
     st.title("📈 Claims Analytics & Star Schema BI")
-    st.markdown("Query the Gold star schema (`fact_claims`, `dim_customer`, `dim_policy`, `dim_claim_type`, `dim_date`) with live interactive filters.")
+    st.markdown(
+        "Query the Gold star schema (`fact_claims`, `dim_customer`, `dim_policy`, `dim_claim_type`, `dim_date`) with live interactive filters."
+    )
 
     service = get_claims_service()
     db = get_db_client()
@@ -26,40 +30,52 @@ def render():
 
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="kpi-card">
             <div class="kpi-title">Total Valid Claims</div>
             <div class="kpi-value">{kpi.total_claims:,}</div>
             <div class="kpi-subtext">Gold Fact Grain: 1 row / claim</div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     with col2:
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="kpi-card">
             <div class="kpi-title">Total Claimed Value</div>
             <div class="kpi-value">${kpi.total_claimed_amount:,.2f}</div>
             <div class="kpi-subtext">Avg: ${kpi.average_claimed_amount:,.2f}</div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     with col3:
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="kpi-card">
             <div class="kpi-title">Avg Reporting Delay</div>
             <div class="kpi-value">{kpi.average_reporting_delay_days:.1f} Days</div>
             <div class="kpi-subtext">Incident to Intake</div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     with col4:
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="kpi-card">
             <div class="kpi-title">High Risk Rate</div>
-            <div class="kpi-value" style="color: {'#FF4B4B' if kpi.high_risk_rate_percent > 20 else '#00D2BA'};">{kpi.high_risk_rate_percent:.1f}%</div>
+            <div class="kpi-value" style="color: {"#FF4B4B" if kpi.high_risk_rate_percent > 20 else "#00D2BA"};">{kpi.high_risk_rate_percent:.1f}%</div>
             <div class="kpi-subtext">{kpi.high_risk_claims_count} Flagged Claims</div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     st.markdown("<br>", unsafe_allow_html=True)
 
@@ -68,9 +84,14 @@ def render():
     with f_col1:
         claim_type_filter = st.selectbox("Filter Claim Type:", ["ALL", "AUTO", "HEALTH", "HOME"])
     with f_col2:
-        status_filter = st.selectbox("Filter Status:", ["ALL", "SUBMITTED", "IN_REVIEW", "APPROVED", "SETTLED"])
+        status_filter = st.selectbox(
+            "Filter Status:", ["ALL", "SUBMITTED", "IN_REVIEW", "APPROVED", "SETTLED"]
+        )
     with f_col3:
-        city_filter = st.selectbox("Filter Metro Region:", ["ALL", "Columbus", "Cleveland", "Cincinnati", "Chicago", "Indianapolis", "Detroit"])
+        city_filter = st.selectbox(
+            "Filter Metro Region:",
+            ["ALL", "Columbus", "Cleveland", "Cincinnati", "Chicago", "Indianapolis", "Detroit"],
+        )
 
     # Build dynamic Gold query
     query = """
@@ -145,16 +166,30 @@ def render():
     st.markdown("### 🔍 Claims Explorer")
     if not df.empty:
         st.dataframe(
-            df[[
-                "claim_id", "policy_id", "full_name", "claim_type", "incident_date",
-                "claimed_amount", "claim_status", "city", "documents_count"
-            ]],
+            df[
+                [
+                    "claim_id",
+                    "policy_id",
+                    "full_name",
+                    "claim_type",
+                    "incident_date",
+                    "claimed_amount",
+                    "claim_status",
+                    "city",
+                    "documents_count",
+                ]
+            ],
             use_container_width=True,
             hide_index=True,
         )
 
         csv_exp = df.to_csv(index=False).encode("utf-8")
-        st.download_button("📥 Export Filtered Analytics (CSV)", data=csv_exp, file_name="claims_analytics_export.csv", mime="text/csv")
+        st.download_button(
+            "📥 Export Filtered Analytics (CSV)",
+            data=csv_exp,
+            file_name="claims_analytics_export.csv",
+            mime="text/csv",
+        )
     else:
         st.info("No claims match the selected filter combination.")
 

@@ -14,13 +14,11 @@ Ensures the LangGraph StateGraph engine adheres to strict control-flow requireme
 - LG-11: Stateless execution between runs
 """
 
-from datetime import datetime, timezone
 import pytest
 from pydantic import ValidationError
 
 from claimsense.agent.graph import (
     AllowedReviewAction,
-    ClaimTriageGraph,
     LLMOutputSchema,
     PrecedenceLevel,
     TriageAgentState,
@@ -33,10 +31,10 @@ from claimsense.agent.graph import (
 )
 from claimsense.db.client_factory import get_db_client
 
-
 # ==============================================================================
 # LG-01: Typed, Validated State
 # ==============================================================================
+
 
 def test_lg01_typed_validated_state():
     """Verify graph state enforces typed validation and rejects invalid schemas."""
@@ -61,6 +59,7 @@ def test_lg01_typed_validated_state():
 # LG-02: Explicit Topology, No Implicit Edges
 # ==============================================================================
 
+
 def test_lg02_explicit_topology():
     """Verify compiled graph contains exact registered nodes and edges."""
     graph = build_triage_graph()
@@ -83,6 +82,7 @@ def test_lg02_explicit_topology():
 # ==============================================================================
 # LG-03: Deterministic Routing Functions
 # ==============================================================================
+
 
 @pytest.mark.parametrize(
     "decision,needs_human,status,expected_route",
@@ -110,12 +110,21 @@ def test_lg03_deterministic_routing_boundaries(decision, needs_human, status, ex
 # LG-04: Explicit Escalation Precedence Order
 # ==============================================================================
 
+
 def test_lg04_escalation_precedence_order():
     """Verify 4-tier precedence list is strictly enforced:
     Level 1 (SIU Fraud) > Level 2 (Evidence/Citations) > Level 3 (Confidence) > Level 4 (LLM Accepted).
     """
-    mock_verifier_valid = type("MockVerifier", (), {"is_valid": True, "hallucination_detected": False, "verified_citations": ["AUTO-COV-01"]})
-    mock_verifier_invalid = type("MockVerifier", (), {"is_valid": False, "hallucination_detected": True, "verified_citations": []})
+    mock_verifier_valid = type(
+        "MockVerifier",
+        (),
+        {"is_valid": True, "hallucination_detected": False, "verified_citations": ["AUTO-COV-01"]},
+    )
+    mock_verifier_invalid = type(
+        "MockVerifier",
+        (),
+        {"is_valid": False, "hallucination_detected": True, "verified_citations": []},
+    )
 
     # Case A: Level 1 Trumps Level 2 (Fraud Risk + Invalid Citation -> ESCALATE_SIU)
     res_a = evaluate_escalation_precedence(
@@ -162,6 +171,7 @@ def test_lg04_escalation_precedence_order():
 # LG-05: LLM Output Gated, Validated Step
 # ==============================================================================
 
+
 def test_lg05_llm_schema_validation():
     """Verify LLMOutputSchema validates closed enum and schema fields."""
     # Valid schema
@@ -196,6 +206,7 @@ def test_lg05_llm_schema_validation():
 # LG-06: Tool Allow-List Enforcement
 # ==============================================================================
 
+
 def test_lg06_tool_allow_list():
     """Verify tools execute only with sanitized, allow-listed parameters."""
     db = get_db_client()
@@ -215,6 +226,7 @@ def test_lg06_tool_allow_list():
 # LG-07: Bounded Execution
 # ==============================================================================
 
+
 def test_lg07_bounded_execution():
     """Verify step_count bounds protect against unbounded cycles."""
     state: TriageAgentState = {
@@ -223,6 +235,7 @@ def test_lg07_bounded_execution():
         "trace": [],
     }
     from claimsense.agent.graph import node_assess_llm
+
     res = node_assess_llm(state)
     assert res["status"] == "LIMIT_EXCEEDED"
     assert res["decision"] == "NEEDS_REVIEW"
@@ -231,6 +244,7 @@ def test_lg07_bounded_execution():
 # ==============================================================================
 # LG-08: Human-in-the-Loop Checkpointer
 # ==============================================================================
+
 
 def test_lg08_human_in_the_loop_checkpointer():
     """Verify interrupt, resume approval, override reason validation, and finish rejection."""
@@ -277,6 +291,7 @@ def test_lg08_human_in_the_loop_checkpointer():
 # LG-09: Full Structured Trace Per Run
 # ==============================================================================
 
+
 def test_lg09_full_structured_trace():
     """Verify every executed node writes a structured trace record."""
     graph = get_triage_graph()
@@ -298,20 +313,25 @@ def test_lg09_full_structured_trace():
 # LG-10: Exported Graph Matches Code
 # ==============================================================================
 
+
 def test_lg10_exported_graph_matches_code():
     """Verify programmatic Mermaid export matches committed architecture documentation."""
     from pathlib import Path
+
     mermaid_text = export_mermaid_diagram()
     arch_file = Path("docs/ARCHITECTURE.md")
     assert arch_file.exists()
     content = arch_file.read_text(encoding="utf-8")
     assert "intake[intake: Validate Claim ID]" in content
     assert "apply_precedence[apply_precedence: 4-Tier Precedence Order]" in content
+    assert "intake" in mermaid_text
+    assert "apply_precedence" in mermaid_text
 
 
 # ==============================================================================
 # LG-11: Stateless Execution Between Runs
 # ==============================================================================
+
 
 def test_lg11_stateless_execution():
     """Verify multi-claim execution order does not leak state across runs."""

@@ -2,7 +2,7 @@
 
 import logging
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any
 
 from claimsense.config import Settings, get_settings
 from claimsense.db.errors import (
@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 class DatabricksClient:
     """Client for executing parameterised queries against Databricks SQL Warehouses."""
 
-    def __init__(self, settings: Optional[Settings] = None):
+    def __init__(self, settings: Settings | None = None):
         self.settings = settings or get_settings()
 
     def _classify_error(self, exc: Exception) -> Exception:
@@ -26,19 +26,28 @@ class DatabricksClient:
         msg = str(exc)
         if "401" in msg or "Invalid access token" in msg or "authentication failed" in msg.lower():
             return DatabricksAuthError(f"Authentication failed: {msg}")
-        if "starting" in msg.lower() or "warehouse is stopped" in msg.lower() or "429" in msg and "cold" in msg.lower():
-            return DatabricksWarehouseStartingError("Databricks SQL Warehouse is currently starting up from cold sleep.")
+        if (
+            "starting" in msg.lower()
+            or "warehouse is stopped" in msg.lower()
+            or "429" in msg
+            and "cold" in msg.lower()
+        ):
+            return DatabricksWarehouseStartingError(
+                "Databricks SQL Warehouse is currently starting up from cold sleep."
+            )
         if "quota exceeded" in msg.lower() or "limit reached" in msg.lower():
-            return DatabricksQuotaExceededError("Databricks Free Edition daily compute quota exceeded.")
+            return DatabricksQuotaExceededError(
+                "Databricks Free Edition daily compute quota exceeded."
+            )
         return DatabricksConnectionError(f"Databricks connection error: {msg}")
 
     def execute_query(
         self,
         query: str,
-        parameters: Optional[Dict[str, Any] | Tuple[Any, ...]] = None,
+        parameters: dict[str, Any] | tuple[Any, ...] | None = None,
         max_retries: int = 3,
         backoff_sec: float = 1.5,
-    ) -> List[Dict[str, Any]]:
+    ) -> list[dict[str, Any]]:
         """Executes a parameterised read query with exponential backoff retries."""
         if not self.settings.is_databricks_configured:
             raise DatabricksConnectionError("Databricks is not configured in settings.")
@@ -49,8 +58,7 @@ class DatabricksClient:
                 from databricks import sql
 
                 server_host = (
-                    self.settings.DATABRICKS_HOST
-                    .replace("https://", "")
+                    self.settings.DATABRICKS_HOST.replace("https://", "")
                     .replace("http://", "")
                     .strip("/")
                 )

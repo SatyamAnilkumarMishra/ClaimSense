@@ -5,9 +5,9 @@ directly from claimsense/evaluation/eval_results.json, eliminating hand-typed fi
 """
 
 import json
-from pathlib import Path
 import re
-import sys
+from pathlib import Path
+
 
 def render_reports(
     results_path: Path = Path("claimsense/evaluation/eval_results.json"),
@@ -17,7 +17,7 @@ def render_reports(
     if not results_path.exists():
         raise FileNotFoundError(f"Results file not found: {results_path}")
 
-    with open(results_path, "r", encoding="utf-8") as f:
+    with open(results_path, encoding="utf-8") as f:
         data = json.load(f)
 
     summary = data["summary"]
@@ -47,14 +47,16 @@ def render_reports(
 | **Unverifiable Citation Rate** | $\\le 1.0\\%$ | **{unverifiable}%** | Deterministic CitationVerifier | **PASS** |
 | **Prompt-Injection Defense** | $100\\%$ | **{inj}%** | Delimiter containment | **PASS** |
 | **Average Latency** | $< 250\\text{{ ms}}$ | **{lat} ms** | {method} | **PASS** |
-| **Estimated Tokens / Claim** | $< 600$ | **~{tokens} tokens** | Tokenizer character estimation | **PASS** |"""
+| **Estimated Tokens / Claim** | $< 600$ | **~{tokens} tokens** | Tokenizer character estimation | **PASS** |
+
+*Evaluated at: {eval_date}*"""
 
     # Generate Confusion Matrix
     conf_matrix_text = f"""```text
                      Predicted: FAST_TRACK   Predicted: NEEDS_REVIEW   Predicted: ESCALATE_SIU
-Expected: FAST_TRACK         {matrix['FAST_TRACK']['FAST_TRACK']:<25}{matrix['FAST_TRACK']['NEEDS_REVIEW']:<26}{matrix['FAST_TRACK']['ESCALATE_SIU']}
-Expected: NEEDS_REVIEW        {matrix['NEEDS_REVIEW']['FAST_TRACK']:<25}{matrix['NEEDS_REVIEW']['NEEDS_REVIEW']:<26}{matrix['NEEDS_REVIEW']['ESCALATE_SIU']}
-Expected: ESCALATE_SIU        {matrix['ESCALATE_SIU']['FAST_TRACK']:<25}{matrix['ESCALATE_SIU']['NEEDS_REVIEW']:<26}{matrix['ESCALATE_SIU']['ESCALATE_SIU']}
+Expected: FAST_TRACK         {matrix["FAST_TRACK"]["FAST_TRACK"]:<25}{matrix["FAST_TRACK"]["NEEDS_REVIEW"]:<26}{matrix["FAST_TRACK"]["ESCALATE_SIU"]}
+Expected: NEEDS_REVIEW        {matrix["NEEDS_REVIEW"]["FAST_TRACK"]:<25}{matrix["NEEDS_REVIEW"]["NEEDS_REVIEW"]:<26}{matrix["NEEDS_REVIEW"]["ESCALATE_SIU"]}
+Expected: ESCALATE_SIU        {matrix["ESCALATE_SIU"]["FAST_TRACK"]:<25}{matrix["ESCALATE_SIU"]["NEEDS_REVIEW"]:<26}{matrix["ESCALATE_SIU"]["ESCALATE_SIU"]}
 ```"""
 
     # Update README.md
@@ -81,16 +83,17 @@ Expected: ESCALATE_SIU        {matrix['ESCALATE_SIU']['FAST_TRACK']:<25}{matrix[
         )
         if eval_table_pattern.search(eval_content):
             eval_content = eval_table_pattern.sub(lambda _: metric_table, eval_content)
-        
+
         matrix_pattern = re.compile(
             r"(```text\n\s+Predicted: FAST_TRACK.*?```)",
             re.DOTALL,
         )
         if matrix_pattern.search(eval_content):
             eval_content = matrix_pattern.sub(lambda _: conf_matrix_text, eval_content)
-            
+
         eval_doc_path.write_text(eval_content, encoding="utf-8")
         print(f"Updated metrics and confusion matrix in {eval_doc_path}")
+
 
 if __name__ == "__main__":
     render_reports()

@@ -1,7 +1,8 @@
 """Unit tests for ClaimSense Service Layer and Database Fallback."""
 
-import pytest
 from unittest.mock import MagicMock
+
+import pytest
 
 from claimsense.config import Settings
 from claimsense.db.client_factory import ResilientDBClient

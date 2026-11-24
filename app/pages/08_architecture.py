@@ -5,15 +5,23 @@ import streamlit as st
 
 def render():
     st.title("🏛️ Architecture, Trade-offs & Design Decisions")
-    st.markdown("Detailed reference documentation covering Lakehouse data flow, architectural decision records (ADRs), PySpark optimizations, and ValueMomentum syllabus alignment.")
+    st.markdown(
+        "Detailed reference documentation covering Lakehouse data flow, architectural decision records (ADRs), PySpark optimizations, and ValueMomentum syllabus alignment."
+    )
 
-    tab1, tab2, tab3, tab4 = st.tabs([
-        "System Architecture", "Design Decision Records", "Spark Optimization", "ValueMomentum Alignment"
-    ])
+    tab1, tab2, tab3, tab4 = st.tabs(
+        [
+            "System Architecture",
+            "Design Decision Records",
+            "Spark Optimization",
+            "ValueMomentum Alignment",
+        ]
+    )
 
     with tab1:
         st.markdown("### 📐 End-to-End Lakehouse & Agent Data Flow")
-        st.code("""
+        st.code(
+            """
         [ Landing Zone: Unity Catalog Volume ]
                          │
                          ▼ (Auto Loader: cloudFiles, schema evolution, .trigger(availableNow=True))
@@ -51,7 +59,9 @@ def render():
              ▼                                               ▼
     [ Streamlit Cloud UI ]                          [ FastAPI REST API ]
     (BACKEND_MODE=inprocess)                        (BACKEND_MODE=http, X-API-Key)
-        """, language="text")
+        """,
+            language="text",
+        )
 
     with tab2:
         st.markdown("### 📋 Key Architectural Decision Records (ADRs)")

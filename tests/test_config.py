@@ -1,6 +1,5 @@
 """Tests for ClaimSense configuration module."""
 
-import os
 from claimsense.config.settings import Settings
 
 

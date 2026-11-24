@@ -12,15 +12,9 @@ Computes:
 from __future__ import annotations
 
 import json
-from pathlib import Path
-import sys
 import time
-from typing import Any, Dict, List
-
-# Ensure project root is importable when executed directly
-PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+from pathlib import Path
+from typing import Any
 
 from claimsense.agent.citation_verifier import CitationVerifier
 from claimsense.agent.graph import get_triage_graph
@@ -28,12 +22,12 @@ from claimsense.db.client_factory import get_db_client
 from claimsense.services.models import TriageDecisionEnum
 
 
-def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
+def run_evaluation(limit: int | None = None) -> dict[str, Any]:
     eval_file = Path(__file__).parent / "eval_dataset.json"
     results_file = Path(__file__).parent / "eval_results.json"
 
     with open(eval_file, encoding="utf-8") as f:
-        dataset: List[Dict[str, Any]] = json.load(f)
+        dataset: list[dict[str, Any]] = json.load(f)
 
     if limit:
         dataset = dataset[:limit]
@@ -108,36 +102,42 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
             case_llm_mode = state.get("llm_mode", "deterministic_fallback")
             case_model_name = state.get("model_name", "offline_heuristic")
 
-            case_details.append({
-                "eval_id": item["eval_id"],
-                "claim_id": claim_id,
-                "expected": expected,
-                "predicted": predicted,
-                "passed": (predicted == expected),
-                "citations": cited,
-                "latency_sec": round(latency, 3),
-                "llm_mode": case_llm_mode,
-                "model_name": case_model_name,
-            })
+            case_details.append(
+                {
+                    "eval_id": item["eval_id"],
+                    "claim_id": claim_id,
+                    "expected": expected,
+                    "predicted": predicted,
+                    "passed": (predicted == expected),
+                    "citations": cited,
+                    "latency_sec": round(latency, 3),
+                    "llm_mode": case_llm_mode,
+                    "model_name": case_model_name,
+                }
+            )
 
         except Exception as exc:
             latencies_sec.append(time.time() - start_t)
-            case_details.append({
-                "eval_id": item["eval_id"],
-                "claim_id": claim_id,
-                "expected": expected,
-                "predicted": "ERROR",
-                "passed": False,
-                "error": str(exc),
-                "llm_mode": "deterministic_fallback",
-                "model_name": "offline_heuristic",
-            })
+            case_details.append(
+                {
+                    "eval_id": item["eval_id"],
+                    "claim_id": claim_id,
+                    "expected": expected,
+                    "predicted": "ERROR",
+                    "passed": False,
+                    "error": str(exc),
+                    "llm_mode": "deterministic_fallback",
+                    "model_name": "offline_heuristic",
+                }
+            )
 
     # Metrics
     accuracy = round((correct_decisions / total) * 100, 2)
     citation_rate = round((citations_present_count / total) * 100, 2)
     unverifiable_rate = round((hallucination_count / total) * 100, 2)
-    avg_latency_ms = round((sum(latencies_sec) / len(latencies_sec)) * 1000, 1) if latencies_sec else 0.0
+    avg_latency_ms = (
+        round((sum(latencies_sec) / len(latencies_sec)) * 1000, 1) if latencies_sec else 0.0
+    )
 
     # SIU Specific Recall (ISS-01)
     siu_actual = sum(matrix["ESCALATE_SIU"].values())
@@ -145,7 +145,11 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
     siu_recall = round((siu_correct / siu_actual) * 100, 2) if siu_actual > 0 else 100.0
 
     # Combined Escalation Precision & Recall
-    tp = sum(matrix[exp][pred] for exp in ["NEEDS_REVIEW", "ESCALATE_SIU"] for pred in ["NEEDS_REVIEW", "ESCALATE_SIU"])
+    tp = sum(
+        matrix[exp][pred]
+        for exp in ["NEEDS_REVIEW", "ESCALATE_SIU"]
+        for pred in ["NEEDS_REVIEW", "ESCALATE_SIU"]
+    )
     fp = sum(matrix["FAST_TRACK"][pred] for pred in ["NEEDS_REVIEW", "ESCALATE_SIU"])
     fn = sum(matrix[exp]["FAST_TRACK"] for exp in ["NEEDS_REVIEW", "ESCALATE_SIU"])
 
@@ -158,7 +162,11 @@ def run_evaluation(limit: int | None = None) -> Dict[str, Any]:
         else 100.0
     )
 
-    dominant_mode = "live_groq" if any(c.get("llm_mode") == "live_groq" for c in case_details) else "deterministic_fallback"
+    dominant_mode = (
+        "live_groq"
+        if any(c.get("llm_mode") == "live_groq" for c in case_details)
+        else "deterministic_fallback"
+    )
 
     metrics_summary = {
         "total_test_cases": total,

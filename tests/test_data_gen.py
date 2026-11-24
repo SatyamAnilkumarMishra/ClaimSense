@@ -8,14 +8,12 @@ Verifies:
 
 import csv
 import json
-from pathlib import Path
+
 import pytest
 
 from data_gen.generate import (
     DEFAULT_SEED,
-    generate_claims_and_notes,
     generate_customers,
-    generate_policies,
     run_generator,
 )
 
@@ -106,12 +104,16 @@ def test_dirty_data_proportions(generated_data):
     # 2. Null incident_date check (~2%)
     null_dates = sum(1 for c in all_claims if not c["incident_date"].strip())
     null_date_rate = null_dates / total
-    assert 0.01 <= null_date_rate <= 0.035, f"Null date rate {null_date_rate:.3f} outside expected tolerance."
+    assert 0.01 <= null_date_rate <= 0.035, (
+        f"Null date rate {null_date_rate:.3f} outside expected tolerance."
+    )
 
     # 3. Invalid claimed amount (<= 0) check (~1%)
     invalid_amounts = sum(1 for c in all_claims if float(c["claimed_amount"]) <= 0)
     invalid_amt_rate = invalid_amounts / total
-    assert 0.005 <= invalid_amt_rate <= 0.025, f"Invalid amount rate {invalid_amt_rate:.3f} outside tolerance."
+    assert 0.005 <= invalid_amt_rate <= 0.025, (
+        f"Invalid amount rate {invalid_amt_rate:.3f} outside tolerance."
+    )
 
     # 4. Orphan policy IDs check (~2%)
     with open(temp_dir / "policies.csv", encoding="utf-8") as f:
@@ -122,8 +124,7 @@ def test_dirty_data_proportions(generated_data):
 
     # 5. Inconsistent casing / whitespace check
     has_inconsistent_casing = any(
-        c["status"] != c["status"].strip() or c["status"] != c["status"].upper()
-        for c in all_claims
+        c["status"] != c["status"].strip() or c["status"] != c["status"].upper() for c in all_claims
     )
     assert has_inconsistent_casing, "Expected inconsistent status casing and whitespace."
 

@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 from enum import StrEnum
-from typing import Any, Dict, List, Optional
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 
@@ -66,16 +67,16 @@ class TriageAssessment(BaseModel):
     claim_id: str
     decision: TriageDecisionEnum
     confidence: float = Field(ge=0.0, le=1.0)
-    reasons: List[str]
-    cited_clause_ids: List[str]
-    rule_checks: List[RuleCheckResult]
+    reasons: list[str]
+    cited_clause_ids: list[str]
+    rule_checks: list[RuleCheckResult]
     needs_human: bool
-    trace: List[Dict[str, Any]] = Field(default_factory=list)
+    trace: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class HumanReviewRequest(BaseModel):
     action: str = Field(description="'APPROVE', 'OVERRIDE', or 'REJECT'")
-    override_decision: Optional[TriageDecisionEnum] = None
+    override_decision: TriageDecisionEnum | None = None
     reviewer_notes: str = Field(min_length=3, max_length=1000)
 
 

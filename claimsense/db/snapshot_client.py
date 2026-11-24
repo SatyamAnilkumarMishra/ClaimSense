@@ -1,8 +1,8 @@
 """Local SQLite / Parquet Snapshot client for zero-cost offline resilience."""
 
-from pathlib import Path
 import sqlite3
-from typing import Any, Dict, List, Optional, Tuple
+from pathlib import Path
+from typing import Any
 
 from claimsense.config import Settings, get_settings
 
@@ -10,7 +10,7 @@ from claimsense.config import Settings, get_settings
 class SnapshotClient:
     """Queries local snapshot database for offline demo and resilient fallback."""
 
-    def __init__(self, settings: Optional[Settings] = None, db_path: Optional[Path] = None):
+    def __init__(self, settings: Settings | None = None, db_path: Path | None = None):
         self.settings = settings or get_settings()
         self.db_path = db_path or (self.settings.SNAPSHOTS_PATH / "claimsense_local.db")
         self._ensure_snapshot_exists()
@@ -19,6 +19,7 @@ class SnapshotClient:
         """Auto-populates local snapshot if not present."""
         if not self.db_path.exists():
             from databricks.local_pipeline import LocalMedallionPipeline
+
             pipeline = LocalMedallionPipeline(db_path=self.db_path)
             pipeline.run_bronze()
             pipeline.run_silver()
@@ -28,13 +29,14 @@ class SnapshotClient:
     def execute_query(
         self,
         query: str,
-        parameters: Optional[Dict[str, Any] | Tuple[Any, ...] | List[Any]] = None,
-    ) -> List[Dict[str, Any]]:
+        parameters: dict[str, Any] | tuple[Any, ...] | list[Any] | None = None,
+    ) -> list[dict[str, Any]]:
         """Executes parameterised read queries against the local snapshot SQLite database."""
         # Convert Databricks catalog/schema qualified names to standard local table names
         cleaned_query = (
-            query
-            .replace(f"{self.settings.DATABRICKS_CATALOG}.{self.settings.DATABRICKS_SCHEMA}.", "")
+            query.replace(
+                f"{self.settings.DATABRICKS_CATALOG}.{self.settings.DATABRICKS_SCHEMA}.", ""
+            )
             .replace("workspace.claimsense.", "")
             .replace("main.claimsense.", "")
         )

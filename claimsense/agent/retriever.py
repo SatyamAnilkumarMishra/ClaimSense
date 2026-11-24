@@ -8,9 +8,9 @@ Designed to run reliably on Streamlit Community Cloud with zero C-extension over
 from __future__ import annotations
 
 import math
-from pathlib import Path
 import re
-from typing import Dict, List, Optional
+from pathlib import Path
+
 from claimsense.config import get_settings
 
 
@@ -23,7 +23,7 @@ class PolicyClause:
         self.tokens = self._tokenize(f"{clause_id} {section} {text}")
 
     @staticmethod
-    def _tokenize(text: str) -> List[str]:
+    def _tokenize(text: str) -> list[str]:
         words = re.findall(r"\b[a-zA-Z0-9_\-]{2,}\b", text.lower())
         return words
 
@@ -31,10 +31,10 @@ class PolicyClause:
 class PolicyRetriever:
     """Indexes policy documents and retrieves top matching clauses by relevance."""
 
-    def __init__(self, docs_dir: Optional[Path] = None):
+    def __init__(self, docs_dir: Path | None = None):
         settings = get_settings()
         self.docs_dir = docs_dir or (settings.DATA_GEN_PATH / "policy_docs")
-        self.clauses: List[PolicyClause] = []
+        self.clauses: list[PolicyClause] = []
         self._load_and_index()
 
     def _load_and_index(self) -> None:
@@ -71,7 +71,7 @@ class PolicyRetriever:
                         )
                         self.clauses.append(clause)
 
-    def retrieve(self, query: str, policy_type: str, top_k: int = 4) -> List[Dict[str, str]]:
+    def retrieve(self, query: str, policy_type: str, top_k: int = 4) -> list[dict[str, str]]:
         """Retrieves top matching clauses for a specific policy type."""
         p_type = policy_type.strip().upper()
         query_tokens = set(PolicyClause._tokenize(query))
@@ -80,7 +80,7 @@ class PolicyRetriever:
         if not candidates:
             candidates = self.clauses
 
-        scored: List[tuple[float, PolicyClause]] = []
+        scored: list[tuple[float, PolicyClause]] = []
         for c in candidates:
             overlap = query_tokens.intersection(c.tokens)
             score = len(overlap) / (math.sqrt(len(c.tokens)) + 1e-5)
@@ -100,12 +100,12 @@ class PolicyRetriever:
             for score, c in top_clauses
         ]
 
-    def get_all_clause_ids(self) -> List[str]:
+    def get_all_clause_ids(self) -> list[str]:
         """Returns list of all known valid clause identifiers."""
         return [c.clause_id for c in self.clauses]
 
 
-_retriever_instance: Optional[PolicyRetriever] = None
+_retriever_instance: PolicyRetriever | None = None
 
 
 def get_policy_retriever() -> PolicyRetriever:

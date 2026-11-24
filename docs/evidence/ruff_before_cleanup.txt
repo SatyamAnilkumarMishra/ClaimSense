@@ -1,0 +1,20 @@
+﻿129	UP006 	[*] non-pep585-annotation
+ 70	F821  	[ ] undefined-name
+ 45	UP045 	[*] non-pep604-annotation-optional
+ 43	I001  	[*] unsorted-imports
+ 39	UP035 	[ ] deprecated-import
+ 32	F401  	[-] unused-import
+ 16	BLE001	[ ] blind-except
+  8	C408  	[ ] unnecessary-collection-call
+  8	F841  	[-] unused-variable
+  5	PIE790	[*] unnecessary-placeholder
+  2	SIM117	[-] multiple-with-statements
+  2	S110  	[ ] try-except-pass
+  1	DTZ011	[ ] call-date-today
+  1	SIM102	[ ] collapsible-if
+  1	LOG014	[ ] exc-info-outside-except-handler
+  1	SIM211	[ ] if-expr-with-false-true
+  1	UP011 	[*] lru-cache-without-parameters
+  1	B006  	[ ] mutable-argument-default
+Found 405 errors.
+[*] 255 fixable with the `--fix` option (18 hidden fixes can be enabled with the `--unsafe-fixes` option).

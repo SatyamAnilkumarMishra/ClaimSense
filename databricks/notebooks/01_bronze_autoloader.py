@@ -4,7 +4,7 @@
 # MAGIC %md
 # MAGIC ### Pipeline Stage: Bronze Ingestion
 # MAGIC Ingests messy source files from Unity Catalog Volume using Databricks Auto Loader (`cloudFiles`).
-# MAGIC 
+# MAGIC
 # MAGIC Key Principles:
 # MAGIC 1. **Append-Only**: Raw data is never modified or filtered at Bronze.
 # MAGIC 2. **Metadata Enrichment**: Adds `_ingest_timestamp` and `_source_file`.
@@ -12,7 +12,7 @@
 # MAGIC 4. **Incremental Execution**: `.trigger(availableNow=True)` for predictable serverless batch costs.
 
 # COMMAND ----------
-from pyspark.sql.functions import current_timestamp, col
+from pyspark.sql.functions import col, current_timestamp
 
 dbutils.widgets.text("catalog", "workspace", "Unity Catalog Name")
 dbutils.widgets.text("schema", "claimsense", "Database / Schema Name")
@@ -29,8 +29,7 @@ checkpoint_base = f"/Volumes/{catalog}/{schema}/{volume}/_checkpoints"
 # DBTITLE 1,Ingest Bronze Customers
 print("Ingesting Bronze Customers...")
 customers_stream = (
-    spark.readStream
-    .format("cloudFiles")
+    spark.readStream.format("cloudFiles")
     .option("cloudFiles.format", "csv")
     .option("cloudFiles.inferColumnTypes", "true")
     .option("cloudFiles.schemaLocation", f"{checkpoint_base}/bronze_customers_schema")
@@ -41,8 +40,7 @@ customers_stream = (
 )
 
 query_customers = (
-    customers_stream.writeStream
-    .format("delta")
+    customers_stream.writeStream.format("delta")
     .outputMode("append")
     .option("checkpointLocation", f"{checkpoint_base}/bronze_customers_chk")
     .trigger(availableNow=True)
@@ -55,8 +53,7 @@ print(f"Bronze Customers row count: {spark.table(f'{catalog}.{schema}.bronze_cus
 # DBTITLE 1,Ingest Bronze Policies
 print("Ingesting Bronze Policies...")
 policies_stream = (
-    spark.readStream
-    .format("cloudFiles")
+    spark.readStream.format("cloudFiles")
     .option("cloudFiles.format", "csv")
     .option("cloudFiles.inferColumnTypes", "true")
     .option("cloudFiles.schemaLocation", f"{checkpoint_base}/bronze_policies_schema")
@@ -67,8 +64,7 @@ policies_stream = (
 )
 
 query_policies = (
-    policies_stream.writeStream
-    .format("delta")
+    policies_stream.writeStream.format("delta")
     .outputMode("append")
     .option("checkpointLocation", f"{checkpoint_base}/bronze_policies_chk")
     .trigger(availableNow=True)
@@ -81,8 +77,7 @@ print(f"Bronze Policies row count: {spark.table(f'{catalog}.{schema}.bronze_poli
 # DBTITLE 1,Ingest Bronze Claims (Raw Batches & Updates)
 print("Ingesting Bronze Claims batches...")
 claims_stream = (
-    spark.readStream
-    .format("cloudFiles")
+    spark.readStream.format("cloudFiles")
     .option("cloudFiles.format", "csv")
     .option("cloudFiles.inferColumnTypes", "true")
     .option("cloudFiles.schemaLocation", f"{checkpoint_base}/bronze_claims_schema")
@@ -93,8 +88,7 @@ claims_stream = (
 )
 
 query_claims = (
-    claims_stream.writeStream
-    .format("delta")
+    claims_stream.writeStream.format("delta")
     .outputMode("append")
     .option("checkpointLocation", f"{checkpoint_base}/bronze_claims_chk")
     .trigger(availableNow=True)
@@ -108,18 +102,18 @@ print(f"Bronze Claims row count: {spark.table(f'{catalog}.{schema}.bronze_claims
 print("Ingesting Bronze Adjuster Notes...")
 try:
     notes_df = (
-        spark.read
-        .option("multiline", "true")
+        spark.read.option("multiline", "true")
         .json(f"{volume_base}/adjuster_notes.json")
         .withColumn("_ingest_timestamp", current_timestamp())
         .withColumn("_source_file", col("_metadata.file_name"))
     )
     (
-        notes_df.write
-        .format("delta")
+        notes_df.write.format("delta")
         .mode("overwrite")
         .saveAsTable(f"{catalog}.{schema}.bronze_adjuster_notes")
     )
-    print(f"Bronze Adjuster Notes row count: {spark.table(f'{catalog}.{schema}.bronze_adjuster_notes').count()}")
+    print(
+        f"Bronze Adjuster Notes row count: {spark.table(f'{catalog}.{schema}.bronze_adjuster_notes').count()}"
+    )
 except Exception as e:
     print(f"Adjuster notes ingestion note: {e}")

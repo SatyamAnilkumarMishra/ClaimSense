@@ -4,10 +4,10 @@ Reads from environment variables, .env file, or Streamlit secrets when available
 Enforces type safety and provides helper flags for live vs offline fallback mode.
 """
 
-from functools import lru_cache
 import os
+from functools import lru_cache
 from pathlib import Path
-from typing import List, Optional
+
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -22,34 +22,49 @@ class Settings(BaseSettings):
     )
 
     # Runtime & Deployment Mode
-    BACKEND_MODE: str = Field(default="inprocess", description="'inprocess' for Streamlit monolithic, 'http' for FastAPI")
+    BACKEND_MODE: str = Field(
+        default="inprocess", description="'inprocess' for Streamlit monolithic, 'http' for FastAPI"
+    )
     OFFLINE_MODE: bool = Field(default=False, description="Force offline snapshot mode when True")
 
     # Databricks Configuration
-    DATABRICKS_HOST: Optional[str] = Field(default=None, description="Workspace URL e.g. https://dbc-xxx.cloud.databricks.com")
-    DATABRICKS_TOKEN: Optional[str] = Field(default=None, description="Personal Access Token")
-    DATABRICKS_HTTP_PATH: Optional[str] = Field(default=None, description="SQL Warehouse HTTP Path")
+    DATABRICKS_HOST: str | None = Field(
+        default=None, description="Workspace URL e.g. https://dbc-xxx.cloud.databricks.com"
+    )
+    DATABRICKS_TOKEN: str | None = Field(default=None, description="Personal Access Token")
+    DATABRICKS_HTTP_PATH: str | None = Field(default=None, description="SQL Warehouse HTTP Path")
     DATABRICKS_CATALOG: str = Field(default="workspace", description="Unity Catalog name")
     DATABRICKS_SCHEMA: str = Field(default="claimsense", description="Schema / database name")
     DATABRICKS_VOLUME: str = Field(default="landing_zone", description="Landing zone Volume name")
-    DATABRICKS_JOB_ID: Optional[str] = Field(default=None, description="Workflow Job ID for pipeline execution")
+    DATABRICKS_JOB_ID: str | None = Field(
+        default=None, description="Workflow Job ID for pipeline execution"
+    )
 
     # Groq LLM Configuration
-    GROQ_API_KEY: Optional[str] = Field(default=None, description="Groq API key")
-    GROQ_FAST_MODEL: str = Field(default="llama-3.1-8b-instant", description="Fast low-latency model for extraction")
-    GROQ_REASONING_MODEL: str = Field(default="llama-3.3-70b-versatile", description="Reasoning model for assessment")
-    GROQ_DAILY_TOKEN_LIMIT: int = Field(default=100_000, description="Daily safety ceiling to guard free tier")
+    GROQ_API_KEY: str | None = Field(default=None, description="Groq API key")
+    GROQ_FAST_MODEL: str = Field(
+        default="llama-3.1-8b-instant", description="Fast low-latency model for extraction"
+    )
+    GROQ_REASONING_MODEL: str = Field(
+        default="llama-3.3-70b-versatile", description="Reasoning model for assessment"
+    )
+    GROQ_DAILY_TOKEN_LIMIT: int = Field(
+        default=100_000, description="Daily safety ceiling to guard free tier"
+    )
 
     # FastAPI REST & Security
-    FASTAPI_API_KEY: str = Field(default="claimsense_dev_key_only_change_in_prod", description="Secret key for X-API-Key auth")
+    FASTAPI_API_KEY: str = Field(
+        default="claimsense_dev_key_only_change_in_prod",
+        description="Secret key for X-API-Key auth",
+    )
     FASTAPI_HOST: str = Field(default="127.0.0.1")
     FASTAPI_PORT: int = Field(default=8000)
-    CORS_ORIGINS: List[str] = Field(default=["http://localhost:8501", "http://127.0.0.1:8501"])
+    CORS_ORIGINS: list[str] = Field(default=["http://localhost:8501", "http://127.0.0.1:8501"])
 
     # Snowflake Configuration (Optional - Stage 7)
-    SNOWFLAKE_ACCOUNT: Optional[str] = None
-    SNOWFLAKE_USER: Optional[str] = None
-    SNOWFLAKE_PASSWORD: Optional[str] = None
+    SNOWFLAKE_ACCOUNT: str | None = None
+    SNOWFLAKE_USER: str | None = None
+    SNOWFLAKE_PASSWORD: str | None = None
     SNOWFLAKE_WAREHOUSE: str = "COMPUTE_WH"
     SNOWFLAKE_DATABASE: str = "CLAIMSENSE_DB"
     SNOWFLAKE_SCHEMA: str = "MART"
@@ -86,12 +101,13 @@ class Settings(BaseSettings):
         )
 
 
-@lru_cache()
+@lru_cache
 def get_settings() -> Settings:
     """Singleton getter for application settings."""
     # If running inside Streamlit with secrets, populate environment variables first
     try:
         import streamlit as st
+
         if hasattr(st, "secrets"):
             for k, v in st.secrets.items():
                 if isinstance(v, str) and k not in os.environ:

@@ -4,6 +4,7 @@ Uses databricks-sdk WorkspaceClient to verify API connectivity and list availabl
 """
 
 import sys
+
 from claimsense.config import get_settings
 
 
@@ -17,8 +18,12 @@ def test_jobs_api() -> bool:
     if not settings.is_databricks_configured:
         print("[INFO] Databricks credentials are not configured in your .env file.")
         print("Required variables: DATABRICKS_HOST, DATABRICKS_TOKEN")
-        print("Offline pipeline simulation is ACTIVE. The project functions seamlessly without live Databricks.")
-        print("When you create your Databricks workspace, add credentials to .env and rerun this script.")
+        print(
+            "Offline pipeline simulation is ACTIVE. The project functions seamlessly without live Databricks."
+        )
+        print(
+            "When you create your Databricks workspace, add credentials to .env and rerun this script."
+        )
         print("=" * 60)
         return False
 
@@ -39,7 +44,9 @@ def test_jobs_api() -> bool:
         jobs = list(w.jobs.list(limit=10))
         print(f"[SUCCESS] Databricks SDK connected! Found {len(jobs)} existing jobs.")
         for job in jobs:
-            print(f" - Job ID: {job.job_id} | Name: {job.settings.name if job.settings else 'Unnamed'}")
+            print(
+                f" - Job ID: {job.job_id} | Name: {job.settings.name if job.settings else 'Unnamed'}"
+            )
 
         return True
 

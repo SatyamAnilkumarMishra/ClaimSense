@@ -5,7 +5,9 @@ import streamlit as st
 
 def render():
     st.title("ℹ️ About, Limitations & Production Roadmap")
-    st.markdown("Honest architectural transparency, operational boundaries, and production evolution paths.")
+    st.markdown(
+        "Honest architectural transparency, operational boundaries, and production evolution paths."
+    )
 
     col1, col2 = st.columns(2)
 

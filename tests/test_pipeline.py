@@ -7,8 +7,8 @@ Verifies:
 4. Gold Star schema integrity (fact_claims foreign keys match dimension tables).
 """
 
-from pathlib import Path
 import pytest
+
 from databricks.local_pipeline import LocalMedallionPipeline
 
 
@@ -65,7 +65,10 @@ def test_reconciliation_audit_zero_discrepancy(pipeline_instance):
     audit = pipeline_instance.run_reconciliation(run_id="TEST-AUDIT-01")
     assert audit["status"] == "PASS"
     assert audit["discrepancy"] == 0
-    assert audit["bronze_count"] == audit["duplicates_count"] + audit["defects_count"] + audit["silver_count"]
+    assert (
+        audit["bronze_count"]
+        == audit["duplicates_count"] + audit["defects_count"] + audit["silver_count"]
+    )
     assert audit["silver_count"] == audit["gold_fact_count"]
 
 
@@ -82,4 +85,6 @@ def test_delta_merge_cdc_updates(pipeline_instance):
     after_count = cur.fetchone()[0]
 
     # Crucial Delta MERGE invariant: updates change row states, never inflate total count
-    assert before_count == after_count, f"Row count changed from {before_count} to {after_count} during MERGE!"
+    assert before_count == after_count, (
+        f"Row count changed from {before_count} to {after_count} during MERGE!"
+    )

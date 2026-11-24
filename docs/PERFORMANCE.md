@@ -61,7 +61,7 @@ ZORDER BY (incident_date, claim_type_sk);
 ```python
 # Caching frequent lookup tables in PySpark:
 silver_policies = spark.table("claimsense.silver_policies").filter("status = 'ACTIVE'").cache()
-silver_policies.count() # Materialize in executor memory (StorageLevel.MEMORY_AND_DISK_DESER)
+silver_policies.count()  # Materialize in executor memory (StorageLevel.MEMORY_AND_DISK_DESER)
 ```
 * **Use Case**: Used during the Silver transformation where all 3 incoming claim batches must repeatedly validate against the policy dimension.
 * **Cleanup**: Always call `silver_policies.unpersist()` at the end of the pipeline run to release Spark executor memory.

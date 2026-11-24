@@ -10,7 +10,8 @@ Enforces:
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Set, Tuple
+from typing import Any
+
 from claimsense.services.models import TriageDecisionEnum
 
 
@@ -35,9 +36,9 @@ class CitationVerifier:
 
     @staticmethod
     def verify(
-        assessment: Dict[str, Any],
-        claim_record: Dict[str, Any],
-        retrieved_clauses: List[Dict[str, Any]],
+        assessment: dict[str, Any],
+        claim_record: dict[str, Any],
+        retrieved_clauses: list[dict[str, Any]],
     ) -> VerificationResult:
         errors = []
         hallucination_detected = False
@@ -50,8 +51,8 @@ class CitationVerifier:
             hallucination_detected = True
 
         # 2. Citation Verification against Retrieved Clauses
-        retrieved_ids: Set[str] = {c["clause_id"] for c in retrieved_clauses}
-        cited_ids: List[str] = assessment.get("cited_clause_ids", [])
+        retrieved_ids: set[str] = {c["clause_id"] for c in retrieved_clauses}
+        cited_ids: list[str] = assessment.get("cited_clause_ids", [])
 
         verified_citations = []
         for cid in cited_ids:
@@ -59,7 +60,9 @@ class CitationVerifier:
             if clean_cid in retrieved_ids:
                 verified_citations.append(clean_cid)
             else:
-                errors.append(f"Hallucinated citation: Clause ID '{cid}' was not in retrieved context.")
+                errors.append(
+                    f"Hallucinated citation: Clause ID '{cid}' was not in retrieved context."
+                )
                 hallucination_detected = True
 
         # 3. Grounded Factual Verification (Amounts & Dates)
@@ -72,13 +75,17 @@ class CitationVerifier:
             record_sum = f"{float(claim_record['sum_insured']):,.2f}"
             for qa in quoted_amounts:
                 # Quoted amount must match either claimed amount or sum insured
-                if qa not in [record_amt, record_sum, str(claim_record['claimed_amount'])]:
-                    errors.append(f"Factual discrepancy: Stated amount '${qa}' does not match record.")
+                if qa not in [record_amt, record_sum, str(claim_record["claimed_amount"])]:
+                    errors.append(
+                        f"Factual discrepancy: Stated amount '${qa}' does not match record."
+                    )
                     hallucination_detected = True
 
         # 4. Abstention Rule: If citations could not be verified or were completely missing
         if not verified_citations and raw_decision == TriageDecisionEnum.FAST_TRACK.value:
-            errors.append("Abstention: FAST_TRACK requires at least one verified policy clause citation.")
+            errors.append(
+                "Abstention: FAST_TRACK requires at least one verified policy clause citation."
+            )
             hallucination_detected = True
 
         if hallucination_detected or errors:

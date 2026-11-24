@@ -12,18 +12,11 @@ Simulates the exact Databricks PySpark Medallion execution locally using SQLite:
 from __future__ import annotations
 
 import csv
-from datetime import date, datetime, timedelta, timezone
-import json
-from pathlib import Path
 import sqlite3
-import sys
-from typing import Any, Dict, List, Tuple
 import uuid
-
-# Ensure root package is importable when executed directly
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+from datetime import UTC, date, datetime, timedelta
+from pathlib import Path
+from typing import Any
 
 from claimsense.config import get_settings
 
@@ -239,12 +232,12 @@ class LocalMedallionPipeline:
         """)
         self.conn.commit()
 
-    def run_bronze(self, batches: Optional[List[str]] = None) -> Dict[str, int]:
+    def run_bronze(self, batches: list[str] | None = None) -> dict[str, int]:
         """Ingests raw CSV batches into Bronze tables with metadata."""
         if batches is None:
             batches = ["claims_batch_1.csv", "claims_batch_2.csv", "claims_batch_3.csv"]
         cur = self.conn.cursor()
-        now_ts = datetime.now(timezone.utc).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
 
         # Ingest Customers
         cust_path = self.data_dir / "customers.csv"
@@ -252,13 +245,24 @@ class LocalMedallionPipeline:
             with open(cust_path, encoding="utf-8") as f:
                 rows = list(csv.DictReader(f))
                 for r in rows:
-                    cur.execute("""
+                    cur.execute(
+                        """
                         INSERT INTO bronze_customers VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    """, (
-                        r["customer_id"], r["first_name"], r["last_name"], r["email"],
-                        r["phone"], r["city"], r["state"], float(r["risk_score"]),
-                        r["created_at"], now_ts, "customers.csv"
-                    ))
+                    """,
+                        (
+                            r["customer_id"],
+                            r["first_name"],
+                            r["last_name"],
+                            r["email"],
+                            r["phone"],
+                            r["city"],
+                            r["state"],
+                            float(r["risk_score"]),
+                            r["created_at"],
+                            now_ts,
+                            "customers.csv",
+                        ),
+                    )
 
         # Ingest Policies
         pol_path = self.data_dir / "policies.csv"
@@ -266,13 +270,23 @@ class LocalMedallionPipeline:
             with open(pol_path, encoding="utf-8") as f:
                 rows = list(csv.DictReader(f))
                 for r in rows:
-                    cur.execute("""
+                    cur.execute(
+                        """
                         INSERT INTO bronze_policies VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    """, (
-                        r["policy_id"], r["customer_id"], r["policy_type"], r["start_date"],
-                        r["end_date"], float(r["sum_insured"]), float(r["deductible"]),
-                        r["status"], now_ts, "policies.csv"
-                    ))
+                    """,
+                        (
+                            r["policy_id"],
+                            r["customer_id"],
+                            r["policy_type"],
+                            r["start_date"],
+                            r["end_date"],
+                            float(r["sum_insured"]),
+                            float(r["deductible"]),
+                            r["status"],
+                            now_ts,
+                            "policies.csv",
+                        ),
+                    )
 
         # Ingest Claims Batches
         claims_ingested = 0
@@ -283,46 +297,66 @@ class LocalMedallionPipeline:
                     rows = list(csv.DictReader(f))
                     claims_ingested += len(rows)
                     for r in rows:
-                        cur.execute("""
+                        cur.execute(
+                            """
                             INSERT INTO bronze_claims VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                        """, (
-                            r["claim_id"], r["policy_id"], r["claim_type"], r["incident_date"],
-                            r["reported_date"], r["claimed_amount"], r["status"], r["description"],
-                            int(r.get("documents_count", 0)), r["city"], now_ts, batch_name
-                        ))
+                        """,
+                            (
+                                r["claim_id"],
+                                r["policy_id"],
+                                r["claim_type"],
+                                r["incident_date"],
+                                r["reported_date"],
+                                r["claimed_amount"],
+                                r["status"],
+                                r["description"],
+                                int(r.get("documents_count", 0)),
+                                r["city"],
+                                now_ts,
+                                batch_name,
+                            ),
+                        )
 
         self.conn.commit()
         return {"claims_ingested": claims_ingested}
 
-    def run_silver(self, run_id: str | None = None) -> Dict[str, int]:
+    def run_silver(self, run_id: str | None = None) -> dict[str, int]:
         """Performs deduplication, quarantine routing, and Delta MERGE into Silver."""
         run_id = run_id or f"RUN-{uuid.uuid4().hex[:8].upper()}"
         cur = self.conn.cursor()
-        now_ts = datetime.now(timezone.utc).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
         today_str = date.today().isoformat()
 
         # 1. Populate Silver Customers (Dedup by latest ingest)
-        cur.execute("""
+        cur.execute(
+            """
             INSERT OR REPLACE INTO silver_customers
             SELECT customer_id, TRIM(first_name), TRIM(last_name), TRIM(email), phone,
                    TRIM(city), TRIM(state), risk_score, created_at, ?
             FROM bronze_customers
-        """, (now_ts,))
+        """,
+            (now_ts,),
+        )
 
         # 2. Populate Silver Policies (Dedup by latest ingest)
-        cur.execute("""
+        cur.execute(
+            """
             INSERT OR REPLACE INTO silver_policies
             SELECT policy_id, customer_id, UPPER(TRIM(policy_type)), start_date, end_date,
                    sum_insured, deductible, UPPER(TRIM(status)), ?
             FROM bronze_policies
-        """, (now_ts,))
+        """,
+            (now_ts,),
+        )
 
         # 3. Fetch valid policy IDs
         cur.execute("SELECT policy_id FROM silver_policies")
         valid_policies = {r[0] for r in cur.fetchall()}
 
         # 4. Fetch all Bronze claims
-        cur.execute("SELECT * FROM bronze_claims ORDER BY reported_date DESC, _ingest_timestamp DESC")
+        cur.execute(
+            "SELECT * FROM bronze_claims ORDER BY reported_date DESC, _ingest_timestamp DESC"
+        )
         bronze_rows = [dict(r) for r in cur.fetchall()]
 
         seen_claim_ids = set()
@@ -378,41 +412,67 @@ class LocalMedallionPipeline:
 
             if reject_reason:
                 rule_counts[reject_reason] += 1
-                cur.execute("""
+                cur.execute(
+                    """
                     INSERT INTO quarantine_claims (
                         claim_id, policy_id, claim_type, raw_incident_date, raw_reported_date,
                         raw_claimed_amount, raw_status, description, reject_reason, _source_file,
                         run_id, quarantined_at
                     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """, (
-                    row["claim_id"], row["policy_id"], row["claim_type"], row["incident_date"],
-                    row["reported_date"], row["claimed_amount"], row["status"], row["description"],
-                    reject_reason, row["_source_file"], run_id, now_ts
-                ))
+                """,
+                    (
+                        row["claim_id"],
+                        row["policy_id"],
+                        row["claim_type"],
+                        row["incident_date"],
+                        row["reported_date"],
+                        row["claimed_amount"],
+                        row["status"],
+                        row["description"],
+                        reject_reason,
+                        row["_source_file"],
+                        run_id,
+                        now_ts,
+                    ),
+                )
             else:
                 # Valid -> Perform Delta MERGE (Upsert)
                 clean_status = (row["status"] or "SUBMITTED").strip().upper()
                 clean_amount = float(row["claimed_amount"])
-                cur.execute("""
+                cur.execute(
+                    """
                     INSERT INTO silver_claims VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     ON CONFLICT(claim_id) DO UPDATE SET
                         status = excluded.status,
                         claimed_amount = excluded.claimed_amount,
                         _silver_timestamp = excluded._silver_timestamp
-                """, (
-                    row["claim_id"], row["policy_id"], row["claim_type"].strip().upper(),
-                    inc_date_raw, row["reported_date"], clean_amount, clean_status,
-                    (row["description"] or "").strip(), int(row.get("documents_count") or 0),
-                    (row["city"] or "").strip(), row["_source_file"], now_ts
-                ))
+                """,
+                    (
+                        row["claim_id"],
+                        row["policy_id"],
+                        row["claim_type"].strip().upper(),
+                        inc_date_raw,
+                        row["reported_date"],
+                        clean_amount,
+                        clean_status,
+                        (row["description"] or "").strip(),
+                        int(row.get("documents_count") or 0),
+                        (row["city"] or "").strip(),
+                        row["_source_file"],
+                        now_ts,
+                    ),
+                )
                 merged_count += 1
 
         # Record Data Quality Results
         for rule_id, count in rule_counts.items():
             if count > 0:
-                cur.execute("""
+                cur.execute(
+                    """
                     INSERT INTO dq_results VALUES (?, ?, ?, ?, ?, ?)
-                """, (rule_id, f"Rule violation count for {rule_id}", "HIGH", count, run_id, now_ts))
+                """,
+                    (rule_id, f"Rule violation count for {rule_id}", "HIGH", count, run_id, now_ts),
+                )
 
         self.conn.commit()
         return {
@@ -422,10 +482,10 @@ class LocalMedallionPipeline:
             "silver_valid": merged_count,
         }
 
-    def run_gold(self) -> Dict[str, int]:
+    def run_gold(self) -> dict[str, int]:
         """Builds Gold Star Schema (dimensions, fact, and views)."""
         cur = self.conn.cursor()
-        now_ts = datetime.now(timezone.utc).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
 
         # 1. dim_customer
         cur.execute("""
@@ -464,17 +524,29 @@ class LocalMedallionPipeline:
                 date_key = int(curr.strftime("%Y%m%d"))
                 full_dt = curr.isoformat()
                 is_wknd = 1 if curr.weekday() in (5, 6) else 0
-                date_records.append((
-                    date_key, full_dt, curr.year, (curr.month - 1) // 3 + 1,
-                    curr.month, curr.strftime("%B"), curr.day, curr.weekday() + 1,
-                    curr.strftime("%A"), is_wknd
-                ))
+                date_records.append(
+                    (
+                        date_key,
+                        full_dt,
+                        curr.year,
+                        (curr.month - 1) // 3 + 1,
+                        curr.month,
+                        curr.strftime("%B"),
+                        curr.day,
+                        curr.weekday() + 1,
+                        curr.strftime("%A"),
+                        is_wknd,
+                    )
+                )
                 curr += timedelta(days=1)
 
-            cur.executemany("INSERT INTO dim_date VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", date_records)
+            cur.executemany(
+                "INSERT INTO dim_date VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", date_records
+            )
 
         # 5. fact_claims
-        cur.execute("""
+        cur.execute(
+            """
             INSERT OR REPLACE INTO fact_claims
             SELECT
                 'SK-CLM-' || c.claim_id,
@@ -499,7 +571,9 @@ class LocalMedallionPipeline:
             JOIN dim_policy p ON c.policy_id = p.policy_id
             JOIN dim_customer u ON p.customer_id = u.customer_id
             JOIN dim_claim_type t ON c.claim_type = t.claim_type
-        """, (now_ts,))
+        """,
+            (now_ts,),
+        )
 
         self.conn.commit()
 
@@ -507,10 +581,10 @@ class LocalMedallionPipeline:
         fact_count = cur.fetchone()[0]
         return {"fact_claims_count": fact_count}
 
-    def run_reconciliation(self, run_id: str) -> Dict[str, Any]:
+    def run_reconciliation(self, run_id: str) -> dict[str, Any]:
         """Calculates and logs mathematical reconciliation metrics to pipeline_audit."""
         cur = self.conn.cursor()
-        now_ts = datetime.now(timezone.utc).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
 
         cur.execute("SELECT COUNT(*) FROM bronze_claims")
         bronze_count = cur.fetchone()[0]
@@ -540,16 +614,28 @@ class LocalMedallionPipeline:
             status = "PASS_WITH_WARNING" if discrepancy == 0 else "FAIL"
             notes = f"Discrepancy count: {discrepancy}. Bronze ({bronze_count}) vs (Quarantine {quarantine_total} + Silver {silver_count} = {expected_bronze})."
 
-        cur.execute("""
+        cur.execute(
+            """
             INSERT INTO pipeline_audit (
                 run_id, run_timestamp, bronze_count, duplicates_count, defects_count,
                 quarantined_total, silver_count, gold_fact_count, discrepancy_count,
                 reconciliation_status, audit_notes
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, (
-            run_id, now_ts, bronze_count, dups_count, defects_count,
-            quarantine_total, silver_count, gold_fact_count, discrepancy, status, notes
-        ))
+        """,
+            (
+                run_id,
+                now_ts,
+                bronze_count,
+                dups_count,
+                defects_count,
+                quarantine_total,
+                silver_count,
+                gold_fact_count,
+                discrepancy,
+                status,
+                notes,
+            ),
+        )
         self.conn.commit()
 
         return {
@@ -565,7 +651,7 @@ class LocalMedallionPipeline:
             "notes": notes,
         }
 
-    def apply_incremental_updates(self, updates_file: str = "claims_updates.csv") -> Dict[str, int]:
+    def apply_incremental_updates(self, updates_file: str = "claims_updates.csv") -> dict[str, int]:
         """Applies status updates batch via Delta MERGE simulation without creating duplicate rows."""
         cur = self.conn.cursor()
         p = self.data_dir / updates_file
@@ -576,28 +662,34 @@ class LocalMedallionPipeline:
         initial_silver_count = cur.fetchone()[0]
 
         updated_count = 0
-        now_ts = datetime.now(timezone.utc).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
         with open(p, encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for r in reader:
-                cur.execute("""
+                cur.execute(
+                    """
                     UPDATE silver_claims
                     SET status = ?, _silver_timestamp = ?
                     WHERE claim_id = ?
-                """, (r["status"].strip().upper(), now_ts, r["claim_id"]))
+                """,
+                    (r["status"].strip().upper(), now_ts, r["claim_id"]),
+                )
                 if cur.rowcount > 0:
                     updated_count += 1
 
         self.conn.commit()
 
         # Re-sync Gold fact_claims
-        cur.execute("""
+        cur.execute(
+            """
             UPDATE fact_claims
             SET claim_status = (SELECT status FROM silver_claims WHERE silver_claims.claim_id = fact_claims.claim_id),
                 is_settled = (CASE WHEN (SELECT status FROM silver_claims WHERE silver_claims.claim_id = fact_claims.claim_id) IN ('APPROVED', 'SETTLED') THEN 1 ELSE 0 END),
                 _gold_timestamp = ?
             WHERE claim_id IN (SELECT claim_id FROM silver_claims)
-        """, (now_ts,))
+        """,
+            (now_ts,),
+        )
         self.conn.commit()
 
         cur.execute("SELECT COUNT(*) FROM silver_claims")
@@ -611,12 +703,19 @@ class LocalMedallionPipeline:
         }
 
 
-def run_full_pipeline(clean: bool = True) -> Dict[str, Any]:
+def run_full_pipeline(clean: bool = True) -> dict[str, Any]:
     """Convenience runner for full pipeline test execution."""
     pipeline = LocalMedallionPipeline()
     if clean:
         # Clear tables
-        for tbl in ["bronze_customers", "bronze_policies", "bronze_claims", "quarantine_claims", "silver_claims", "fact_claims"]:
+        for tbl in [
+            "bronze_customers",
+            "bronze_policies",
+            "bronze_claims",
+            "quarantine_claims",
+            "silver_claims",
+            "fact_claims",
+        ]:
             pipeline.conn.execute(f"DELETE FROM {tbl}")
         pipeline.conn.commit()
 

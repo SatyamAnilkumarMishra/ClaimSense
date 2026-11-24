@@ -44,8 +44,7 @@ def build_triage_user_prompt(
     )
 
     clauses_text = "\n".join(
-        f"- [{c['clause_id']}] ({c['policy_type']}): {c['text']}"
-        for c in retrieved_clauses
+        f"- [{c['clause_id']}] ({c['policy_type']}): {c['text']}" for c in retrieved_clauses
     )
 
     # Delimit untrusted description
@@ -53,14 +52,14 @@ def build_triage_user_prompt(
     safe_desc = raw_desc.replace("<", "&lt;").replace(">", "&gt;")
 
     return f"""[CLAIM_METRIC_FACTS]
-Claim ID: {claim_record.get('claim_id')}
-Policy ID: {claim_record.get('policy_id')} (Type: {claim_record.get('policy_type')})
-Incident Date: {claim_record.get('incident_date')}
-Reported Date: {claim_record.get('reported_date')} (Delay: {claim_record.get('reporting_delay_days')} days)
-Claimed Amount: ${float(claim_record.get('claimed_amount', 0)):,.2f}
-Policy Sum Insured: ${float(claim_record.get('sum_insured', 0)):,.2f} (Deductible: ${float(claim_record.get('deductible', 0)):,.2f})
-Customer Risk Score: {float(claim_record.get('risk_score', 0)):.2f}
-Documents Attached: {claim_record.get('documents_count')}
+Claim ID: {claim_record.get("claim_id")}
+Policy ID: {claim_record.get("policy_id")} (Type: {claim_record.get("policy_type")})
+Incident Date: {claim_record.get("incident_date")}
+Reported Date: {claim_record.get("reported_date")} (Delay: {claim_record.get("reporting_delay_days")} days)
+Claimed Amount: ${float(claim_record.get("claimed_amount", 0)):,.2f}
+Policy Sum Insured: ${float(claim_record.get("sum_insured", 0)):,.2f} (Deductible: ${float(claim_record.get("deductible", 0)):,.2f})
+Customer Risk Score: {float(claim_record.get("risk_score", 0)):.2f}
+Documents Attached: {claim_record.get("documents_count")}
 
 [UNTRUSTED_CLAIMANT_DATA]
 <untrusted_claim_description>

@@ -9,7 +9,8 @@ import streamlit as st
 
 def apply_theme():
     """Injects custom global CSS into the Streamlit app."""
-    st.markdown("""
+    st.markdown(
+        """
     <style>
     /* Global Container Adjustments */
     .block-container {
@@ -145,4 +146,6 @@ def apply_theme():
         color: #FFB300;
     }
     </style>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )

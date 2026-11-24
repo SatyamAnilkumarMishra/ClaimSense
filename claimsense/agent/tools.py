@@ -7,7 +7,8 @@ these 4 fixed, parameterised functions with typed, validated arguments.
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Optional
+from typing import Any
+
 from claimsense.db.client_factory import get_db_client
 
 
@@ -27,7 +28,7 @@ def _validate_customer_id(customer_id: str) -> str:
     return cleaned
 
 
-def get_claim(claim_id: str) -> Dict[str, Any]:
+def get_claim(claim_id: str) -> dict[str, Any]:
     """Tool 1: Fetches complete claim, policy, and customer record from Gold/Silver tables."""
     cid = _validate_claim_id(claim_id)
     db = get_db_client()
@@ -50,78 +51,89 @@ def get_claim(claim_id: str) -> Dict[str, Any]:
     return dict(rows[0])
 
 
-def validate_claim(claim_id: str) -> List[Dict[str, Any]]:
+def validate_claim(claim_id: str) -> list[dict[str, Any]]:
     """Tool 2: Executes deterministic policy and coverage rules against the claim record."""
     rec = get_claim(claim_id)
-    rules: List[Dict[str, Any]] = []
+    rules: list[dict[str, Any]] = []
 
     # 1. Policy Active on Incident Date
     inc_date = rec["incident_date"]
     p_start = rec["start_date"]
     p_end = rec["end_date"]
     active = (p_start <= inc_date <= p_end) and (rec["policy_status"] == "ACTIVE")
-    rules.append({
-        "rule_id": "RULE-01-ACTIVE-PERIOD",
-        "description": "Policy was active and within coverage dates during incident",
-        "passed": active,
-        "severity": "CRITICAL",
-        "details": f"Incident: {inc_date} | Term: {p_start} to {p_end} (Status: {rec['policy_status']})",
-    })
+    rules.append(
+        {
+            "rule_id": "RULE-01-ACTIVE-PERIOD",
+            "description": "Policy was active and within coverage dates during incident",
+            "passed": active,
+            "severity": "CRITICAL",
+            "details": f"Incident: {inc_date} | Term: {p_start} to {p_end} (Status: {rec['policy_status']})",
+        }
+    )
 
     # 2. Within Sum Insured
     amt = float(rec["claimed_amount"])
     sum_ins = float(rec["sum_insured"])
     within_limit = amt <= sum_ins
-    rules.append({
-        "rule_id": "RULE-02-SUM-INSURED",
-        "description": "Claimed amount does not exceed policy declared sum insured",
-        "passed": within_limit,
-        "severity": "HIGH",
-        "details": f"Claimed: ${amt:,.2f} | Limit: ${sum_ins:,.2f}",
-    })
+    rules.append(
+        {
+            "rule_id": "RULE-02-SUM-INSURED",
+            "description": "Claimed amount does not exceed policy declared sum insured",
+            "passed": within_limit,
+            "severity": "HIGH",
+            "details": f"Claimed: ${amt:,.2f} | Limit: ${sum_ins:,.2f}",
+        }
+    )
 
     # 3. Minimum Documents
     docs = int(rec.get("documents_count", 0))
     min_docs = 2
-    rules.append({
-        "rule_id": "RULE-03-MANDATORY-DOCS",
-        "description": "Minimum supporting documentation supplied",
-        "passed": docs >= min_docs,
-        "severity": "MEDIUM",
-        "details": f"Attached documents: {docs} (Required: >= {min_docs})",
-    })
+    rules.append(
+        {
+            "rule_id": "RULE-03-MANDATORY-DOCS",
+            "description": "Minimum supporting documentation supplied",
+            "passed": docs >= min_docs,
+            "severity": "MEDIUM",
+            "details": f"Attached documents: {docs} (Required: >= {min_docs})",
+        }
+    )
 
     # 4. Reporting Window
     delay = int(rec.get("reporting_delay_days", 0))
-    rules.append({
-        "rule_id": "RULE-04-TIMELY-REPORTING",
-        "description": "Incident reported within allowable notification window (14 days)",
-        "passed": delay <= 14,
-        "severity": "MEDIUM",
-        "details": f"Reporting delay: {delay} calendar days",
-    })
+    rules.append(
+        {
+            "rule_id": "RULE-04-TIMELY-REPORTING",
+            "description": "Incident reported within allowable notification window (14 days)",
+            "passed": delay <= 14,
+            "severity": "MEDIUM",
+            "details": f"Reporting delay: {delay} calendar days",
+        }
+    )
 
     # 5. Customer Fraud Risk
     risk = float(rec.get("risk_score", 0.20))
-    rules.append({
-        "rule_id": "RULE-05-FRAUD-RISK",
-        "description": "Customer behavioral risk score is within acceptable limits",
-        "passed": risk < 0.60,
-        "severity": "HIGH",
-        "details": f"Risk score: {risk:.2f} (Threshold: 0.60)",
-    })
+    rules.append(
+        {
+            "rule_id": "RULE-05-FRAUD-RISK",
+            "description": "Customer behavioral risk score is within acceptable limits",
+            "passed": risk < 0.60,
+            "severity": "HIGH",
+            "details": f"Risk score: {risk:.2f} (Threshold: 0.60)",
+        }
+    )
 
     return rules
 
 
-def search_policy_clauses(query: str, policy_type: str) -> List[Dict[str, str]]:
+def search_policy_clauses(query: str, policy_type: str) -> list[dict[str, str]]:
     """Tool 3: Retrieves top matching policy clauses from policy documents."""
     from claimsense.agent.retriever import get_policy_retriever
+
     retriever = get_policy_retriever()
     return retriever.retrieve(query=query, policy_type=policy_type, top_k=4)
 
 
-def get_customer_claim_history(customer_id: str) -> List[Dict[str, Any]]:
+def get_customer_claim_history(customer_id: str) -> list[dict[str, Any]]:
     """Tool 4: Fetches past claims submitted by the same customer (detects rapid filing clusters)."""
     cust_id = _validate_customer_id(customer_id)
     db = get_db_client()

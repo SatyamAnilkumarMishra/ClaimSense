@@ -5,6 +5,7 @@ Provides human-friendly diagnostic messages for auth, warehouse state, or missin
 """
 
 import sys
+
 from claimsense.config import get_settings
 
 
@@ -18,8 +19,12 @@ def test_sql_connection() -> bool:
     if not settings.is_databricks_configured:
         print("[INFO] Databricks credentials are not configured in your .env file.")
         print("Required variables: DATABRICKS_HOST, DATABRICKS_TOKEN, DATABRICKS_HTTP_PATH")
-        print("Offline snapshot mode is currently ACTIVE. The project runs seamlessly without live Databricks.")
-        print("When you create your Databricks workspace, add your credentials to .env and rerun this script.")
+        print(
+            "Offline snapshot mode is currently ACTIVE. The project runs seamlessly without live Databricks."
+        )
+        print(
+            "When you create your Databricks workspace, add your credentials to .env and rerun this script."
+        )
         print("=" * 60)
         return False
 
@@ -31,13 +36,19 @@ def test_sql_connection() -> bool:
         from databricks import sql
 
         with sql.connect(
-            server_hostname=settings.DATABRICKS_HOST.replace("https://", "").replace("http://", "").strip("/"),
+            server_hostname=settings.DATABRICKS_HOST.replace("https://", "")
+            .replace("http://", "")
+            .strip("/"),
             http_path=settings.DATABRICKS_HTTP_PATH,
             access_token=settings.DATABRICKS_TOKEN,
         ) as connection:
             with connection.cursor() as cursor:
-                print("Running 'SELECT 1 AS status, current_timestamp() AS ts, current_user() AS user'...")
-                cursor.execute("SELECT 1 AS status, current_timestamp() AS ts, current_user() AS user")
+                print(
+                    "Running 'SELECT 1 AS status, current_timestamp() AS ts, current_user() AS user'..."
+                )
+                cursor.execute(
+                    "SELECT 1 AS status, current_timestamp() AS ts, current_user() AS user"
+                )
                 result = cursor.fetchall()
                 print("\n[SUCCESS] Databricks SQL Warehouse is connected and healthy!")
                 print(f"Query Result: {result}")
@@ -47,9 +58,13 @@ def test_sql_connection() -> bool:
         print("\n[ERROR] Connection failed!")
         error_msg = str(exc)
         if "401" in error_msg or "Invalid access token" in error_msg:
-            print("Diagnosis: Authentication failed. Please check that DATABRICKS_TOKEN is valid and has not expired.")
+            print(
+                "Diagnosis: Authentication failed. Please check that DATABRICKS_TOKEN is valid and has not expired."
+            )
         elif "Starting" in error_msg or "Warehouse is stopped" in error_msg:
-            print("Diagnosis: SQL Warehouse is currently starting up from cold sleep. Wait 60 seconds and retry.")
+            print(
+                "Diagnosis: SQL Warehouse is currently starting up from cold sleep. Wait 60 seconds and retry."
+            )
         else:
             print(f"Error details: {error_msg}")
         return False

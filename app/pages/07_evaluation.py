@@ -2,24 +2,25 @@
 
 import json
 from pathlib import Path
+
 import pandas as pd
 import streamlit as st
-
-try:
-    import plotly.express as px
-    from app.styles.plotly_theme import apply_plotly_theme
-    HAS_PLOTLY = True
-except ImportError:
-    HAS_PLOTLY = False
 
 from claimsense.evaluation.eval_runner import run_evaluation
 
 
 def render():
     st.title("🎯 Agent Evaluation & Benchmark Report")
-    st.markdown("Rigorous offline and live evaluation metrics across 45 ground-truth test claims, measuring decision accuracy, escalation recall, zero-hallucination citation rates, and prompt injection containment.")
+    st.markdown(
+        "Rigorous offline and live evaluation metrics across 45 ground-truth test claims, measuring decision accuracy, escalation recall, zero-hallucination citation rates, and prompt injection containment."
+    )
 
-    results_path = Path(__file__).resolve().parent.parent.parent / "claimsense" / "evaluation" / "eval_results.json"
+    results_path = (
+        Path(__file__).resolve().parent.parent.parent
+        / "claimsense"
+        / "evaluation"
+        / "eval_results.json"
+    )
 
     # Button to re-run evaluation
     if st.button("🔄 Re-Run Evaluation Benchmark (45 Cases)", type="primary"):
@@ -40,10 +41,21 @@ def render():
     # KPI Scorecards
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Decision Accuracy", f"{summary['decision_accuracy_percent']}%", "Target: >75%")
-    col2.metric("Escalation Precision", f"{summary['escalation_precision_percent']}%", "100% Valid SIU")
-    col3.metric("Escalation Recall", f"{summary['escalation_recall_percent']}%", "10/10 SIU Identified")
-    col4.metric("Hallucination Rate", f"{summary['hallucination_rate_percent']}%", "0% Target Achieved", delta_color="inverse")
-    col5.metric("Injection Defense", f"{summary['prompt_injection_defense_percent']}%", "100% Contained")
+    col2.metric(
+        "Escalation Precision", f"{summary['escalation_precision_percent']}%", "100% Valid SIU"
+    )
+    col3.metric(
+        "Escalation Recall", f"{summary['escalation_recall_percent']}%", "10/10 SIU Identified"
+    )
+    col4.metric(
+        "Hallucination Rate",
+        f"{summary['hallucination_rate_percent']}%",
+        "0% Target Achieved",
+        delta_color="inverse",
+    )
+    col5.metric(
+        "Injection Defense", f"{summary['prompt_injection_defense_percent']}%", "100% Contained"
+    )
 
     st.divider()
 
@@ -60,18 +72,21 @@ def render():
 
     with col_latency:
         st.markdown("#### ⚡ Latency & Cost Metrics")
-        st.markdown(f"""
+        st.markdown(
+            f"""
         <div class="kpi-card" style="margin-bottom: 1rem;">
             <div class="kpi-title">Average Latency per Claim</div>
-            <div class="kpi-value">{summary['average_latency_ms']} ms</div>
+            <div class="kpi-value">{summary["average_latency_ms"]} ms</div>
             <div class="kpi-subtext">Real-time inline triage capability</div>
         </div>
         <div class="kpi-card">
             <div class="kpi-title">Estimated Tokens / Claim</div>
-            <div class="kpi-value">{summary['estimated_tokens_per_claim']}</div>
+            <div class="kpi-value">{summary["estimated_tokens_per_claim"]}</div>
             <div class="kpi-subtext">Delimited prompts & dense clause retrieval</div>
         </div>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
     st.divider()
 

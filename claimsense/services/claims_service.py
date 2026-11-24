@@ -5,9 +5,10 @@ Shared seamlessly between the in-process Streamlit application and the FastAPI R
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
-from typing import Any, Dict, List, Optional
+import logging
 import uuid
+from datetime import UTC, datetime
+from typing import Any
 
 from claimsense.agent.graph import get_triage_graph
 from claimsense.config import Settings, get_settings
@@ -27,11 +28,13 @@ from claimsense.services.models import (
     TriageDecisionEnum,
 )
 
+logger = logging.getLogger(__name__)
+
 
 class ClaimsService:
     """Core domain service for claims operations, KPIs, data quality, and triage."""
 
-    def __init__(self, settings: Optional[Settings] = None):
+    def __init__(self, settings: Settings | None = None):
         self.settings = settings or get_settings()
         self.db = get_db_client(self.settings)
         self.agent_graph = get_triage_graph()
@@ -45,7 +48,7 @@ class ClaimsService:
             databricks_configured=self.settings.is_databricks_configured,
             groq_configured=self.settings.is_groq_configured,
             snowflake_configured=self.settings.is_snowflake_configured,
-            timestamp=datetime.now(timezone.utc).isoformat(),
+            timestamp=datetime.now(UTC).isoformat(),
         )
 
     def get_kpi_summary(self) -> KPISummary:
@@ -87,9 +90,9 @@ class ClaimsService:
     def get_claims(
         self,
         limit: int = 50,
-        status: Optional[str] = None,
-        claim_type: Optional[str] = None,
-    ) -> List[ClaimSummary]:
+        status: str | None = None,
+        claim_type: str | None = None,
+    ) -> list[ClaimSummary]:
         """Lists claims with optional status and type filters."""
         query = """
             SELECT
@@ -158,11 +161,12 @@ class ClaimsService:
     def trigger_pipeline_run(self) -> PipelineTriggerResponse:
         """Triggers pipeline run (Databricks SDK Workflow or local execution)."""
         run_id = f"RUN-{uuid.uuid4().hex[:8].upper()}"
-        now_str = datetime.now(timezone.utc).isoformat()
+        now_str = datetime.now(UTC).isoformat()
 
         if self.settings.is_databricks_configured and self.settings.DATABRICKS_JOB_ID:
             try:
                 from databricks.sdk import WorkspaceClient
+
                 w = WorkspaceClient(
                     host=self.settings.DATABRICKS_HOST,
                     token=self.settings.DATABRICKS_TOKEN,
@@ -175,10 +179,14 @@ class ClaimsService:
                     message="Databricks Workflow Job execution triggered successfully.",
                 )
             except Exception as e:
-                pass
+                logger.warning(
+                    "Databricks workflow trigger failed: %s; falling back to local Lakehouse pipeline.",
+                    e,
+                )
 
         # Local Lakehouse engine fallback
         from databricks.local_pipeline import LocalMedallionPipeline
+
         pipeline = LocalMedallionPipeline()
         pipeline.run_bronze()
         pipeline.run_silver(run_id=run_id)
@@ -192,7 +200,7 @@ class ClaimsService:
             message="Local Medallion pipeline executed with full reconciliation.",
         )
 
-    def get_audit_runs(self, limit: int = 10) -> List[AuditRunRecord]:
+    def get_audit_runs(self, limit: int = 10) -> list[AuditRunRecord]:
         """Returns historical reconciliation records from pipeline_audit."""
         query = """
             SELECT
@@ -206,7 +214,7 @@ class ClaimsService:
         rows = self.db.execute_query(query, (limit,))
         return [AuditRunRecord(**dict(r)) for r in rows]
 
-    def get_quality_summary(self) -> Dict[str, Any]:
+    def get_quality_summary(self) -> dict[str, Any]:
         """Summarizes data quality failure statistics from dq_results."""
         query = """
             SELECT reject_reason, COUNT(*) as failed_count
@@ -264,7 +272,7 @@ class ClaimsService:
         )
 
 
-_claims_service_instance: Optional[ClaimsService] = None
+_claims_service_instance: ClaimsService | None = None
 
 
 def get_claims_service() -> ClaimsService:

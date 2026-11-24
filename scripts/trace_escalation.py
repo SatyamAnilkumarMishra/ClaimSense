@@ -6,16 +6,17 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from claimsense.agent.tools import get_claim, validate_claim
 from claimsense.agent.graph import get_triage_graph
+from claimsense.agent.tools import get_claim, validate_claim
 from claimsense.db.client_factory import get_db_client
+
 
 def main():
     db = get_db_client()
     graph = get_triage_graph()
 
     dataset_path = Path("claimsense/evaluation/eval_dataset.json")
-    with open(dataset_path, "r", encoding="utf-8") as f:
+    with open(dataset_path, encoding="utf-8") as f:
         dataset = json.load(f)
 
     siu_cases = [c for c in dataset if c.get("expected_decision") == "ESCALATE_SIU"]
@@ -54,6 +55,7 @@ def main():
         f.write("\n".join(lines))
 
     print(f"Wrote {len(siu_cases)} traces to {evidence_file}")
+
 
 if __name__ == "__main__":
     main()

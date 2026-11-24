@@ -4,7 +4,7 @@ import hashlib
 import json
 import logging
 import time
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 from claimsense.config import Settings, get_settings
 
@@ -14,14 +14,14 @@ logger = logging.getLogger(__name__)
 class GroqClientWrapper:
     """Manages Groq LLM calls with tier routing, prompt caching, and quota protection."""
 
-    def __init__(self, settings: Optional[Settings] = None):
+    def __init__(self, settings: Settings | None = None):
         self.settings = settings or get_settings()
-        self._cache: Dict[str, str] = {}
+        self._cache: dict[str, str] = {}
         self._tokens_used_today = 0
         self.last_llm_mode: str = "deterministic_fallback"
         self.last_model_name: str = "offline_heuristic"
 
-    def _hash_messages(self, model: str, messages: List[Dict[str, str]]) -> str:
+    def _hash_messages(self, model: str, messages: list[dict[str, str]]) -> str:
         serialized = json.dumps({"model": model, "messages": messages}, sort_keys=True)
         return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
 
@@ -30,7 +30,7 @@ class GroqClientWrapper:
         system_prompt: str,
         user_prompt: str,
         model_tier: str = "reasoning",
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """Calls Groq API to produce structured JSON with caching and offline fallback."""
         model = (
             self.settings.GROQ_REASONING_MODEL
@@ -52,7 +52,10 @@ class GroqClientWrapper:
             return cached_data
 
         # If Groq is not configured or quota exceeded, use deterministic mock fallback
-        if not self.settings.is_groq_configured or self._tokens_used_today >= self.settings.GROQ_DAILY_TOKEN_LIMIT:
+        if (
+            not self.settings.is_groq_configured
+            or self._tokens_used_today >= self.settings.GROQ_DAILY_TOKEN_LIMIT
+        ):
             self.last_llm_mode = "deterministic_fallback"
             self.last_model_name = "offline_heuristic"
             mock_result = self._mock_triage_decision(user_prompt)
@@ -64,6 +67,7 @@ class GroqClientWrapper:
         # Live Groq API Execution
         try:
             from groq import Groq
+
             client = Groq(api_key=self.settings.GROQ_API_KEY)
 
             # Retry with exponential backoff for rate limits
@@ -94,7 +98,9 @@ class GroqClientWrapper:
                     else:
                         break
 
-            logger.warning(f"Live Groq call failed ({last_exc}). Falling back to deterministic agent reasoning.")
+            logger.warning(
+                f"Live Groq call failed ({last_exc}). Falling back to deterministic agent reasoning."
+            )
             self.last_llm_mode = "deterministic_fallback"
             self.last_model_name = "offline_heuristic"
             mock_res = self._mock_triage_decision(user_prompt)
@@ -111,7 +117,7 @@ class GroqClientWrapper:
             mock_res["_model_name"] = "offline_heuristic"
             return mock_res
 
-    def _mock_triage_decision(self, user_prompt: str) -> Dict[str, Any]:
+    def _mock_triage_decision(self, user_prompt: str) -> dict[str, Any]:
         """Deterministic offline fallback reasoning based on rule check facts in prompt."""
         import re
 
@@ -120,11 +126,16 @@ class GroqClientWrapper:
         primary_clause = available_clauses[0] if available_clauses else "AUTO-COV-01"
 
         # Detect prompt injection attempts
-        if "ignore previous instructions" in user_prompt.lower() or "override" in user_prompt.lower():
+        if (
+            "ignore previous instructions" in user_prompt.lower()
+            or "override" in user_prompt.lower()
+        ):
             return {
                 "decision": "NEEDS_REVIEW",
                 "confidence": 0.99,
-                "reasons": ["Prompt injection attempt detected inside untrusted claimant data. Escalated for safety."],
+                "reasons": [
+                    "Prompt injection attempt detected inside untrusted claimant data. Escalated for safety."
+                ],
                 "cited_clause_ids": [primary_clause],
             }
 
@@ -148,12 +159,14 @@ class GroqClientWrapper:
             return {
                 "decision": "FAST_TRACK",
                 "confidence": 0.96,
-                "reasons": ["All deterministic policy checks passed. Eligible for straight-through processing."],
+                "reasons": [
+                    "All deterministic policy checks passed. Eligible for straight-through processing."
+                ],
                 "cited_clause_ids": [primary_clause],
             }
 
 
-_groq_client_wrapper_instance: Optional[GroqClientWrapper] = None
+_groq_client_wrapper_instance: GroqClientWrapper | None = None
 
 
 def get_groq_client_wrapper() -> GroqClientWrapper:

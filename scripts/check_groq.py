@@ -5,6 +5,7 @@ Verifies fast model (llama-3.1-8b-instant) inference, latency, and token efficie
 
 import sys
 import time
+
 from claimsense.config import get_settings
 
 
@@ -34,8 +35,14 @@ def test_groq_connectivity() -> bool:
         response = client.chat.completions.create(
             model=settings.GROQ_FAST_MODEL,
             messages=[
-                {"role": "system", "content": "You are a concise assistant verifying API connectivity."},
-                {"role": "user", "content": "Reply with 'Groq connected successfully' and the current year."},
+                {
+                    "role": "system",
+                    "content": "You are a concise assistant verifying API connectivity.",
+                },
+                {
+                    "role": "user",
+                    "content": "Reply with 'Groq connected successfully' and the current year.",
+                },
             ],
             temperature=0,
             max_tokens=30,

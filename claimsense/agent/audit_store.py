@@ -2,18 +2,19 @@
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
 import json
-from pathlib import Path
 import sqlite3
-from typing import Any, Dict, List, Optional
+from datetime import UTC, datetime
+from pathlib import Path
+from typing import Any
+
 from claimsense.config import get_settings
 
 
 class TriageAuditStore:
     """Persists every triage assessment, citation, and human review trace for compliance."""
 
-    def __init__(self, db_path: Optional[Path] = None):
+    def __init__(self, db_path: Path | None = None):
         settings = get_settings()
         self.db_path = db_path or (settings.SNAPSHOTS_PATH / "claimsense_local.db")
         self._init_db()
@@ -40,33 +41,38 @@ class TriageAuditStore:
         claim_id: str,
         decision: str,
         confidence: float,
-        reasons: List[str],
-        cited_clauses: List[str],
+        reasons: list[str],
+        cited_clauses: list[str],
         needs_human: bool,
-        trace: List[Dict[str, Any]],
+        trace: list[dict[str, Any]],
     ) -> int:
-        now_ts = datetime.now(timezone.utc).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
         with sqlite3.connect(self.db_path) as conn:
             cur = conn.cursor()
-            cur.execute("""
+            cur.execute(
+                """
                 INSERT INTO triage_audit (
                     claim_id, decision, confidence, reasons, cited_clauses,
                     needs_human, full_trace, created_at
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                claim_id,
-                decision,
-                confidence,
-                json.dumps(reasons),
-                json.dumps(cited_clauses),
-                1 if needs_human else 0,
-                json.dumps(trace),
-                now_ts,
-            ))
+            """,
+                (
+                    claim_id,
+                    decision,
+                    confidence,
+                    json.dumps(reasons),
+                    json.dumps(cited_clauses),
+                    1 if needs_human else 0,
+                    json.dumps(trace),
+                    now_ts,
+                ),
+            )
             conn.commit()
             return cur.lastrowid or 1
 
-    def list_audit_records(self, limit: int = 50, decision: Optional[str] = None) -> List[Dict[str, Any]]:
+    def list_audit_records(
+        self, limit: int = 50, decision: str | None = None
+    ) -> list[dict[str, Any]]:
         query = "SELECT * FROM triage_audit"
         params = []
         if decision:
@@ -88,7 +94,7 @@ class TriageAuditStore:
             return results
 
 
-_audit_store_instance: Optional[TriageAuditStore] = None
+_audit_store_instance: TriageAuditStore | None = None
 
 
 def get_triage_audit_store() -> TriageAuditStore:

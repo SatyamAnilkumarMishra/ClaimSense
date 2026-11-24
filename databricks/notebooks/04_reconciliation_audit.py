@@ -4,14 +4,15 @@
 # MAGIC %md
 # MAGIC ### Pipeline Stage: Automated Reconciliation Audit
 # MAGIC Verifies zero data loss and data integrity across all Medallion Lakehouse layers.
-# MAGIC 
+# MAGIC
 # MAGIC Invariant Assertion:
 # MAGIC $$\text{Bronze Count} = \text{Duplicates Quarantined} + \text{Defects Quarantined} + \text{Silver Count}$$
 # MAGIC $$\text{Silver Count} = \text{Gold Fact Count}$$
 
 # COMMAND ----------
 import uuid
-from pyspark.sql.functions import current_timestamp, lit
+
+from pyspark.sql.functions import current_timestamp
 
 dbutils.widgets.text("catalog", "workspace", "Unity Catalog Name")
 dbutils.widgets.text("schema", "claimsense", "Database / Schema Name")
@@ -64,37 +65,35 @@ else:
 
 # COMMAND ----------
 # DBTITLE 1,Persist Audit Record in pipeline_audit Delta Table
-audit_df = spark.createDataFrame([
-    (
-        run_id,
-        bronze_count,
-        duplicates_count,
-        defects_count,
-        quarantine_total,
-        silver_count,
-        gold_fact_count,
-        discrepancy,
-        status,
-        notes
-    )
-], [
-    "run_id",
-    "bronze_count",
-    "duplicates_count",
-    "defects_count",
-    "quarantined_total",
-    "silver_count",
-    "gold_fact_count",
-    "discrepancy_count",
-    "reconciliation_status",
-    "audit_notes"
-]).withColumn("run_timestamp", current_timestamp())
+audit_df = spark.createDataFrame(
+    [
+        (
+            run_id,
+            bronze_count,
+            duplicates_count,
+            defects_count,
+            quarantine_total,
+            silver_count,
+            gold_fact_count,
+            discrepancy,
+            status,
+            notes,
+        )
+    ],
+    [
+        "run_id",
+        "bronze_count",
+        "duplicates_count",
+        "defects_count",
+        "quarantined_total",
+        "silver_count",
+        "gold_fact_count",
+        "discrepancy_count",
+        "reconciliation_status",
+        "audit_notes",
+    ],
+).withColumn("run_timestamp", current_timestamp())
 
-(
-    audit_df.write
-    .format("delta")
-    .mode("append")
-    .saveAsTable(f"{catalog}.{schema}.pipeline_audit")
-)
+(audit_df.write.format("delta").mode("append").saveAsTable(f"{catalog}.{schema}.pipeline_audit"))
 
 print(f"Audit log saved to {catalog}.{schema}.pipeline_audit.")

@@ -16,24 +16,25 @@ Implements strict LangGraph principles (LG-01 to LG-11):
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
-from enum import StrEnum
-import json
 import logging
 import re
-import time
-from typing import Any, Dict, List, Literal, Optional, Tuple, TypedDict
+from datetime import UTC, datetime
+from enum import StrEnum
+from typing import Any, Literal, TypedDict
 
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.graph import END, START, StateGraph
+from langgraph.graph import END, StateGraph
 from pydantic import BaseModel, Field, field_validator
 
 from claimsense.agent.audit_store import get_triage_audit_store
 from claimsense.agent.citation_verifier import CitationVerifier
 from claimsense.agent.groq_client import get_groq_client_wrapper
-from claimsense.agent.prompts import SYSTEM_PROMPT_VERSION, TRIAGE_SYSTEM_PROMPT, build_triage_user_prompt
+from claimsense.agent.prompts import (
+    TRIAGE_SYSTEM_PROMPT,
+    build_triage_user_prompt,
+)
 from claimsense.agent.retriever import get_policy_retriever
-from claimsense.agent.tools import get_claim, search_policy_clauses, validate_claim
+from claimsense.agent.tools import get_claim, validate_claim
 from claimsense.services.models import TriageDecisionEnum
 
 logger = logging.getLogger(__name__)
@@ -42,6 +43,7 @@ logger = logging.getLogger(__name__)
 # ==============================================================================
 # LG-01 & LG-05: Typed, Validated State & Schemas
 # ==============================================================================
+
 
 class PrecedenceLevel(StrEnum):
     SIU_FRAUD_BREACH = "SIU_FRAUD_BREACH"
@@ -58,10 +60,11 @@ class AllowedReviewAction(StrEnum):
 
 class LLMOutputSchema(BaseModel):
     """LG-05: Pydantic schema validating structured LLM output."""
+
     decision: str
     confidence: float = Field(ge=0.0, le=1.0)
-    reasons: List[str] = Field(default_factory=list)
-    cited_clause_ids: List[str] = Field(default_factory=list)
+    reasons: list[str] = Field(default_factory=list)
+    cited_clause_ids: list[str] = Field(default_factory=list)
 
     @field_validator("decision")
     @classmethod
@@ -74,23 +77,24 @@ class LLMOutputSchema(BaseModel):
 
 class TriageStateModel(BaseModel):
     """LG-01: Validated Pydantic model for graph state."""
+
     claim_id: str
-    claim_record: Optional[Dict[str, Any]] = None
-    validation_results: List[Dict[str, Any]] = Field(default_factory=list)
-    retrieved_clauses: List[Dict[str, Any]] = Field(default_factory=list)
-    assessment: Optional[Dict[str, Any]] = None
+    claim_record: dict[str, Any] | None = None
+    validation_results: list[dict[str, Any]] = Field(default_factory=list)
+    retrieved_clauses: list[dict[str, Any]] = Field(default_factory=list)
+    assessment: dict[str, Any] | None = None
     confidence: float = 0.0
     decision: str = "NEEDS_REVIEW"
     needs_human: bool = True
-    human_feedback: Optional[Dict[str, Any]] = None
-    trace: List[Dict[str, Any]] = Field(default_factory=list)
+    human_feedback: dict[str, Any] | None = None
+    trace: list[dict[str, Any]] = Field(default_factory=list)
     step_count: int = 0
     llm_mode: str = "deterministic_fallback"
     model_name: str = "offline_heuristic"
     run_id: str = "default_run"
     status: str = "IN_PROGRESS"
-    precedence_rule: Optional[str] = None
-    error: Optional[str] = None
+    precedence_rule: str | None = None
+    error: str | None = None
 
     @field_validator("claim_id")
     @classmethod
@@ -103,35 +107,37 @@ class TriageStateModel(BaseModel):
 
 class TriageAgentState(TypedDict, total=False):
     """TypedDict representation for LangGraph runtime state."""
+
     claim_id: str
-    claim_record: Optional[Dict[str, Any]]
-    validation_results: List[Dict[str, Any]]
-    retrieved_clauses: List[Dict[str, Any]]
-    assessment: Optional[Dict[str, Any]]
+    claim_record: dict[str, Any] | None
+    validation_results: list[dict[str, Any]]
+    retrieved_clauses: list[dict[str, Any]]
+    assessment: dict[str, Any] | None
     confidence: float
     decision: str
     needs_human: bool
-    human_feedback: Optional[Dict[str, Any]]
-    trace: List[Dict[str, Any]]
+    human_feedback: dict[str, Any] | None
+    trace: list[dict[str, Any]]
     step_count: int
     llm_mode: str
     model_name: str
     run_id: str
     status: str
-    precedence_rule: Optional[str]
-    error: Optional[str]
+    precedence_rule: str | None
+    error: str | None
 
 
 # ==============================================================================
 # LG-04: Explicit Escalation Precedence Function
 # ==============================================================================
 
+
 def evaluate_escalation_precedence(
-    rules: List[Dict[str, Any]],
-    claim_record: Dict[str, Any],
+    rules: list[dict[str, Any]],
+    claim_record: dict[str, Any],
     verification: Any,
-    raw_assessment: Dict[str, Any],
-) -> Dict[str, Any]:
+    raw_assessment: dict[str, Any],
+) -> dict[str, Any]:
     """LG-04: Ordered precedence list evaluated in strict order:
     1. High-severity rule failure or fraud-risk breach -> ESCALATE_SIU
     2. Unverifiable citation or insufficient evidence -> NEEDS_REVIEW
@@ -144,12 +150,10 @@ def evaluate_escalation_precedence(
     flag_high_risk = int(rec.get("flag_high_risk_customer", 0))
 
     fraud_rule_failed = any(
-        r.get("rule_id") == "RULE-05-FRAUD-RISK" and not r.get("passed", True)
-        for r in rules
+        r.get("rule_id") == "RULE-05-FRAUD-RISK" and not r.get("passed", True) for r in rules
     )
     has_high_or_crit_rule_fail = any(
-        not r.get("passed", True) and r.get("severity") in ["CRITICAL", "HIGH"]
-        for r in rules
+        not r.get("passed", True) and r.get("severity") in ["CRITICAL", "HIGH"] for r in rules
     )
 
     # 1. Level 1: SIU Fraud Risk Breach
@@ -174,7 +178,9 @@ def evaluate_escalation_precedence(
     if (not verification.is_valid) or is_injection or has_high_or_crit_rule_fail:
         reasons_list = []
         if not verification.is_valid:
-            reasons_list.append("Unverifiable citations or ungrounded amounts detected by citation verifier")
+            reasons_list.append(
+                "Unverifiable citations or ungrounded amounts detected by citation verifier"
+            )
         if is_injection:
             reasons_list.append("Prompt injection attack detected inside claimant data")
         if has_high_or_crit_rule_fail:
@@ -214,7 +220,10 @@ def evaluate_escalation_precedence(
 # LG-03: Deterministic Routing Functions
 # ==============================================================================
 
-def route_after_precedence(state: TriageAgentState) -> Literal["fast_track", "human_review", "finalize"]:
+
+def route_after_precedence(
+    state: TriageAgentState,
+) -> Literal["fast_track", "human_review", "finalize"]:
     """LG-03: Pure Python conditional edge function over state fields.
     Default branch safely routes to human_review, never to finalize.
     """
@@ -237,28 +246,31 @@ def route_after_precedence(state: TriageAgentState) -> Literal["fast_track", "hu
 # LG-02 & LG-06: Graph Nodes Implementation
 # ==============================================================================
 
-def node_intake(state: TriageAgentState) -> Dict[str, Any]:
+
+def node_intake(state: TriageAgentState) -> dict[str, Any]:
     """Node 1: Validates claim_id and initializes trace."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"].strip().upper()
 
     step_count = state.get("step_count", 0) + 1
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "intake",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {"status": "VALIDATED"},
-        "route": "fetch_data",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "intake",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {"status": "VALIDATED"},
+            "route": "fetch_data",
+            "step_count": step_count,
+        }
+    )
     return {"claim_id": cid, "step_count": step_count, "trace": trace, "status": "IN_PROGRESS"}
 
 
-def node_fetch_data(state: TriageAgentState) -> Dict[str, Any]:
+def node_fetch_data(state: TriageAgentState) -> dict[str, Any]:
     """Node 2 (LG-06): Calls tool get_claim with parameterised validation."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
@@ -269,21 +281,23 @@ def node_fetch_data(state: TriageAgentState) -> Dict[str, Any]:
         logger.error(f"Failed to fetch claim {cid}: {exc}")
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "fetch_data",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {"fields_loaded": list(record.keys()) if record else []},
-        "route": "validate_rules",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "fetch_data",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {"fields_loaded": list(record.keys()) if record else []},
+            "route": "validate_rules",
+            "step_count": step_count,
+        }
+    )
     return {"claim_record": record, "step_count": step_count, "trace": trace}
 
 
-def node_validate_rules(state: TriageAgentState) -> Dict[str, Any]:
+def node_validate_rules(state: TriageAgentState) -> dict[str, Any]:
     """Node 3 (LG-06): Calls tool validate_claim deterministically."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
@@ -291,21 +305,23 @@ def node_validate_rules(state: TriageAgentState) -> Dict[str, Any]:
     passed_count = sum(1 for r in rules if r["passed"])
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "validate_rules",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {"rules_count": len(rules), "passed_count": passed_count},
-        "route": "retrieve_clauses",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "validate_rules",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {"rules_count": len(rules), "passed_count": passed_count},
+            "route": "retrieve_clauses",
+            "step_count": step_count,
+        }
+    )
     return {"validation_results": rules, "step_count": step_count, "trace": trace}
 
 
-def node_retrieve_clauses(state: TriageAgentState) -> Dict[str, Any]:
+def node_retrieve_clauses(state: TriageAgentState) -> dict[str, Any]:
     """Node 4 (LG-06): Calls tool search_policy_clauses."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
@@ -317,36 +333,40 @@ def node_retrieve_clauses(state: TriageAgentState) -> Dict[str, Any]:
     retrieved = retriever.retrieve(query=query, policy_type=p_type, top_k=4)
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "retrieve_clauses",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid, "policy_type": p_type},
-        "output_summary": {"clauses_retrieved": len(retrieved)},
-        "route": "assess_llm",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "retrieve_clauses",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid, "policy_type": p_type},
+            "output_summary": {"clauses_retrieved": len(retrieved)},
+            "route": "assess_llm",
+            "step_count": step_count,
+        }
+    )
     return {"retrieved_clauses": retrieved, "step_count": step_count, "trace": trace}
 
 
-def node_assess_llm(state: TriageAgentState) -> Dict[str, Any]:
+def node_assess_llm(state: TriageAgentState) -> dict[str, Any]:
     """Node 5 (LG-05 & LG-07): Gated LLM assessment with Pydantic validation & bounded repair."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
     # LG-07: Bounded execution check
     if step_count > 15:
         trace = list(state.get("trace", []))
-        trace.append({
-            "node": "assess_llm",
-            "start_time": t0,
-            "end_time": datetime.now(timezone.utc).isoformat(),
-            "input_ids": {"claim_id": cid},
-            "output_summary": {"error": "limit_exceeded"},
-            "route": "human_review",
-            "step_count": step_count,
-        })
+        trace.append(
+            {
+                "node": "assess_llm",
+                "start_time": t0,
+                "end_time": datetime.now(UTC).isoformat(),
+                "input_ids": {"claim_id": cid},
+                "output_summary": {"error": "limit_exceeded"},
+                "route": "human_review",
+                "step_count": step_count,
+            }
+        )
         return {
             "decision": "NEEDS_REVIEW",
             "confidence": 0.50,
@@ -374,7 +394,7 @@ def node_assess_llm(state: TriageAgentState) -> Dict[str, Any]:
     model_name = getattr(groq_client, "last_model_name", "offline_heuristic")
 
     # Validate output schema (LG-05)
-    parsed_assessment: Optional[Dict[str, Any]] = None
+    parsed_assessment: dict[str, Any] | None = None
     try:
         valid_schema = LLMOutputSchema(
             decision=raw_output.get("decision", "NEEDS_REVIEW"),
@@ -384,7 +404,9 @@ def node_assess_llm(state: TriageAgentState) -> Dict[str, Any]:
         )
         parsed_assessment = valid_schema.model_dump()
     except Exception as exc:
-        logger.warning(f"Initial LLM schema parse failed for claim {cid}: {exc}. Triggering bounded repair.")
+        logger.warning(
+            f"Initial LLM schema parse failed for claim {cid}: {exc}. Triggering bounded repair."
+        )
         # Single bounded repair retry
         repair_prompt = f"Previous JSON response was invalid: {exc}. Please produce valid JSON matching the schema."
         try:
@@ -410,17 +432,22 @@ def node_assess_llm(state: TriageAgentState) -> Dict[str, Any]:
             }
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "assess_llm",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {"decision": parsed_assessment["decision"], "confidence": parsed_assessment["confidence"]},
-        "route": "apply_precedence",
-        "model_name": model_name,
-        "llm_mode": llm_mode,
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "assess_llm",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {
+                "decision": parsed_assessment["decision"],
+                "confidence": parsed_assessment["confidence"],
+            },
+            "route": "apply_precedence",
+            "model_name": model_name,
+            "llm_mode": llm_mode,
+            "step_count": step_count,
+        }
+    )
 
     return {
         "assessment": parsed_assessment,
@@ -431,9 +458,9 @@ def node_assess_llm(state: TriageAgentState) -> Dict[str, Any]:
     }
 
 
-def node_apply_precedence(state: TriageAgentState) -> Dict[str, Any]:
+def node_apply_precedence(state: TriageAgentState) -> dict[str, Any]:
     """Node 6 (LG-04): Applies deterministic 4-tier escalation precedence."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
@@ -485,19 +512,21 @@ def node_apply_precedence(state: TriageAgentState) -> Dict[str, Any]:
     }
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "apply_precedence",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {
-            "precedence_level": precedence_rule,
-            "final_decision": final_decision,
-            "needs_human": needs_human,
-        },
-        "route": "finalize" if not needs_human else "human_review",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "apply_precedence",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {
+                "precedence_level": precedence_rule,
+                "final_decision": final_decision,
+                "needs_human": needs_human,
+            },
+            "route": "finalize" if not needs_human else "human_review",
+            "step_count": step_count,
+        }
+    )
 
     return {
         "decision": final_decision,
@@ -510,11 +539,11 @@ def node_apply_precedence(state: TriageAgentState) -> Dict[str, Any]:
     }
 
 
-def node_human_review(state: TriageAgentState) -> Dict[str, Any]:
+def node_human_review(state: TriageAgentState) -> dict[str, Any]:
     """Node 7 (LG-08): Human review checkpoint node.
     Pauses execution for adjuster feedback when compiled with interrupt_before.
     """
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
@@ -531,18 +560,21 @@ def node_human_review(state: TriageAgentState) -> Dict[str, Any]:
             final_decision = TriageDecisionEnum.NEEDS_REVIEW.value
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "human_review",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {
-            "status": "REVIEWED" if feedback else "PAUSED_AWAITING_REVIEW",
-            "decision": final_decision,
-        },
-        "route": "finalize",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "human_review",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {
+                "status": "REVIEWED" if feedback else "PAUSED_AWAITING_REVIEW",
+                "decision": final_decision,
+                "reviewer_notes": notes if feedback else None,
+            },
+            "route": "finalize",
+            "step_count": step_count,
+        }
+    )
 
     return {
         "decision": final_decision,
@@ -552,9 +584,9 @@ def node_human_review(state: TriageAgentState) -> Dict[str, Any]:
     }
 
 
-def node_finalize(state: TriageAgentState) -> Dict[str, Any]:
+def node_finalize(state: TriageAgentState) -> dict[str, Any]:
     """Node 8: Finalizes state and writes to compliance audit store."""
-    t0 = datetime.now(timezone.utc).isoformat()
+    t0 = datetime.now(UTC).isoformat()
     cid = state["claim_id"]
     step_count = state.get("step_count", 0) + 1
 
@@ -572,15 +604,17 @@ def node_finalize(state: TriageAgentState) -> Dict[str, Any]:
     )
 
     trace = list(state.get("trace", []))
-    trace.append({
-        "node": "finalize",
-        "start_time": t0,
-        "end_time": datetime.now(timezone.utc).isoformat(),
-        "input_ids": {"claim_id": cid},
-        "output_summary": {"status": "FINALIZED", "decision": state.get("decision")},
-        "route": "END",
-        "step_count": step_count,
-    })
+    trace.append(
+        {
+            "node": "finalize",
+            "start_time": t0,
+            "end_time": datetime.now(UTC).isoformat(),
+            "input_ids": {"claim_id": cid},
+            "output_summary": {"status": "FINALIZED", "decision": state.get("decision")},
+            "route": "END",
+            "step_count": step_count,
+        }
+    )
 
     return {"status": "FINALIZED", "step_count": step_count, "trace": trace}
 
@@ -589,8 +623,9 @@ def node_finalize(state: TriageAgentState) -> Dict[str, Any]:
 # LG-02: Explicit Graph Topology Builder
 # ==============================================================================
 
+
 def build_triage_graph(
-    checkpointer: Optional[Any] = None,
+    checkpointer: Any | None = None,
     interrupt_on_human: bool = False,
 ) -> Any:
     """LG-02: Builds explicit LangGraph StateGraph topology.
@@ -647,7 +682,7 @@ flowchart TD
     validate_rules --> retrieve_clauses[retrieve_clauses: TF-IDF Policy Clauses]
     retrieve_clauses --> assess_llm[assess_llm: Groq LLM / Offline Fallback]
     assess_llm --> apply_precedence[apply_precedence: 4-Tier Precedence Order]
-    
+
     apply_precedence -->|fast_track| finalize[finalize: Audit Store & Metric Record]
     apply_precedence -->|human_review| human_review[human_review: Adjuster Queue Checkpoint]
     human_review --> finalize
@@ -658,6 +693,7 @@ flowchart TD
 # ==============================================================================
 # Controller Class (Backwards Compatible Facade)
 # ==============================================================================
+
 
 class ClaimTriageGraph:
     """Controller facade managing LangGraph StateGraph execution, checkpoints, and resume."""
@@ -737,9 +773,9 @@ class ClaimTriageGraph:
         claim_id: str,
         action: str,
         reviewer_notes: str,
-        override_decision: Optional[str] = None,
+        override_decision: str | None = None,
         run_id: str = "run_1",
-    ) -> Dict[str, Any]:
+    ) -> dict[str, Any]:
         """LG-08: Resumes execution from human review checkpoint using thread_id."""
         cleaned_id = claim_id.strip().upper()
         thread_id = f"{cleaned_id}_{run_id}"
@@ -752,24 +788,30 @@ class ClaimTriageGraph:
         # Validate override reason requirement
         if action.upper() == AllowedReviewAction.OVERRIDE.value:
             if not reviewer_notes or not reviewer_notes.strip():
-                raise ValueError("Reviewer override action requires a non-empty reviewer_notes justification.")
+                raise ValueError(
+                    "Reviewer override action requires a non-empty reviewer_notes justification."
+                )
 
         # Reject resume on already finished thread
         if thread_id in self._finished_threads:
-            raise RuntimeError(f"Thread '{thread_id}' is already finalized. Cannot resume a finished thread.")
+            raise RuntimeError(
+                f"Thread '{thread_id}' is already finalized. Cannot resume a finished thread."
+            )
 
         feedback = {
             "action": action.upper(),
             "reviewer_notes": reviewer_notes,
             "override_decision": override_decision,
-            "reviewed_at": datetime.now(timezone.utc).isoformat(),
+            "reviewed_at": datetime.now(UTC).isoformat(),
         }
 
         config = {"configurable": {"thread_id": thread_id}, "recursion_limit": 25}
 
         # Retrieve state from checkpointer
         state_tuple = self.checkpointer.get_tuple(config)
-        existing_state: Dict[str, Any] = state_tuple.checkpoint.get("channel_values", {}) if state_tuple else {}
+        existing_state: dict[str, Any] = (
+            state_tuple.checkpoint.get("channel_values", {}) if state_tuple else {}
+        )
 
         current_decision = existing_state.get("decision", "NEEDS_REVIEW")
         if action.upper() == AllowedReviewAction.OVERRIDE.value and override_decision:
@@ -793,10 +835,10 @@ class ClaimTriageGraph:
 
         return {
             "claim_id": cleaned_id,
-            "final_decision": final_dec,
+            "final_decision": final_state.get("decision", final_dec),
             "reviewer_notes": reviewer_notes,
-            "status": "FINALIZED",
-            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "status": final_state.get("status", "FINALIZED"),
+            "timestamp": datetime.now(UTC).isoformat(),
         }
 
 

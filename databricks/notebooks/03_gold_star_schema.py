@@ -4,7 +4,7 @@
 # MAGIC %md
 # MAGIC ### Pipeline Stage: Gold Star Schema & KPI Views
 # MAGIC Models cleaned Silver data into an analytical Star Schema optimized for BI queries, dashboard serving, and the LangGraph triage agent.
-# MAGIC 
+# MAGIC
 # MAGIC Star Schema Design:
 # MAGIC * **Dimensions**: `dim_customer`, `dim_policy`, `dim_claim_type`, `dim_date`
 # MAGIC * **Fact**: `fact_claims` with surrogate keys, grain: 1 row per claim
@@ -12,8 +12,14 @@
 
 # COMMAND ----------
 from pyspark.sql.functions import (
-    col, monotonically_increasing_id, sha2, concat_ws, datediff,
-    year, month, date_format, when, lit, current_timestamp
+    col,
+    concat_ws,
+    current_timestamp,
+    date_format,
+    datediff,
+    lit,
+    sha2,
+    when,
 )
 
 dbutils.widgets.text("catalog", "workspace", "Unity Catalog Name")
@@ -28,22 +34,19 @@ print(f"Target Schema: {catalog}.{schema}")
 # DBTITLE 1,Dimension: dim_customer
 print("Building dim_customer...")
 silver_cust = spark.table(f"{catalog}.{schema}.silver_customers")
-dim_customer = (
-    silver_cust
-    .select(
-        sha2(col("customer_id"), 256).alias("customer_sk"),
-        col("customer_id"),
-        col("first_name"),
-        col("last_name"),
-        concat_ws(" ", col("first_name"), col("last_name")).alias("full_name"),
-        col("email"),
-        col("phone"),
-        col("city"),
-        col("state"),
-        col("risk_score"),
-        col("created_at"),
-        current_timestamp().alias("_effective_date")
-    )
+dim_customer = silver_cust.select(
+    sha2(col("customer_id"), 256).alias("customer_sk"),
+    col("customer_id"),
+    col("first_name"),
+    col("last_name"),
+    concat_ws(" ", col("first_name"), col("last_name")).alias("full_name"),
+    col("email"),
+    col("phone"),
+    col("city"),
+    col("state"),
+    col("risk_score"),
+    col("created_at"),
+    current_timestamp().alias("_effective_date"),
 )
 dim_customer.write.format("delta").mode("overwrite").saveAsTable(f"{catalog}.{schema}.dim_customer")
 print(f"dim_customer rows: {spark.table(f'{catalog}.{schema}.dim_customer').count()}")
@@ -52,21 +55,18 @@ print(f"dim_customer rows: {spark.table(f'{catalog}.{schema}.dim_customer').coun
 # DBTITLE 1,Dimension: dim_policy
 print("Building dim_policy...")
 silver_pol = spark.table(f"{catalog}.{schema}.silver_policies")
-dim_policy = (
-    silver_pol
-    .select(
-        sha2(col("policy_id"), 256).alias("policy_sk"),
-        col("policy_id"),
-        col("customer_id"),
-        sha2(col("customer_id"), 256).alias("customer_sk"),
-        col("policy_type"),
-        col("start_date"),
-        col("end_date"),
-        col("sum_insured"),
-        col("deductible"),
-        col("status").alias("policy_status"),
-        current_timestamp().alias("_effective_date")
-    )
+dim_policy = silver_pol.select(
+    sha2(col("policy_id"), 256).alias("policy_sk"),
+    col("policy_id"),
+    col("customer_id"),
+    sha2(col("customer_id"), 256).alias("customer_sk"),
+    col("policy_type"),
+    col("start_date"),
+    col("end_date"),
+    col("sum_insured"),
+    col("deductible"),
+    col("status").alias("policy_status"),
+    current_timestamp().alias("_effective_date"),
 )
 dim_policy.write.format("delta").mode("overwrite").saveAsTable(f"{catalog}.{schema}.dim_policy")
 print(f"dim_policy rows: {spark.table(f'{catalog}.{schema}.dim_policy').count()}")
@@ -76,15 +76,13 @@ print(f"dim_policy rows: {spark.table(f'{catalog}.{schema}.dim_policy').count()}
 print("Building dim_claim_type...")
 silver_claims = spark.table(f"{catalog}.{schema}.silver_claims")
 dim_claim_type = (
-    silver_claims
-    .select("claim_type")
+    silver_claims.select("claim_type")
     .distinct()
-    .select(
-        sha2(col("claim_type"), 256).alias("claim_type_sk"),
-        col("claim_type")
-    )
+    .select(sha2(col("claim_type"), 256).alias("claim_type_sk"), col("claim_type"))
 )
-dim_claim_type.write.format("delta").mode("overwrite").saveAsTable(f"{catalog}.{schema}.dim_claim_type")
+dim_claim_type.write.format("delta").mode("overwrite").saveAsTable(
+    f"{catalog}.{schema}.dim_claim_type"
+)
 print(f"dim_claim_type rows: {spark.table(f'{catalog}.{schema}.dim_claim_type').count()}")
 
 # COMMAND ----------
@@ -115,9 +113,21 @@ print(f"dim_date rows: {spark.table(f'{catalog}.{schema}.dim_date').count()}")
 print("Building fact_claims...")
 fact_claims = (
     silver_claims.alias("c")
-    .join(spark.table(f"{catalog}.{schema}.dim_policy").alias("p"), col("c.policy_id") == col("p.policy_id"), "inner")
-    .join(spark.table(f"{catalog}.{schema}.dim_customer").alias("u"), col("p.customer_id") == col("u.customer_id"), "inner")
-    .join(spark.table(f"{catalog}.{schema}.dim_claim_type").alias("t"), col("c.claim_type") == col("t.claim_type"), "inner")
+    .join(
+        spark.table(f"{catalog}.{schema}.dim_policy").alias("p"),
+        col("c.policy_id") == col("p.policy_id"),
+        "inner",
+    )
+    .join(
+        spark.table(f"{catalog}.{schema}.dim_customer").alias("u"),
+        col("p.customer_id") == col("u.customer_id"),
+        "inner",
+    )
+    .join(
+        spark.table(f"{catalog}.{schema}.dim_claim_type").alias("t"),
+        col("c.claim_type") == col("t.claim_type"),
+        "inner",
+    )
     .select(
         sha2(col("c.claim_id"), 256).alias("claim_sk"),
         col("c.claim_id"),
@@ -134,9 +144,13 @@ fact_claims = (
         col("c.documents_count"),
         col("c.description"),
         col("c.city"),
-        when(col("c.status").isin("APPROVED", "SETTLED"), lit(1)).otherwise(lit(0)).alias("is_settled"),
-        when(col("u.risk_score") >= 0.70, lit(1)).otherwise(lit(0)).alias("flag_high_risk_customer"),
-        current_timestamp().alias("_gold_timestamp")
+        when(col("c.status").isin("APPROVED", "SETTLED"), lit(1))
+        .otherwise(lit(0))
+        .alias("is_settled"),
+        when(col("u.risk_score") >= 0.70, lit(1))
+        .otherwise(lit(0))
+        .alias("flag_high_risk_customer"),
+        current_timestamp().alias("_gold_timestamp"),
     )
 )
 

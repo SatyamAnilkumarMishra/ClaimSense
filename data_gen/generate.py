@@ -10,11 +10,11 @@ Pure Python standard library implementation with zero external dependencies.
 from __future__ import annotations
 
 import argparse
-from datetime import date, datetime, timedelta
 import json
-from pathlib import Path
 import random
-from typing import Any, Dict, List, Tuple
+from datetime import date, timedelta
+from pathlib import Path
+from typing import Any
 
 # Deterministic Seed
 DEFAULT_SEED = 42
@@ -36,18 +36,80 @@ CITIES_BY_STATE = [
 ]
 
 FIRST_NAMES = [
-    "James", "Mary", "Robert", "Patricia", "John", "Jennifer", "Michael", "Linda",
-    "David", "Elizabeth", "William", "Barbara", "Richard", "Susan", "Joseph", "Jessica",
-    "Thomas", "Sarah", "Charles", "Karen", "Christopher", "Nancy", "Daniel", "Lisa",
-    "Matthew", "Betty", "Anthony", "Margaret", "Mark", "Sandra", "Donald", "Ashley",
-    "Steven", "Kimberly", "Paul", "Emily", "Andrew", "Donna", "Joshua", "Michelle",
+    "James",
+    "Mary",
+    "Robert",
+    "Patricia",
+    "John",
+    "Jennifer",
+    "Michael",
+    "Linda",
+    "David",
+    "Elizabeth",
+    "William",
+    "Barbara",
+    "Richard",
+    "Susan",
+    "Joseph",
+    "Jessica",
+    "Thomas",
+    "Sarah",
+    "Charles",
+    "Karen",
+    "Christopher",
+    "Nancy",
+    "Daniel",
+    "Lisa",
+    "Matthew",
+    "Betty",
+    "Anthony",
+    "Margaret",
+    "Mark",
+    "Sandra",
+    "Donald",
+    "Ashley",
+    "Steven",
+    "Kimberly",
+    "Paul",
+    "Emily",
+    "Andrew",
+    "Donna",
+    "Joshua",
+    "Michelle",
 ]
 
 LAST_NAMES = [
-    "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis",
-    "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson",
-    "Thomas", "Taylor", "Moore", "Jackson", "Martin", "Lee", "Perez", "Thompson",
-    "White", "Harris", "Sanchez", "Clark", "Ramirez", "Lewis", "Robinson", "Walker",
+    "Smith",
+    "Johnson",
+    "Williams",
+    "Brown",
+    "Jones",
+    "Garcia",
+    "Miller",
+    "Davis",
+    "Rodriguez",
+    "Martinez",
+    "Hernandez",
+    "Lopez",
+    "Gonzalez",
+    "Wilson",
+    "Anderson",
+    "Thomas",
+    "Taylor",
+    "Moore",
+    "Jackson",
+    "Martin",
+    "Lee",
+    "Perez",
+    "Thompson",
+    "White",
+    "Harris",
+    "Sanchez",
+    "Clark",
+    "Ramirez",
+    "Lewis",
+    "Robinson",
+    "Walker",
 ]
 
 CLAIM_DESCRIPTIONS = {
@@ -78,7 +140,9 @@ CLAIM_DESCRIPTIONS = {
 }
 
 
-def generate_customers(num_customers: int = 100, rng: random.Random | None = None) -> List[Dict[str, Any]]:
+def generate_customers(
+    num_customers: int = 100, rng: random.Random | None = None
+) -> list[dict[str, Any]]:
     """Generates synthetic customer dimension records."""
     if rng is None:
         rng = random.Random(DEFAULT_SEED)
@@ -101,25 +165,27 @@ def generate_customers(num_customers: int = 100, rng: random.Random | None = Non
         created_days_ago = rng.randint(200, 900)
         created_at = (ANCHOR_DATE - timedelta(days=created_days_ago)).isoformat()
 
-        customers.append({
-            "customer_id": cust_id,
-            "first_name": first_name,
-            "last_name": last_name,
-            "email": email,
-            "phone": phone,
-            "city": city,
-            "state": state,
-            "risk_score": risk_score,
-            "created_at": created_at,
-        })
+        customers.append(
+            {
+                "customer_id": cust_id,
+                "first_name": first_name,
+                "last_name": last_name,
+                "email": email,
+                "phone": phone,
+                "city": city,
+                "state": state,
+                "risk_score": risk_score,
+                "created_at": created_at,
+            }
+        )
     return customers
 
 
 def generate_policies(
-    customers: List[Dict[str, Any]],
+    customers: list[dict[str, Any]],
     num_policies: int = 150,
     rng: random.Random | None = None,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """Generates synthetic policy records mapped to customers."""
     if rng is None:
         rng = random.Random(DEFAULT_SEED)
@@ -156,32 +222,34 @@ def generate_policies(
         else:
             status = "CANCELLED"
 
-        policies.append({
-            "policy_id": pol_id,
-            "customer_id": customer["customer_id"],
-            "policy_type": p_type,
-            "start_date": start_date.isoformat(),
-            "end_date": end_date.isoformat(),
-            "sum_insured": float(sum_insured),
-            "deductible": float(deductible),
-            "status": status,
-        })
+        policies.append(
+            {
+                "policy_id": pol_id,
+                "customer_id": customer["customer_id"],
+                "policy_type": p_type,
+                "start_date": start_date.isoformat(),
+                "end_date": end_date.isoformat(),
+                "sum_insured": float(sum_insured),
+                "deductible": float(deductible),
+                "status": status,
+            }
+        )
     return policies
 
 
 def generate_claims_and_notes(
-    policies: List[Dict[str, Any]],
-    customers: List[Dict[str, Any]],
+    policies: list[dict[str, Any]],
+    customers: list[dict[str, Any]],
     total_claims: int = 600,
     rng: random.Random | None = None,
-) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]]]:
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]]]:
     """Generates synthetic raw claims, updates, and adjuster notes with injected dirty data."""
     if rng is None:
         rng = random.Random(DEFAULT_SEED)
 
     policy_map = {p["policy_id"]: p for p in policies}
-    raw_claims: List[Dict[str, Any]] = []
-    adjuster_notes: List[Dict[str, Any]] = []
+    raw_claims: list[dict[str, Any]] = []
+    adjuster_notes: list[dict[str, Any]] = []
 
     # Identify a high-risk customer for fraud clustering (~4 claims in a short window)
     cluster_customer = next(c for c in customers if c["risk_score"] > 0.80)
@@ -201,9 +269,6 @@ def generate_claims_and_notes(
             policy = rng.choice(policies)
             p_type = policy["policy_type"]
             # Pick incident date within active period or slightly outside
-            p_start = date.fromisoformat(policy["start_date"])
-            p_end = date.fromisoformat(policy["end_date"])
-
             incident_offset = rng.randint(5, 300)
             incident_dt = ANCHOR_DATE - timedelta(days=incident_offset)
 
@@ -243,10 +308,12 @@ def generate_claims_and_notes(
                     "note_id": 1,
                     "author": f"Adjuster {rng.choice(FIRST_NAMES)} {rng.choice(LAST_NAMES)}",
                     "timestamp": f"{reported_dt.isoformat()}T14:30:00Z",
-                    "severity_tag": "SUSPICIOUS" if (10 <= i <= 13 or rng.random() < 0.05) else "NORMAL",
-                    "text": f"Intake record logged for {p_type} incident in {city}. Documents attached: {doc_count}."
+                    "severity_tag": "SUSPICIOUS"
+                    if (10 <= i <= 13 or rng.random() < 0.05)
+                    else "NORMAL",
+                    "text": f"Intake record logged for {p_type} incident in {city}. Documents attached: {doc_count}.",
                 }
-            ]
+            ],
         }
         adjuster_notes.append(notes_entry)
         raw_claims.append(claim_rec)
@@ -284,12 +351,14 @@ def generate_claims_and_notes(
     casing_indices = rng.sample(range(total_claims), int(total_claims * 0.10))
     for idx in casing_indices:
         orig_status = raw_claims[idx]["status"]
-        cased = rng.choice([
-            f" {orig_status.lower()} ",
-            orig_status.capitalize(),
-            f"  {orig_status}  ",
-            orig_status.lower(),
-        ])
+        cased = rng.choice(
+            [
+                f" {orig_status.lower()} ",
+                orig_status.capitalize(),
+                f"  {orig_status}  ",
+                orig_status.lower(),
+            ]
+        )
         raw_claims[idx]["status"] = cased
 
     # 6. Future incident_date (~1% = ~6 rows)
@@ -321,28 +390,35 @@ def generate_claims_and_notes(
     claims_updates = []
     for c in raw_claims[:40]:
         if c["claim_id"].startswith("CLM-"):
-            new_status = "APPROVED" if c["status"].strip().upper() in ["SUBMITTED", "IN_REVIEW"] else "SETTLED"
-            claims_updates.append({
-                "claim_id": c["claim_id"],
-                "policy_id": c["policy_id"],
-                "claim_type": c["claim_type"],
-                "incident_date": c["incident_date"],
-                "reported_date": c["reported_date"],
-                "claimed_amount": c["claimed_amount"],
-                "status": new_status,
-                "description": c["description"],
-                "documents_count": c["documents_count"],
-                "city": c["city"],
-            })
+            new_status = (
+                "APPROVED"
+                if c["status"].strip().upper() in ["SUBMITTED", "IN_REVIEW"]
+                else "SETTLED"
+            )
+            claims_updates.append(
+                {
+                    "claim_id": c["claim_id"],
+                    "policy_id": c["policy_id"],
+                    "claim_type": c["claim_type"],
+                    "incident_date": c["incident_date"],
+                    "reported_date": c["reported_date"],
+                    "claimed_amount": c["claimed_amount"],
+                    "status": new_status,
+                    "description": c["description"],
+                    "documents_count": c["documents_count"],
+                    "city": c["city"],
+                }
+            )
 
     return raw_claims, claims_updates, adjuster_notes
 
 
-def save_csv(data: List[Dict[str, Any]], filepath: Path) -> None:
+def save_csv(data: list[dict[str, Any]], filepath: Path) -> None:
     """Writes list of dicts to CSV file."""
     if not data:
         return
     import csv
+
     fieldnames = list(data[0].keys())
     filepath.parent.mkdir(parents=True, exist_ok=True)
     with open(filepath, "w", newline="", encoding="utf-8") as f:
@@ -351,7 +427,7 @@ def save_csv(data: List[Dict[str, Any]], filepath: Path) -> None:
         writer.writerows(data)
 
 
-def run_generator(output_dir: Path, seed: int = DEFAULT_SEED) -> Dict[str, int]:
+def run_generator(output_dir: Path, seed: int = DEFAULT_SEED) -> dict[str, int]:
     """Generates all synthetic artifacts deterministically and writes to disk."""
     rng = random.Random(seed)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -376,8 +452,8 @@ def run_generator(output_dir: Path, seed: int = DEFAULT_SEED) -> Dict[str, int]:
     # Split raw claims into 3 batches
     batch_size = len(raw_claims) // 3
     batch_1 = raw_claims[:batch_size]
-    batch_2 = raw_claims[batch_size: 2 * batch_size]
-    batch_3 = raw_claims[2 * batch_size:]
+    batch_2 = raw_claims[batch_size : 2 * batch_size]
+    batch_3 = raw_claims[2 * batch_size :]
 
     save_csv(batch_1, output_dir / "claims_batch_1.csv")
     save_csv(batch_2, output_dir / "claims_batch_2.csv")
@@ -411,7 +487,9 @@ def run_generator(output_dir: Path, seed: int = DEFAULT_SEED) -> Dict[str, int]:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate ClaimSense synthetic insurance data.")
-    parser.add_argument("--output-dir", type=Path, default=Path(__file__).parent, help="Target output folder")
+    parser.add_argument(
+        "--output-dir", type=Path, default=Path(__file__).parent, help="Target output folder"
+    )
     parser.add_argument("--seed", type=int, default=DEFAULT_SEED, help="Random generator seed")
     args = parser.parse_args()
 

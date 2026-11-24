@@ -1,7 +1,7 @@
 """Integration and Security tests for ClaimSense FastAPI endpoints."""
 
-from fastapi.testclient import TestClient
 import pytest
+from fastapi.testclient import TestClient
 
 from api.main import app
 from claimsense.config import get_settings
