@@ -73,8 +73,7 @@ def render_sidebar():
 
         st.markdown("### 🔗 Resources")
         st.markdown("""
-        - 📄 [GitHub Repository](https://github.com/)
+        - 📄 [GitHub Repository](https://github.com/SatyamAnilkumarMishra/ClaimSense)
         - ⚡ [FastAPI Swagger Docs](http://127.0.0.1:8000/docs)
-        - 📐 [Architecture Spec](docs/ARCHITECTURE.md)
-        - 📋 [Evaluation Benchmark](docs/EVALUATION.md)
+        - 📐 [Architecture Spec](ARCHITECTURE.md)
         """)

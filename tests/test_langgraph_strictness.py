@@ -319,7 +319,7 @@ def test_lg10_exported_graph_matches_code():
     from pathlib import Path
 
     mermaid_text = export_mermaid_diagram()
-    arch_file = Path("docs/ARCHITECTURE.md")
+    arch_file = Path("ARCHITECTURE.md")
     assert arch_file.exists()
     content = arch_file.read_text(encoding="utf-8")
     assert "intake[intake: Validate Claim ID]" in content

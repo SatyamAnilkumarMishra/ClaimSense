@@ -89,7 +89,7 @@ Evaluated across **45 ground-truth insurance claims** covering straight-through 
 
 *Evaluated at: 2026-11-24T19:11:27Z*
 
-Full benchmark report available in [docs/EVALUATION.md](docs/EVALUATION.md). Raw evaluation output recorded in [claimsense/evaluation/eval_results.json](claimsense/evaluation/eval_results.json).
+Raw evaluation output recorded in [claimsense/evaluation/eval_results.json](claimsense/evaluation/eval_results.json).
 
 ---
 
@@ -153,17 +153,6 @@ Run evidence recorded in [docs/evidence/pipeline_audit_run.md](docs/evidence/pip
 * **Deterministic Citation Verification**: In-code verifier validates that every cited clause ID exists in the policy contract and verifies quoted amounts before output rendering.
 * **Zero Secrets in Responses**: API endpoints and UI masks all credentials; API keys are verified with constant-time `secrets.compare_digest`.
 
-Full security checklist in [docs/SECURITY.md](docs/SECURITY.md).
-
----
-
 ## 📚 Documentation Index
 
-* [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md): Complete architecture diagrams, data flow, and Medallion specs.
-* [docs/DECISIONS.md](docs/DECISIONS.md): Architectural Decision Records (ADRs 001 - 006).
-* [docs/EVALUATION.md](docs/EVALUATION.md): 45-claim evaluation report, confusion matrix, and case studies.
-* [docs/SECURITY.md](docs/SECURITY.md): Multi-layer security review and governance checklist.
-* [docs/PERFORMANCE.md](docs/PERFORMANCE.md): Catalyst optimization, BroadcastHashJoin, and Z-ORDER clustering.
-* [docs/DATABRICKS_SETUP.md](docs/DATABRICKS_SETUP.md): Step-by-step Databricks Free Edition setup guide.
-* [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): Streamlit Community Cloud deployment & mobile testing instructions.
-* [docs/evidence/README.md](docs/evidence/README.md): Verification artifacts, baseline outputs, and audit logs.
+* [ARCHITECTURE.md](ARCHITECTURE.md): Complete architecture diagrams, data flow, and Medallion specs.
